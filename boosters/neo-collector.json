@@ -4,9 +4,9 @@
   "boosterType": "collector",
   "source": "https://magic.wizards.com/en/news/feature/collecting-kamigawa-neon-dynasty",
   "slots": [
-    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-302", "303-357"], "nonfoil": ["358-433"] } },
-    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-302", "303-357"] } },
-    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-302"] } },
-    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["358-433"] }, "notes": "extended-art, neon ink, phyrexian text" }
+    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-302", "303-514"], "nonfoil": ["303-514"] }, "notes": "ninja/samurai showcase, borderless, extended-art" },
+    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-302"] } },
+    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-282"] } },
+    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["303-514"], "foil": ["303-514"], "neoninkfoil": ["303-514"] }, "notes": "showcase, borderless, extended-art, neon ink, phyrexian text" }
   ]
 }

@@ -4,9 +4,9 @@
   "boosterType": "collector",
   "source": "https://magic.wizards.com/en/news/feature/collecting-wilds-of-eldraine",
   "slots": [
-    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-266", "267-331"], "nonfoil": ["332-390"] } },
-    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-266", "267-331"] } },
-    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-266"] } },
-    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["332-390"] }, "notes": "extended-art, confetti foil, anime borderless" }
+    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-276", "277-307"], "nonfoil": ["277-381"] }, "notes": "showcase (277-296), borderless (297-307), extended-art (323-381)" },
+    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-276"] } },
+    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-261"] } },
+    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["277-381"], "foil": ["277-381"] }, "notes": "showcase, borderless, extended-art treatments" }
   ]
 }

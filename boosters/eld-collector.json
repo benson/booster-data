@@ -4,9 +4,9 @@
   "boosterType": "collector",
   "source": "https://magic.wizards.com/en/news/feature/throne-eldraine-collector-booster",
   "slots": [
-    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-269", "270-302"], "nonfoil": ["303-333"] } },
-    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-269", "270-302"] } },
-    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-269"] } },
-    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["303-333"] }, "notes": "extended-art cards" }
+    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-269", "270-397"], "nonfoil": ["270-397"] }, "notes": "borderless/showcase (270-303), brawl exclusives (304-333), extended-art (334-391)" },
+    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-269"] } },
+    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-260"] } },
+    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["270-397"], "foil": ["270-397"] }, "notes": "borderless, showcase adventure, brawl exclusives, extended-art" }
   ]
 }

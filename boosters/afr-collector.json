@@ -4,9 +4,9 @@
   "boosterType": "collector",
   "source": "https://magic.wizards.com/en/news/feature/collecting-adventures-forgotten-realms",
   "slots": [
-    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-281", "282-302"], "nonfoil": ["303-349"] } },
-    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-281", "282-302"] } },
-    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-281"] } },
-    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["303-349"] }, "notes": "extended-art cards" }
+    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-281", "282-402"], "nonfoil": ["282-402"] }, "notes": "borderless (282-298), module showcase (299-358), extended-art (359-396)" },
+    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-281"] } },
+    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-261"] } },
+    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["282-402"], "foil": ["282-402"] }, "notes": "borderless, module showcase, extended-art treatments" }
   ]
 }

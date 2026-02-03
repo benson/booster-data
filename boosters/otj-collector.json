@@ -9,21 +9,22 @@
       "count": 5,
       "rarities": ["rare", "mythic"],
       "pool": {
-        "foil": ["1-286", "287-306"],
-        "nonfoil": ["307-360"]
-      }
+        "foil": ["1-276", "287-306"],
+        "nonfoil": ["287-367"]
+      },
+      "notes": "showcase legendary (287-299), borderless fastlands (300-304), borderless pw (305-306), extended-art (307-367)"
     },
     {
       "name": "uncommon",
       "count": 4,
       "rarities": ["uncommon"],
-      "pool": { "foil": ["1-286", "287-306"] }
+      "pool": { "foil": ["1-276"] }
     },
     {
       "name": "common",
       "count": 4,
       "rarities": ["common"],
-      "pool": { "foil": ["1-286"] }
+      "pool": { "foil": ["1-276"] }
     },
     {
       "name": "bonusSheet",
@@ -38,8 +39,11 @@
     {
       "name": "collectorExclusive",
       "count": 2,
-      "pool": { "nonfoil": ["307-360"] },
-      "notes": "extended-art and special treatments"
+      "pool": {
+        "nonfoil": ["287-367"],
+        "foil": ["287-367"]
+      },
+      "notes": "showcase, borderless, extended-art treatments"
     }
   ]
 }

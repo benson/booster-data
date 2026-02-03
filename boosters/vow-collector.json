@@ -4,9 +4,9 @@
   "boosterType": "collector",
   "source": "https://magic.wizards.com/en/news/feature/collecting-innistrad-crimson-vow",
   "slots": [
-    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-277", "278-318"], "nonfoil": ["319-361"] } },
-    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-277", "278-318"] } },
-    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-277"] } },
-    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["319-361"] }, "notes": "extended-art and fang frame treatments" }
+    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-277", "278-412"], "nonfoil": ["278-412"] }, "notes": "borderless (278-397), extended-art, fang frame" },
+    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-277"] } },
+    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-267"] } },
+    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["278-412"], "foil": ["278-412"] }, "notes": "borderless, showcase fang frame, extended-art treatments" }
   ]
 }

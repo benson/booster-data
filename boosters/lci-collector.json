@@ -9,15 +9,16 @@
       "count": 5,
       "rarities": ["rare", "mythic"],
       "pool": {
-        "foil": ["1-291", "312-351"],
-        "nonfoil": ["352-411"]
-      }
+        "foil": ["1-352", "353-409"],
+        "nonfoil": ["353-409"]
+      },
+      "notes": "extended-art (353-392), special JW promos (405-409)"
     },
     {
       "name": "uncommon",
       "count": 4,
       "rarities": ["uncommon"],
-      "pool": { "foil": ["1-291", "312-351"] }
+      "pool": { "foil": ["1-352"] }
     },
     {
       "name": "common",
@@ -28,8 +29,11 @@
     {
       "name": "collectorExclusive",
       "count": 2,
-      "pool": { "nonfoil": ["352-411"] },
-      "notes": "extended-art and special treatments"
+      "pool": {
+        "nonfoil": ["353-409"],
+        "foil": ["353-409"]
+      },
+      "notes": "extended-art and jurassic world promos"
     }
   ]
 }

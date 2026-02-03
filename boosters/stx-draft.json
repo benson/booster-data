@@ -7,6 +7,6 @@
     { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-275"] }, "mythicRate": 0.125 },
     { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-275"] } },
     { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-275"] } },
-    { "name": "lesson", "count": 1, "pool": { "nonfoil": ["1-275"] }, "notes": "lesson card slot" }
+    { "name": "land", "count": 1, "pool": { "nonfoil": ["366-375"] }, "notes": "basic lands" }
   ]
 }

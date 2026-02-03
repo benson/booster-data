@@ -9,27 +9,33 @@
       "count": 5,
       "rarities": ["rare", "mythic"],
       "pool": {
-        "foil": ["1-301", "322-367"],
-        "nonfoil": ["368-411"]
-      }
+        "foil": ["1-276", "302-367"],
+        "nonfoil": ["302-405"]
+      },
+      "notes": "showcase inverted (302-327), borderless (328-367), extended-art (368-385)"
     },
     {
       "name": "uncommon",
       "count": 4,
       "rarities": ["uncommon"],
-      "pool": { "foil": ["1-301", "336-367"] }
+      "pool": { "foil": ["1-276"] }
     },
     {
       "name": "common",
       "count": 4,
       "rarities": ["common"],
-      "pool": { "foil": ["1-301"] }
+      "pool": { "foil": ["1-276"] }
     },
     {
       "name": "collectorExclusive",
       "count": 2,
-      "pool": { "nonfoil": ["368-411"] },
-      "notes": "extended-art, special frames, japan-exclusive"
+      "pool": {
+        "nonfoil": ["302-405"],
+        "foil": ["302-405"],
+        "fracturefoil": ["396-404"],
+        "texturedfoil": ["406-410"]
+      },
+      "notes": "showcase, borderless, extended-art, fracturefoil, textured double-exposure"
     }
   ]
 }

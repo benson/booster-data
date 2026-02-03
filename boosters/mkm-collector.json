@@ -9,15 +9,16 @@
       "count": 5,
       "rarities": ["rare", "mythic"],
       "pool": {
-        "foil": ["1-286", "307-376"],
-        "nonfoil": ["377-436"]
-      }
+        "foil": ["1-286", "287-389"],
+        "nonfoil": ["287-422"]
+      },
+      "notes": "magnified showcase (287-316), ravnica city (317-323), borderless (324-335), dossier (336-389), extended-art (390-422)"
     },
     {
       "name": "uncommon",
       "count": 4,
       "rarities": ["uncommon"],
-      "pool": { "foil": ["1-286", "347-376"] }
+      "pool": { "foil": ["1-286"] }
     },
     {
       "name": "common",
@@ -28,8 +29,11 @@
     {
       "name": "collectorExclusive",
       "count": 2,
-      "pool": { "nonfoil": ["377-436"] },
-      "notes": "extended-art and special treatments"
+      "pool": {
+        "nonfoil": ["287-422"],
+        "foil": ["287-422"]
+      },
+      "notes": "showcase, dossier, invisible ink, extended-art treatments"
     }
   ]
 }

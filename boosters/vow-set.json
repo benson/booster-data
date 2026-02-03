@@ -4,10 +4,11 @@
   "boosterType": "set",
   "source": "https://magic.wizards.com/en/news/feature/collecting-innistrad-crimson-vow",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-277", "278-318"] }, "mythicRate": 0.125 },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-277", "278-318"] } },
-    { "name": "common", "count": 7, "rarities": ["common"], "pool": { "nonfoil": ["1-277"] } },
-    { "name": "wildcard", "count": 1, "pool": { "nonfoil": ["1-277", "278-318"] } },
-    { "name": "foil", "count": 1, "pool": { "foil": ["1-318"] } }
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-267"] }, "mythicRate": 0.125 },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-267"] } },
+    { "name": "common", "count": 7, "rarities": ["common"], "pool": { "nonfoil": ["1-267"] } },
+    { "name": "land", "count": 1, "pool": { "nonfoil": ["398-402"] }, "notes": "basic lands" },
+    { "name": "wildcard", "count": 1, "pool": { "nonfoil": ["1-277", "398-402"] }, "notes": "any rarity from booster-eligible cards" },
+    { "name": "foil", "count": 1, "pool": { "foil": ["1-277", "398-402"] }, "notes": "any rarity from booster-eligible cards" }
   ]
 }

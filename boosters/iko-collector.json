@@ -4,9 +4,9 @@
   "boosterType": "collector",
   "source": "https://magic.wizards.com/en/news/feature/ikoria-lair-behemoths-collector-booster",
   "slots": [
-    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-274", "275-314"], "nonfoil": ["315-388"] } },
-    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-274", "275-314"] } },
-    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-274"] } },
-    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["315-388"] }, "notes": "extended-art, godzilla series" }
+    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-274", "275-387"], "nonfoil": ["275-387"] }, "notes": "borderless (276-278), showcase mutate (279-313), extended-art (314-363), godzilla series (370-387)" },
+    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-274"] } },
+    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-264"] } },
+    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["275-387"], "foil": ["275-387"] }, "notes": "borderless, showcase mutate, extended-art, godzilla series box toppers" }
   ]
 }

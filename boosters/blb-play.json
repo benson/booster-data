@@ -8,14 +8,14 @@
       "name": "rare",
       "count": 1,
       "rarities": ["rare", "mythic"],
-      "pool": { "nonfoil": ["1-261", "282-293", "337-342"] },
+      "pool": { "nonfoil": ["1-261"] },
       "mythicRate": 0.125
     },
     {
       "name": "uncommon",
       "count": 3,
       "rarities": ["uncommon"],
-      "pool": { "nonfoil": ["1-261", "294-336"] }
+      "pool": { "nonfoil": ["1-261"] }
     },
     {
       "name": "common",
@@ -32,14 +32,14 @@
     {
       "name": "wildcard",
       "count": 1,
-      "pool": { "nonfoil": ["1-261", "294-336"] },
-      "notes": "any rarity; can upgrade to rare/showcase"
+      "pool": { "nonfoil": ["1-281"] },
+      "notes": "any rarity from booster-eligible cards"
     },
     {
       "name": "foil",
       "count": 1,
-      "pool": { "foil": ["1-342"] },
-      "notes": "any rarity"
+      "pool": { "foil": ["1-281"] },
+      "notes": "any rarity from booster-eligible cards"
     }
   ]
 }

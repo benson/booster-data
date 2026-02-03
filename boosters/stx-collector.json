@@ -4,9 +4,9 @@
   "boosterType": "collector",
   "source": "https://magic.wizards.com/en/news/feature/collecting-strixhaven",
   "slots": [
-    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-275", "276-331"], "nonfoil": ["332-382"] } },
-    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-275", "276-331"] } },
+    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-275", "276-382"], "nonfoil": ["276-382"] }, "notes": "extended-art (276-365), japanese alt-art (376-382)" },
+    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-275"] } },
     { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-275"] } },
-    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["332-382"] }, "notes": "extended-art and japanese mystical archive" }
+    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["276-382"], "foil": ["276-382"] }, "notes": "extended-art, japanese mystical archive treatments" }
   ]
 }

@@ -4,9 +4,9 @@
   "boosterType": "collector",
   "source": "https://magic.wizards.com/en/news/feature/theros-beyond-death-collector-booster",
   "slots": [
-    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-254", "255-284"], "nonfoil": ["285-328"] } },
-    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-254", "255-284"] } },
-    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-254"] } },
-    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["285-328"] }, "notes": "extended-art cards" }
+    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-254", "255-357"], "nonfoil": ["255-357"] }, "notes": "constellation showcase (255-268), extended-art, planeswalker deck cards" },
+    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-254"] } },
+    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-244"] } },
+    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["255-357"], "foil": ["255-357"] }, "notes": "constellation showcase, extended-art treatments" }
   ]
 }

@@ -4,9 +4,9 @@
   "boosterType": "collector",
   "source": "https://magic.wizards.com/en/news/feature/collecting-dominaria-united",
   "slots": [
-    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-281", "282-330"], "nonfoil": ["331-376"] } },
-    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-281", "282-330"] } },
-    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-281"] } },
-    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["331-376"] }, "notes": "extended-art and textured foils" }
+    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-281", "287-382"], "nonfoil": ["282-436"] }, "notes": "stained glass showcase (287-371), borderless (372-382), extended-art (383-428)" },
+    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-281"] } },
+    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-261"] } },
+    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["282-436"], "foil": ["282-436"] }, "notes": "stained glass showcase, borderless, extended-art, promos" }
   ]
 }

@@ -4,9 +4,9 @@
   "boosterType": "collector",
   "source": "https://magic.wizards.com/en/news/feature/collecting-phyrexia-all-will-be-one",
   "slots": [
-    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-271", "272-315"], "nonfoil": ["316-374"] } },
-    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-271", "272-315"] } },
-    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-271"] } },
-    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["316-374"] }, "notes": "extended-art, step-and-compleat foils, oil slick raised foil" }
+    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-271", "285-374"], "nonfoil": ["272-479"] }, "notes": "ichor showcase (285-344), borderless (370-374), extended-art (375-413)" },
+    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-271"] } },
+    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-261"] } },
+    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["272-479"], "foil": ["272-479"], "oilslickfoil": ["345-369"] }, "notes": "showcase, borderless, extended-art, oil slick raised foil, step-and-compleat" }
   ]
 }

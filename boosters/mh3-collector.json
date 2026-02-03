@@ -9,27 +9,34 @@
       "count": 5,
       "rarities": ["rare", "mythic"],
       "pool": {
-        "foil": ["1-319", "340-383"],
-        "nonfoil": ["384-496"]
-      }
+        "foil": ["1-309", "320-441"],
+        "nonfoil": ["320-496"]
+      },
+      "notes": "borderless inverted (320-383), retro frame (384-441), extended-art (447-467)"
     },
     {
       "name": "uncommon",
       "count": 4,
       "rarities": ["uncommon"],
-      "pool": { "foil": ["1-319", "340-383"] }
+      "pool": { "foil": ["1-309"] }
     },
     {
       "name": "common",
       "count": 4,
       "rarities": ["common"],
-      "pool": { "foil": ["1-319"] }
+      "pool": { "foil": ["1-309"] }
     },
     {
       "name": "collectorExclusive",
       "count": 2,
-      "pool": { "nonfoil": ["384-446", "447-496"] },
-      "notes": "extended-art, special frames, serialized cards"
+      "pool": {
+        "nonfoil": ["320-496"],
+        "foil": ["320-496"],
+        "texturedfoil": ["468-472"],
+        "etchedfoil": ["473-494"],
+        "ripplefoil": ["497-521"]
+      },
+      "notes": "borderless, retro frame, extended-art, portrait, concept art, textured, etched, ripple foil"
     }
   ]
 }

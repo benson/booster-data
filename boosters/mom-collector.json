@@ -4,9 +4,9 @@
   "boosterType": "collector",
   "source": "https://magic.wizards.com/en/news/feature/collecting-march-of-the-machine",
   "slots": [
-    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-291", "292-360"], "nonfoil": ["361-438"] } },
-    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-291", "292-360"] } },
-    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-291"] } },
-    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["361-438"] }, "notes": "extended-art, halo foil, serialized praetors" }
+    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-291", "292-342"], "nonfoil": ["292-387"] }, "notes": "showcase/borderless (292-342), extended-art (343-380)" },
+    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-291"] } },
+    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-271"] } },
+    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["292-387"], "foil": ["292-387"] }, "notes": "showcase, borderless, jumpstart, extended-art, promos" }
   ]
 }

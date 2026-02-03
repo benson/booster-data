@@ -4,9 +4,9 @@
   "boosterType": "collector",
   "source": "https://magic.wizards.com/en/news/feature/collecting-the-brothers-war",
   "slots": [
-    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-287", "288-342"], "nonfoil": ["343-389"] } },
-    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-287", "288-342"] } },
-    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-287"] } },
-    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["343-389"] }, "notes": "extended-art, retro frame schematic, serialized" }
+    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-287", "288-384"], "nonfoil": ["288-384"] }, "notes": "retro artifacts (inverted frame), extended-art" },
+    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-287"] } },
+    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-267"] } },
+    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["288-384"], "foil": ["288-384"] }, "notes": "retro frame artifacts, extended-art, schematic, serialized" }
   ]
 }

@@ -4,10 +4,11 @@
   "boosterType": "set",
   "source": "https://magic.wizards.com/en/news/feature/collecting-phyrexia-all-will-be-one",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-271", "272-315"] }, "mythicRate": 0.125 },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-271", "272-315"] } },
-    { "name": "common", "count": 7, "rarities": ["common"], "pool": { "nonfoil": ["1-271"] } },
-    { "name": "wildcard", "count": 1, "pool": { "nonfoil": ["1-271", "272-315"] } },
-    { "name": "foil", "count": 1, "pool": { "foil": ["1-315"] } }
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-261"] }, "mythicRate": 0.125 },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-261"] } },
+    { "name": "common", "count": 7, "rarities": ["common"], "pool": { "nonfoil": ["1-261"] } },
+    { "name": "land", "count": 1, "pool": { "nonfoil": ["262-271"] }, "notes": "full-art basic lands" },
+    { "name": "wildcard", "count": 1, "pool": { "nonfoil": ["1-271"] }, "notes": "any rarity from booster-eligible cards" },
+    { "name": "foil", "count": 1, "pool": { "foil": ["1-271"] }, "notes": "any rarity from booster-eligible cards" }
   ]
 }

@@ -9,16 +9,16 @@
       "count": 5,
       "rarities": ["rare", "mythic"],
       "pool": {
-        "foil": ["1-261", "282-342"],
-        "nonfoil": ["343-396"]
+        "foil": ["1-281", "282-342"],
+        "nonfoil": ["282-368"]
       },
-      "notes": "mix of foil base/showcase and nonfoil collector-exclusive"
+      "notes": "mix of foil base/showcase and nonfoil borderless/extended-art"
     },
     {
       "name": "uncommon",
       "count": 4,
       "rarities": ["uncommon"],
-      "pool": { "foil": ["1-261", "294-336"] }
+      "pool": { "foil": ["1-261"] }
     },
     {
       "name": "common",
@@ -30,10 +30,11 @@
       "name": "collectorExclusive",
       "count": 2,
       "pool": {
-        "nonfoil": ["343-362", "363-375"],
-        "raisedfoil": ["376-396"]
+        "nonfoil": ["282-342"],
+        "foil": ["282-342"],
+        "raisedfoil": ["343-355"]
       },
-      "notes": "imagine: courageous critters, extended-art, japanese raised foil anime"
+      "notes": "borderless/showcase (282-342), raised foil showcase (343-355), extended-art (356-368)"
     }
   ]
 }

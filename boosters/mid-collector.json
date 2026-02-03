@@ -4,9 +4,9 @@
   "boosterType": "collector",
   "source": "https://magic.wizards.com/en/news/feature/collecting-innistrad-midnight-hunt",
   "slots": [
-    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-277", "278-315"], "nonfoil": ["316-359"] } },
-    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-277", "278-315"] } },
-    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-277"] } },
-    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["316-359"] }, "notes": "extended-art and eternal night treatments" }
+    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-277", "278-391"], "nonfoil": ["278-391"] }, "notes": "borderless (278-285), equinox showcase (286-311), extended-art (312-379)" },
+    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-277"] } },
+    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-267"] } },
+    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["278-391"], "foil": ["278-391"] }, "notes": "borderless, equinox showcase, extended-art, eternal night treatments" }
   ]
 }

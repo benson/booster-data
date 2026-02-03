@@ -9,27 +9,28 @@
       "count": 4,
       "rarities": ["rare", "mythic"],
       "pool": {
-        "foil": ["1-280", "281-312"],
-        "nonfoil": ["313-340"]
-      }
+        "foil": ["1-280", "281-391"],
+        "nonfoil": ["281-391"]
+      },
+      "notes": "showcase planeswalkers/pathways (281-289), showcase landfall (290-313), extended-art (314-379)"
     },
     {
       "name": "uncommon",
       "count": 4,
       "rarities": ["uncommon"],
-      "pool": { "foil": ["1-280", "281-312"] }
+      "pool": { "foil": ["1-280"] }
     },
     {
       "name": "common",
       "count": 4,
       "rarities": ["common"],
-      "pool": { "foil": ["1-280"] }
+      "pool": { "foil": ["1-265"] }
     },
     {
       "name": "collectorExclusive",
       "count": 3,
-      "pool": { "nonfoil": ["313-340"] },
-      "notes": "extended-art cards"
+      "pool": { "nonfoil": ["281-391"], "foil": ["281-391"] },
+      "notes": "showcase, extended-art treatments"
     }
   ]
 }
