@@ -8,32 +8,32 @@
       "name": "rare",
       "count": 1,
       "rarities": ["rare", "mythic"],
-      "pool": { "nonfoil": ["1-273", "274-296", "297-346"] },
+      "pool": { "nonfoil": ["1-401"] },
       "mythicRate": 0.125
     },
     {
       "name": "uncommon",
       "count": 3,
       "rarities": ["uncommon"],
-      "pool": { "nonfoil": ["1-273", "274-296", "297-346"] }
+      "pool": { "nonfoil": ["1-401"] }
     },
     {
       "name": "common",
       "count": 5,
       "rarities": ["common"],
-      "pool": { "nonfoil": ["1-273"] }
+      "pool": { "nonfoil": ["1-401"] }
     },
     {
       "name": "wildcard",
       "count": 1,
-      "pool": { "nonfoil": ["1-273", "274-296", "297-346"] },
-      "notes": "any rarity; full-art lands, borderless, showcase"
+      "pool": { "nonfoil": ["1-401"] },
+      "notes": "any rarity from booster-eligible cards"
     },
     {
       "name": "foil",
       "count": 1,
-      "pool": { "foil": ["1-346"] },
-      "notes": "any rarity"
+      "pool": { "foil": ["1-401"] },
+      "notes": "any rarity from booster-eligible cards"
     }
   ]
 }

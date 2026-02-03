@@ -9,28 +9,30 @@
       "count": 5,
       "rarities": ["rare", "mythic"],
       "pool": {
-        "foil": ["1-273", "274-346"],
-        "nonfoil": ["347-400"]
-      }
+        "foil": ["1-401", "402-408"],
+        "nonfoil": ["402-408"]
+      },
+      "notes": "promo and special treatments"
     },
     {
       "name": "uncommon",
       "count": 4,
       "rarities": ["uncommon"],
-      "pool": { "foil": ["1-273", "274-296", "297-346"] }
+      "pool": { "foil": ["1-401"] }
     },
     {
       "name": "common",
       "count": 4,
       "rarities": ["common"],
-      "pool": { "foil": ["1-273"] }
+      "pool": { "foil": ["1-401"] }
     },
     {
       "name": "collectorExclusive",
       "count": 2,
       "pool": {
-        "nonfoil": ["347-400"],
-        "fracturefoil": ["347-400"]
+        "nonfoil": ["402-408"],
+        "foil": ["402-408"],
+        "fracturefoil": ["402-408"]
       },
       "notes": "reversible shocklands, japanese showcase, fracture foils"
     }

@@ -9,26 +9,27 @@
       "count": 5,
       "rarities": ["rare", "mythic"],
       "pool": {
-        "foil": ["1-286", "287-296"],
-        "nonfoil": ["297-400"]
-      }
+        "foil": ["1-358", "359-394"],
+        "nonfoil": ["359-394"]
+      },
+      "notes": "showcase, borderless, elemental frame treatments"
     },
     {
       "name": "uncommon",
       "count": 4,
       "rarities": ["uncommon"],
-      "pool": { "foil": ["1-286", "287-296"] }
+      "pool": { "foil": ["1-358"] }
     },
     {
       "name": "common",
       "count": 4,
       "rarities": ["common"],
-      "pool": { "foil": ["1-286"] }
+      "pool": { "foil": ["1-358"] }
     },
     {
       "name": "collectorExclusive",
       "count": 2,
-      "pool": { "nonfoil": ["297-400"] },
+      "pool": { "nonfoil": ["359-394"], "foil": ["359-394"] },
       "notes": "scene cards, borderless, elemental frame, neon ink"
     }
   ]
