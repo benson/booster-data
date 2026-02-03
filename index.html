@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>booster-data</title>
+  <link rel="stylesheet" href="https://bensonperry.com/shared/common.css">
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.6;
+    }
+    h1 { margin-bottom: 0.5rem; }
+    .subtitle { color: #666; margin-bottom: 2rem; }
+    code {
+      background: #f4f4f4;
+      padding: 0.2em 0.4em;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    pre code { background: none; padding: 0; }
+    a { color: #0066cc; }
+  </style>
+</head>
+<body>
+  <h1>booster-data</h1>
+  <p class="subtitle">explicit card pool definitions for mtg booster products</p>
+
+  <h2>about</h2>
+  <p>
+    this project provides ground-truth data for which cards can appear in each mtg booster pack type.
+    no inference, no general rules - just explicit collector number ranges per slot.
+  </p>
+
+  <h2>usage</h2>
+  <pre><code>// load the manifest
+const index = await fetch('https://bensonperry.com/booster-data/index.json').then(r => r.json());
+
+// load a specific booster file
+const blbPlay = await fetch('https://bensonperry.com/booster-data/boosters/blb-play.json').then(r => r.json());</code></pre>
+
+  <h2>file format</h2>
+  <p>each booster file defines slots with collector number ranges:</p>
+  <pre><code>{
+  "set": "blb",
+  "setName": "Bloomburrow",
+  "boosterType": "play",
+  "source": "https://magic.wizards.com/...",
+  "slots": [
+    {
+      "name": "rare",
+      "count": 1,
+      "rarities": ["rare", "mythic"],
+      "pool": { "nonfoil": ["1-261"] },
+      "mythicRate": 0.125
+    }
+  ]
+}</code></pre>
+
+  <h2>links</h2>
+  <ul>
+    <li><a href="index.json">index.json</a> - manifest of all booster files</li>
+    <li><a href="https://github.com/benson-perry/booster-data">github</a></li>
+  </ul>
+</body>
+</html>
