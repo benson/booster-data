@@ -588,6 +588,48 @@
           "sourceQuote": "Extended-art cards exclusive to Collector Boosters"
         }
       ]
+    },
+    {
+      "set": "ecl",
+      "setName": "Lorwyn Eclipsed",
+      "source": "https://magic.wizards.com/en/news/feature/collecting-lorwyn-eclipsed",
+      "testCases": [
+        {
+          "card": "Main set rare",
+          "cn": "100",
+          "inBoosters": ["play", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set cards appear in Play Boosters and Collector Boosters"
+        },
+        {
+          "card": "Bloom Tender (Fracturefoil Inverted)",
+          "cn": "400",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["play"],
+          "sourceQuote": "Fracturefoil and inverted frame treatments are Collector Booster exclusive"
+        },
+        {
+          "card": "Selfless Safewright (Fracturefoil Inverted)",
+          "cn": "401",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["play"],
+          "sourceQuote": "Fracturefoil and inverted frame treatments are Collector Booster exclusive"
+        },
+        {
+          "card": "Formidable Speaker (Extended Art)",
+          "cn": "366",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["play"],
+          "sourceQuote": "Extended-art cards are exclusive to Collector Boosters"
+        },
+        {
+          "card": "Hallowed Fountain (Inverted Shock Land)",
+          "cn": "347",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["play"],
+          "sourceQuote": "Reversible inverted shock lands are Collector Booster exclusive"
+        }
+      ]
     }
   ]
 }
