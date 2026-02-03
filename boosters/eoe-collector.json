@@ -9,27 +9,28 @@
       "count": 5,
       "rarities": ["rare", "mythic"],
       "pool": {
-        "foil": ["1-250", "277-396"],
-        "nonfoil": ["397-450"]
-      }
+        "foil": ["1-276", "277-399"],
+        "nonfoil": ["277-399"]
+      },
+      "notes": "showcase, borderless, extended-art treatments"
     },
     {
       "name": "uncommon",
       "count": 4,
       "rarities": ["uncommon"],
-      "pool": { "foil": ["1-250", "277-316", "317-396"] }
+      "pool": { "foil": ["1-276"] }
     },
     {
       "name": "common",
       "count": 4,
       "rarities": ["common"],
-      "pool": { "foil": ["1-250"] }
+      "pool": { "foil": ["1-276"] }
     },
     {
       "name": "collectorExclusive",
       "count": 2,
-      "pool": { "nonfoil": ["397-450"] },
-      "notes": "extended-art and special treatments"
+      "pool": { "nonfoil": ["277-399"], "foil": ["277-399"] },
+      "notes": "showcase, borderless, extended-art treatments"
     }
   ]
 }

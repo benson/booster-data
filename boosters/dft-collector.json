@@ -9,15 +9,16 @@
       "count": 5,
       "rarities": ["rare", "mythic"],
       "pool": {
-        "foil": ["1-291", "312-341"],
-        "nonfoil": ["342-400"]
-      }
+        "foil": ["1-291", "292-553"],
+        "nonfoil": ["292-553"]
+      },
+      "notes": "showcase, borderless, extended-art treatments"
     },
     {
       "name": "uncommon",
       "count": 4,
       "rarities": ["uncommon"],
-      "pool": { "foil": ["1-291", "312-341"] }
+      "pool": { "foil": ["1-291"] }
     },
     {
       "name": "common",
@@ -28,7 +29,7 @@
     {
       "name": "collectorExclusive",
       "count": 2,
-      "pool": { "nonfoil": ["342-400"] },
+      "pool": { "nonfoil": ["292-553"], "foil": ["292-553"] },
       "notes": "revved up foils, rude riders, extended art, japan showcase"
     }
   ]
