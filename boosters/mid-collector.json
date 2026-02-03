@@ -1,0 +1,12 @@
+{
+  "set": "mid",
+  "setName": "Innistrad: Midnight Hunt",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-innistrad-midnight-hunt",
+  "slots": [
+    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-277", "278-315"], "nonfoil": ["316-359"] } },
+    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-277", "278-315"] } },
+    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-277"] } },
+    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["316-359"] }, "notes": "extended-art and eternal night treatments" }
+  ]
+}

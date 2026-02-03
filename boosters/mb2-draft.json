@@ -1,0 +1,9 @@
+{
+  "set": "mb2",
+  "setName": "Mystery Booster 2",
+  "boosterType": "draft",
+  "slots": [
+    { "name": "slot", "count": 14, "pool": { "nonfoil": ["1-999"] }, "notes": "curated selection from magic history" },
+    { "name": "playtest", "count": 1, "pool": { "nonfoil": ["1-999"] }, "notes": "r&d playtest card or special insert" }
+  ]
+}

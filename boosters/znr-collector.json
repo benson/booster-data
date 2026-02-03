@@ -1,0 +1,35 @@
+{
+  "set": "znr",
+  "setName": "Zendikar Rising",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-zendikar-rising",
+  "slots": [
+    {
+      "name": "rareOrMythic",
+      "count": 4,
+      "rarities": ["rare", "mythic"],
+      "pool": {
+        "foil": ["1-280", "281-312"],
+        "nonfoil": ["313-340"]
+      }
+    },
+    {
+      "name": "uncommon",
+      "count": 4,
+      "rarities": ["uncommon"],
+      "pool": { "foil": ["1-280", "281-312"] }
+    },
+    {
+      "name": "common",
+      "count": 4,
+      "rarities": ["common"],
+      "pool": { "foil": ["1-280"] }
+    },
+    {
+      "name": "collectorExclusive",
+      "count": 3,
+      "pool": { "nonfoil": ["313-340"] },
+      "notes": "extended-art cards"
+    }
+  ]
+}

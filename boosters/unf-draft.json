@@ -1,0 +1,11 @@
+{
+  "set": "unf",
+  "setName": "Unfinity",
+  "boosterType": "draft",
+  "slots": [
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-244"] }, "mythicRate": 0.125 },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-244"] } },
+    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-244"] } },
+    { "name": "land", "count": 1, "pool": { "nonfoil": ["235-244"] }, "notes": "space-themed land" }
+  ]
+}

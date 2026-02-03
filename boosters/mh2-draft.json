@@ -1,0 +1,11 @@
+{
+  "set": "mh2",
+  "setName": "Modern Horizons 2",
+  "boosterType": "draft",
+  "slots": [
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-303"] }, "mythicRate": 0.125 },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-303"] } },
+    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-303"] } },
+    { "name": "newToModern", "count": 1, "pool": { "nonfoil": ["261-303"] }, "notes": "new-to-modern reprint slot" }
+  ]
+}

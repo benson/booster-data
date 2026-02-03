@@ -1,0 +1,13 @@
+{
+  "set": "bro",
+  "setName": "The Brothers' War",
+  "boosterType": "set",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-the-brothers-war",
+  "slots": [
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-287", "288-342"] }, "mythicRate": 0.125 },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-287", "288-342"] } },
+    { "name": "common", "count": 7, "rarities": ["common"], "pool": { "nonfoil": ["1-287"] } },
+    { "name": "wildcard", "count": 1, "pool": { "nonfoil": ["1-287", "288-342"] } },
+    { "name": "foil", "count": 1, "pool": { "foil": ["1-342"] } }
+  ]
+}

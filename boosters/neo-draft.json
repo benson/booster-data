@@ -1,0 +1,12 @@
+{
+  "set": "neo",
+  "setName": "Kamigawa: Neon Dynasty",
+  "boosterType": "draft",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-kamigawa-neon-dynasty",
+  "slots": [
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-302"] }, "mythicRate": 0.125 },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-302"] } },
+    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-302"] } },
+    { "name": "land", "count": 1, "pool": { "nonfoil": ["283-302"] } }
+  ]
+}

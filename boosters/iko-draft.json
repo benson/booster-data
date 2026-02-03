@@ -1,0 +1,12 @@
+{
+  "set": "iko",
+  "setName": "Ikoria: Lair of Behemoths",
+  "boosterType": "draft",
+  "source": "https://magic.wizards.com/en/news/feature/ikoria-lair-behemoths-collector-booster",
+  "slots": [
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-274"] }, "mythicRate": 0.125 },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-274"] } },
+    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-274"] } },
+    { "name": "land", "count": 1, "pool": { "nonfoil": ["265-274"] } }
+  ]
+}

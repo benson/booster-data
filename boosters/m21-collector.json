@@ -1,0 +1,12 @@
+{
+  "set": "m21",
+  "setName": "Core Set 2021",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/articles/archive/card-preview/core-set-2021-product-overview-2020-06-05",
+  "slots": [
+    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-274", "275-310"], "nonfoil": ["311-366"] } },
+    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-274", "275-310"] } },
+    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-274"] } },
+    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["311-366"] }, "notes": "extended-art cards" }
+  ]
+}

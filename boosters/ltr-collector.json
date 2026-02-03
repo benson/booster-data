@@ -1,0 +1,12 @@
+{
+  "set": "ltr",
+  "setName": "The Lord of the Rings: Tales of Middle-earth",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-the-lord-of-the-rings-tales-of-middle-earth",
+  "slots": [
+    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-281", "282-388"], "nonfoil": ["389-474"] } },
+    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-281", "282-388"] } },
+    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-281"] } },
+    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["389-474"] }, "notes": "extended-art, surge foil, serialized ring" }
+  ]
+}

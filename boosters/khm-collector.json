@@ -1,0 +1,12 @@
+{
+  "set": "khm",
+  "setName": "Kaldheim",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-kaldheim",
+  "slots": [
+    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-285", "286-327"], "nonfoil": ["328-374"] } },
+    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-285", "286-327"] } },
+    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-285"] } },
+    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["328-374"] }, "notes": "extended-art cards" }
+  ]
+}

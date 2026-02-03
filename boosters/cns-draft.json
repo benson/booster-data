@@ -1,0 +1,11 @@
+{
+  "set": "cns",
+  "setName": "Conspiracy",
+  "boosterType": "draft",
+  "slots": [
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-210"] }, "mythicRate": 0.125 },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-210"] } },
+    { "name": "common", "count": 11, "rarities": ["common"], "pool": { "nonfoil": ["1-210"] } }
+  ],
+  "notes": "conspiracy draft format"
+}

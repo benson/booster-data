@@ -1,0 +1,12 @@
+{
+  "set": "one",
+  "setName": "Phyrexia: All Will Be One",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-phyrexia-all-will-be-one",
+  "slots": [
+    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-271", "272-315"], "nonfoil": ["316-374"] } },
+    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-271", "272-315"] } },
+    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-271"] } },
+    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["316-374"] }, "notes": "extended-art, step-and-compleat foils, oil slick raised foil" }
+  ]
+}

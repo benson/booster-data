@@ -1,0 +1,11 @@
+{
+  "set": "tsr",
+  "setName": "Time Spiral Remastered",
+  "boosterType": "draft",
+  "slots": [
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-289"] }, "mythicRate": 0.125 },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-289"] } },
+    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-289"] } },
+    { "name": "timeshifted", "count": 1, "pool": { "nonfoil": ["290-410"] }, "notes": "bonus timeshifted card" }
+  ]
+}

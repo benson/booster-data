@@ -1,0 +1,12 @@
+{
+  "set": "snc",
+  "setName": "Streets of New Capenna",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-streets-new-capenna",
+  "slots": [
+    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-281", "282-330"], "nonfoil": ["331-361"] } },
+    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-281", "282-330"] } },
+    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-281"] } },
+    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["331-361"] }, "notes": "extended-art and gilded foils" }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "set": "iko",
+  "setName": "Ikoria: Lair of Behemoths",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/news/feature/ikoria-lair-behemoths-collector-booster",
+  "slots": [
+    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-274", "275-314"], "nonfoil": ["315-388"] } },
+    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-274", "275-314"] } },
+    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-274"] } },
+    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["315-388"] }, "notes": "extended-art, godzilla series" }
+  ]
+}

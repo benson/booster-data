@@ -1,0 +1,13 @@
+{
+  "set": "dmu",
+  "setName": "Dominaria United",
+  "boosterType": "set",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-dominaria-united",
+  "slots": [
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-281", "282-330"] }, "mythicRate": 0.125 },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-281", "282-330"] } },
+    { "name": "common", "count": 7, "rarities": ["common"], "pool": { "nonfoil": ["1-281"] } },
+    { "name": "wildcard", "count": 1, "pool": { "nonfoil": ["1-281", "282-330"] } },
+    { "name": "foil", "count": 1, "pool": { "foil": ["1-330"] } }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "set": "j22",
+  "setName": "Jumpstart 2022",
+  "boosterType": "jumpstart",
+  "slots": [
+    { "name": "themed", "count": 20, "pool": { "nonfoil": ["1-806"] }, "notes": "themed half-deck with predetermined card list" }
+  ]
+}

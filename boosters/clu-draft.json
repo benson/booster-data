@@ -1,0 +1,11 @@
+{
+  "set": "clu",
+  "setName": "Ravnica: Clue Edition",
+  "boosterType": "draft",
+  "slots": [
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-247"] }, "mythicRate": 0.125 },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-247"] } },
+    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-247"] } },
+    { "name": "evidence", "count": 1, "pool": { "nonfoil": ["1-247"] }, "notes": "evidence card for clue game" }
+  ]
+}

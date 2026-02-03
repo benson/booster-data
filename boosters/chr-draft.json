@@ -1,0 +1,11 @@
+{
+  "set": "chr",
+  "setName": "Chronicles",
+  "boosterType": "draft",
+  "slots": [
+    { "name": "rare", "count": 1, "rarities": ["rare"], "pool": { "nonfoil": ["1-125"] } },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-125"] } },
+    { "name": "common", "count": 8, "rarities": ["common"], "pool": { "nonfoil": ["1-125"] } }
+  ],
+  "notes": "reprint set with white borders"
+}

@@ -1,0 +1,12 @@
+{
+  "set": "eld",
+  "setName": "Throne of Eldraine",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/news/feature/throne-eldraine-collector-booster",
+  "slots": [
+    { "name": "rareOrMythic", "count": 4, "rarities": ["rare", "mythic"], "pool": { "foil": ["1-269", "270-302"], "nonfoil": ["303-333"] } },
+    { "name": "uncommon", "count": 4, "rarities": ["uncommon"], "pool": { "foil": ["1-269", "270-302"] } },
+    { "name": "common", "count": 4, "rarities": ["common"], "pool": { "foil": ["1-269"] } },
+    { "name": "collectorExclusive", "count": 3, "pool": { "nonfoil": ["303-333"] }, "notes": "extended-art cards" }
+  ]
+}
