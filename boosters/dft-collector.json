@@ -1,0 +1,35 @@
+{
+  "set": "dft",
+  "setName": "Aetherdrift",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-aetherdrift",
+  "slots": [
+    {
+      "name": "rareOrMythic",
+      "count": 5,
+      "rarities": ["rare", "mythic"],
+      "pool": {
+        "foil": ["1-291", "312-341"],
+        "nonfoil": ["342-400"]
+      }
+    },
+    {
+      "name": "uncommon",
+      "count": 4,
+      "rarities": ["uncommon"],
+      "pool": { "foil": ["1-291", "312-341"] }
+    },
+    {
+      "name": "common",
+      "count": 4,
+      "rarities": ["common"],
+      "pool": { "foil": ["1-291"] }
+    },
+    {
+      "name": "collectorExclusive",
+      "count": 2,
+      "pool": { "nonfoil": ["342-400"] },
+      "notes": "revved up foils, rude riders, extended art, japan showcase"
+    }
+  ]
+}

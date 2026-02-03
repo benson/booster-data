@@ -1,0 +1,45 @@
+{
+  "set": "fdn",
+  "setName": "Foundations",
+  "boosterType": "play",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-foundations",
+  "slots": [
+    {
+      "name": "rare",
+      "count": 1,
+      "rarities": ["rare", "mythic"],
+      "pool": { "nonfoil": ["1-291", "312-341"] },
+      "mythicRate": 0.125
+    },
+    {
+      "name": "uncommon",
+      "count": 3,
+      "rarities": ["uncommon"],
+      "pool": { "nonfoil": ["1-291", "342-361"] }
+    },
+    {
+      "name": "common",
+      "count": 5,
+      "rarities": ["common"],
+      "pool": { "nonfoil": ["1-291"] }
+    },
+    {
+      "name": "land",
+      "count": 1,
+      "pool": { "nonfoil": ["292-311"] },
+      "notes": "full-art basic lands"
+    },
+    {
+      "name": "wildcard",
+      "count": 1,
+      "pool": { "nonfoil": ["1-291", "342-361"] },
+      "notes": "any rarity"
+    },
+    {
+      "name": "foil",
+      "count": 1,
+      "pool": { "foil": ["1-361"] },
+      "notes": "any rarity"
+    }
+  ]
+}

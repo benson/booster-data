@@ -1,0 +1,39 @@
+{
+  "set": "acr",
+  "setName": "Assassin's Creed",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-assassins-creed",
+  "slots": [
+    {
+      "name": "rareOrMythic",
+      "count": 5,
+      "rarities": ["rare", "mythic"],
+      "pool": {
+        "foil": ["1-110", "111-126"],
+        "nonfoil": ["127-171"]
+      }
+    },
+    {
+      "name": "uncommon",
+      "count": 4,
+      "rarities": ["uncommon"],
+      "pool": { "foil": ["1-110", "111-126"] }
+    },
+    {
+      "name": "common",
+      "count": 4,
+      "rarities": ["common"],
+      "pool": { "foil": ["1-110"] }
+    },
+    {
+      "name": "collectorExclusive",
+      "count": 2,
+      "pool": {
+        "nonfoil": ["127-154", "155-171"],
+        "etchedfoil": ["172-271"],
+        "texturedfoil": ["172-271"]
+      },
+      "notes": "showcase treatments, extended-art, etched foils, textured foils"
+    }
+  ]
+}

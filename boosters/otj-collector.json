@@ -1,0 +1,45 @@
+{
+  "set": "otj",
+  "setName": "Outlaws of Thunder Junction",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-outlaws-of-thunder-junction",
+  "slots": [
+    {
+      "name": "rareOrMythic",
+      "count": 5,
+      "rarities": ["rare", "mythic"],
+      "pool": {
+        "foil": ["1-286", "287-306"],
+        "nonfoil": ["307-360"]
+      }
+    },
+    {
+      "name": "uncommon",
+      "count": 4,
+      "rarities": ["uncommon"],
+      "pool": { "foil": ["1-286", "287-306"] }
+    },
+    {
+      "name": "common",
+      "count": 4,
+      "rarities": ["common"],
+      "pool": { "foil": ["1-286"] }
+    },
+    {
+      "name": "bonusSheet",
+      "count": 2,
+      "bonusSet": "otp",
+      "pool": {
+        "foil": ["1-65"],
+        "texturedfoil": ["1-30"]
+      },
+      "notes": "breaking news with premium treatments"
+    },
+    {
+      "name": "collectorExclusive",
+      "count": 2,
+      "pool": { "nonfoil": ["307-360"] },
+      "notes": "extended-art and special treatments"
+    }
+  ]
+}

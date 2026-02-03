@@ -1,0 +1,45 @@
+{
+  "set": "tla",
+  "setName": "Avatar: The Last Airbender",
+  "boosterType": "play",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-avatar-the-last-airbender",
+  "slots": [
+    {
+      "name": "rare",
+      "count": 1,
+      "rarities": ["rare", "mythic"],
+      "pool": { "nonfoil": ["1-286", "287-296"] },
+      "mythicRate": 0.125
+    },
+    {
+      "name": "uncommon",
+      "count": 3,
+      "rarities": ["uncommon"],
+      "pool": { "nonfoil": ["1-286", "287-296"] }
+    },
+    {
+      "name": "common",
+      "count": 5,
+      "rarities": ["common"],
+      "pool": { "nonfoil": ["1-286"] }
+    },
+    {
+      "name": "land",
+      "count": 1,
+      "pool": { "nonfoil": ["287-296"] },
+      "notes": "full-art lands"
+    },
+    {
+      "name": "wildcard",
+      "count": 1,
+      "pool": { "nonfoil": ["1-286"] },
+      "notes": "any rarity"
+    },
+    {
+      "name": "foil",
+      "count": 1,
+      "pool": { "foil": ["1-296"] },
+      "notes": "any rarity"
+    }
+  ]
+}

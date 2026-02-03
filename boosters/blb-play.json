@@ -1,0 +1,45 @@
+{
+  "set": "blb",
+  "setName": "Bloomburrow",
+  "boosterType": "play",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-bloomburrow",
+  "slots": [
+    {
+      "name": "rare",
+      "count": 1,
+      "rarities": ["rare", "mythic"],
+      "pool": { "nonfoil": ["1-261", "282-293", "337-342"] },
+      "mythicRate": 0.125
+    },
+    {
+      "name": "uncommon",
+      "count": 3,
+      "rarities": ["uncommon"],
+      "pool": { "nonfoil": ["1-261", "294-336"] }
+    },
+    {
+      "name": "common",
+      "count": 5,
+      "rarities": ["common"],
+      "pool": { "nonfoil": ["1-261"] }
+    },
+    {
+      "name": "land",
+      "count": 1,
+      "pool": { "nonfoil": ["262-281"] },
+      "notes": "full-art seasonal basic lands"
+    },
+    {
+      "name": "wildcard",
+      "count": 1,
+      "pool": { "nonfoil": ["1-261", "294-336"] },
+      "notes": "any rarity; can upgrade to rare/showcase"
+    },
+    {
+      "name": "foil",
+      "count": 1,
+      "pool": { "foil": ["1-342"] },
+      "notes": "any rarity"
+    }
+  ]
+}

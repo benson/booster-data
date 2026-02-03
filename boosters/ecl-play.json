@@ -1,0 +1,39 @@
+{
+  "set": "ecl",
+  "setName": "Lorwyn Eclipsed",
+  "boosterType": "play",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-lorwyn-eclipsed",
+  "slots": [
+    {
+      "name": "rare",
+      "count": 1,
+      "rarities": ["rare", "mythic"],
+      "pool": { "nonfoil": ["1-273", "274-296", "297-346"] },
+      "mythicRate": 0.125
+    },
+    {
+      "name": "uncommon",
+      "count": 3,
+      "rarities": ["uncommon"],
+      "pool": { "nonfoil": ["1-273", "274-296", "297-346"] }
+    },
+    {
+      "name": "common",
+      "count": 5,
+      "rarities": ["common"],
+      "pool": { "nonfoil": ["1-273"] }
+    },
+    {
+      "name": "wildcard",
+      "count": 1,
+      "pool": { "nonfoil": ["1-273", "274-296", "297-346"] },
+      "notes": "any rarity; full-art lands, borderless, showcase"
+    },
+    {
+      "name": "foil",
+      "count": 1,
+      "pool": { "foil": ["1-346"] },
+      "notes": "any rarity"
+    }
+  ]
+}

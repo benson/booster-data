@@ -1,0 +1,35 @@
+{
+  "set": "fin",
+  "setName": "Final Fantasy",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-final-fantasy",
+  "slots": [
+    {
+      "name": "rareOrMythic",
+      "count": 5,
+      "rarities": ["rare", "mythic"],
+      "pool": {
+        "foil": ["1-250", "251-420"],
+        "nonfoil": ["421-518"]
+      }
+    },
+    {
+      "name": "uncommon",
+      "count": 4,
+      "rarities": ["uncommon"],
+      "pool": { "foil": ["1-250", "251-314", "315-420"] }
+    },
+    {
+      "name": "common",
+      "count": 4,
+      "rarities": ["common"],
+      "pool": { "foil": ["1-250"] }
+    },
+    {
+      "name": "collectorExclusive",
+      "count": 2,
+      "pool": { "nonfoil": ["421-518"] },
+      "notes": "extended-art cards"
+    }
+  ]
+}

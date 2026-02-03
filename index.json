@@ -1,4 +1,21 @@
 {
   "version": "1.0.0",
-  "boosters": {}
+  "boosters": {
+    "mkm": ["play", "collector"],
+    "otj": ["play", "collector"],
+    "mh3": ["play", "collector"],
+    "blb": ["play", "collector"],
+    "dsk": ["play", "collector"],
+    "fdn": ["play", "collector"],
+    "dft": ["play", "collector"],
+    "tdm": ["play", "collector"],
+    "fin": ["play", "collector"],
+    "eoe": ["play", "collector"],
+    "spm": ["play", "collector"],
+    "tla": ["play", "collector"],
+    "ecl": ["play", "collector"],
+    "lci": ["play", "collector"],
+    "acr": ["play", "collector"],
+    "inr": ["play", "collector"]
+  }
 }

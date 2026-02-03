@@ -1,0 +1,35 @@
+{
+  "set": "dsk",
+  "setName": "Duskmourn: House of Horror",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-duskmourn",
+  "slots": [
+    {
+      "name": "rareOrMythic",
+      "count": 5,
+      "rarities": ["rare", "mythic"],
+      "pool": {
+        "foil": ["1-301", "322-367"],
+        "nonfoil": ["368-411"]
+      }
+    },
+    {
+      "name": "uncommon",
+      "count": 4,
+      "rarities": ["uncommon"],
+      "pool": { "foil": ["1-301", "336-367"] }
+    },
+    {
+      "name": "common",
+      "count": 4,
+      "rarities": ["common"],
+      "pool": { "foil": ["1-301"] }
+    },
+    {
+      "name": "collectorExclusive",
+      "count": 2,
+      "pool": { "nonfoil": ["368-411"] },
+      "notes": "extended-art, special frames, japan-exclusive"
+    }
+  ]
+}

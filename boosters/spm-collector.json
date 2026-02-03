@@ -1,0 +1,35 @@
+{
+  "set": "spm",
+  "setName": "Marvel's Spider-Man",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-marvels-spider-man",
+  "slots": [
+    {
+      "name": "rareOrMythic",
+      "count": 5,
+      "rarities": ["rare", "mythic"],
+      "pool": {
+        "foil": ["1-188", "189-198"],
+        "nonfoil": ["199-286"]
+      }
+    },
+    {
+      "name": "uncommon",
+      "count": 4,
+      "rarities": ["uncommon"],
+      "pool": { "foil": ["1-188", "189-198"] }
+    },
+    {
+      "name": "common",
+      "count": 4,
+      "rarities": ["common"],
+      "pool": { "foil": ["1-188"] }
+    },
+    {
+      "name": "collectorExclusive",
+      "count": 2,
+      "pool": { "nonfoil": ["199-286"] },
+      "notes": "scene cards, web-slinger, panel cards, extended art"
+    }
+  ]
+}

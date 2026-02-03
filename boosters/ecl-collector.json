@@ -1,0 +1,38 @@
+{
+  "set": "ecl",
+  "setName": "Lorwyn Eclipsed",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-lorwyn-eclipsed",
+  "slots": [
+    {
+      "name": "rareOrMythic",
+      "count": 5,
+      "rarities": ["rare", "mythic"],
+      "pool": {
+        "foil": ["1-273", "274-346"],
+        "nonfoil": ["347-400"]
+      }
+    },
+    {
+      "name": "uncommon",
+      "count": 4,
+      "rarities": ["uncommon"],
+      "pool": { "foil": ["1-273", "274-296", "297-346"] }
+    },
+    {
+      "name": "common",
+      "count": 4,
+      "rarities": ["common"],
+      "pool": { "foil": ["1-273"] }
+    },
+    {
+      "name": "collectorExclusive",
+      "count": 2,
+      "pool": {
+        "nonfoil": ["347-400"],
+        "fracturefoil": ["347-400"]
+      },
+      "notes": "reversible shocklands, japanese showcase, fracture foils"
+    }
+  ]
+}

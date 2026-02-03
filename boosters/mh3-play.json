@@ -1,0 +1,45 @@
+{
+  "set": "mh3",
+  "setName": "Modern Horizons 3",
+  "boosterType": "play",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-modern-horizons-3",
+  "slots": [
+    {
+      "name": "rare",
+      "count": 1,
+      "rarities": ["rare", "mythic"],
+      "pool": { "nonfoil": ["1-319", "340-383"] },
+      "mythicRate": 0.125
+    },
+    {
+      "name": "uncommon",
+      "count": 3,
+      "rarities": ["uncommon"],
+      "pool": { "nonfoil": ["1-319", "340-383"] }
+    },
+    {
+      "name": "common",
+      "count": 5,
+      "rarities": ["common"],
+      "pool": { "nonfoil": ["1-319"] }
+    },
+    {
+      "name": "land",
+      "count": 1,
+      "pool": { "nonfoil": ["320-339"] },
+      "notes": "full-art basic lands"
+    },
+    {
+      "name": "wildcard",
+      "count": 1,
+      "pool": { "nonfoil": ["1-319", "340-383"] },
+      "notes": "any rarity"
+    },
+    {
+      "name": "foil",
+      "count": 1,
+      "pool": { "foil": ["1-383"] },
+      "notes": "any rarity"
+    }
+  ]
+}

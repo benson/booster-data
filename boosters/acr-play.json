@@ -1,0 +1,39 @@
+{
+  "set": "acr",
+  "setName": "Assassin's Creed",
+  "boosterType": "play",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-assassins-creed",
+  "slots": [
+    {
+      "name": "rare",
+      "count": 1,
+      "rarities": ["rare", "mythic"],
+      "pool": { "nonfoil": ["1-110", "111-126"] },
+      "mythicRate": 0.125
+    },
+    {
+      "name": "uncommon",
+      "count": 3,
+      "rarities": ["uncommon"],
+      "pool": { "nonfoil": ["1-110", "111-126"] }
+    },
+    {
+      "name": "common",
+      "count": 5,
+      "rarities": ["common"],
+      "pool": { "nonfoil": ["1-110"] }
+    },
+    {
+      "name": "wildcard",
+      "count": 1,
+      "pool": { "nonfoil": ["1-110", "111-126"] },
+      "notes": "any rarity; borderless scene cards and borderless treatments"
+    },
+    {
+      "name": "foil",
+      "count": 1,
+      "pool": { "foil": ["1-126"] },
+      "notes": "any rarity"
+    }
+  ]
+}

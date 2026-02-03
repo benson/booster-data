@@ -1,0 +1,35 @@
+{
+  "set": "mkm",
+  "setName": "Murders at Karlov Manor",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-murders-at-karlov-manor",
+  "slots": [
+    {
+      "name": "rareOrMythic",
+      "count": 5,
+      "rarities": ["rare", "mythic"],
+      "pool": {
+        "foil": ["1-286", "307-376"],
+        "nonfoil": ["377-436"]
+      }
+    },
+    {
+      "name": "uncommon",
+      "count": 4,
+      "rarities": ["uncommon"],
+      "pool": { "foil": ["1-286", "347-376"] }
+    },
+    {
+      "name": "common",
+      "count": 4,
+      "rarities": ["common"],
+      "pool": { "foil": ["1-286"] }
+    },
+    {
+      "name": "collectorExclusive",
+      "count": 2,
+      "pool": { "nonfoil": ["377-436"] },
+      "notes": "extended-art and special treatments"
+    }
+  ]
+}

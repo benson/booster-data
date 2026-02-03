@@ -1,0 +1,35 @@
+{
+  "set": "tla",
+  "setName": "Avatar: The Last Airbender",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-avatar-the-last-airbender",
+  "slots": [
+    {
+      "name": "rareOrMythic",
+      "count": 5,
+      "rarities": ["rare", "mythic"],
+      "pool": {
+        "foil": ["1-286", "287-296"],
+        "nonfoil": ["297-400"]
+      }
+    },
+    {
+      "name": "uncommon",
+      "count": 4,
+      "rarities": ["uncommon"],
+      "pool": { "foil": ["1-286", "287-296"] }
+    },
+    {
+      "name": "common",
+      "count": 4,
+      "rarities": ["common"],
+      "pool": { "foil": ["1-286"] }
+    },
+    {
+      "name": "collectorExclusive",
+      "count": 2,
+      "pool": { "nonfoil": ["297-400"] },
+      "notes": "scene cards, borderless, elemental frame, neon ink"
+    }
+  ]
+}

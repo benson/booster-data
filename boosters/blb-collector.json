@@ -1,0 +1,39 @@
+{
+  "set": "blb",
+  "setName": "Bloomburrow",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-bloomburrow",
+  "slots": [
+    {
+      "name": "rareOrMythic",
+      "count": 5,
+      "rarities": ["rare", "mythic"],
+      "pool": {
+        "foil": ["1-261", "282-342"],
+        "nonfoil": ["343-396"]
+      },
+      "notes": "mix of foil base/showcase and nonfoil collector-exclusive"
+    },
+    {
+      "name": "uncommon",
+      "count": 4,
+      "rarities": ["uncommon"],
+      "pool": { "foil": ["1-261", "294-336"] }
+    },
+    {
+      "name": "common",
+      "count": 4,
+      "rarities": ["common"],
+      "pool": { "foil": ["1-261"] }
+    },
+    {
+      "name": "collectorExclusive",
+      "count": 2,
+      "pool": {
+        "nonfoil": ["343-362", "363-375"],
+        "raisedfoil": ["376-396"]
+      },
+      "notes": "imagine: courageous critters, extended-art, japanese raised foil anime"
+    }
+  ]
+}

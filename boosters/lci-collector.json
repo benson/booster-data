@@ -1,0 +1,35 @@
+{
+  "set": "lci",
+  "setName": "The Lost Caverns of Ixalan",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-the-lost-caverns-of-ixalan",
+  "slots": [
+    {
+      "name": "rareOrMythic",
+      "count": 5,
+      "rarities": ["rare", "mythic"],
+      "pool": {
+        "foil": ["1-291", "312-351"],
+        "nonfoil": ["352-411"]
+      }
+    },
+    {
+      "name": "uncommon",
+      "count": 4,
+      "rarities": ["uncommon"],
+      "pool": { "foil": ["1-291", "312-351"] }
+    },
+    {
+      "name": "common",
+      "count": 4,
+      "rarities": ["common"],
+      "pool": { "foil": ["1-291"] }
+    },
+    {
+      "name": "collectorExclusive",
+      "count": 2,
+      "pool": { "nonfoil": ["352-411"] },
+      "notes": "extended-art and special treatments"
+    }
+  ]
+}

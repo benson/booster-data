@@ -1,0 +1,35 @@
+{
+  "set": "eoe",
+  "setName": "Edge of Eternities",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-edge-of-eternities",
+  "slots": [
+    {
+      "name": "rareOrMythic",
+      "count": 5,
+      "rarities": ["rare", "mythic"],
+      "pool": {
+        "foil": ["1-250", "277-396"],
+        "nonfoil": ["397-450"]
+      }
+    },
+    {
+      "name": "uncommon",
+      "count": 4,
+      "rarities": ["uncommon"],
+      "pool": { "foil": ["1-250", "277-316", "317-396"] }
+    },
+    {
+      "name": "common",
+      "count": 4,
+      "rarities": ["common"],
+      "pool": { "foil": ["1-250"] }
+    },
+    {
+      "name": "collectorExclusive",
+      "count": 2,
+      "pool": { "nonfoil": ["397-450"] },
+      "notes": "extended-art and special treatments"
+    }
+  ]
+}

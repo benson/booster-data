@@ -1,0 +1,35 @@
+{
+  "set": "inr",
+  "setName": "Innistrad Remastered",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-innistrad-remastered",
+  "slots": [
+    {
+      "name": "rareOrMythic",
+      "count": 5,
+      "rarities": ["rare", "mythic"],
+      "pool": {
+        "foil": ["1-287", "288-297"],
+        "nonfoil": ["298-350"]
+      }
+    },
+    {
+      "name": "uncommon",
+      "count": 4,
+      "rarities": ["uncommon"],
+      "pool": { "foil": ["1-287", "288-297"] }
+    },
+    {
+      "name": "common",
+      "count": 4,
+      "rarities": ["common"],
+      "pool": { "foil": ["1-287"] }
+    },
+    {
+      "name": "collectorExclusive",
+      "count": 2,
+      "pool": { "nonfoil": ["298-350"] },
+      "notes": "showcase variants and premium treatments"
+    }
+  ]
+}
