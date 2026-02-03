@@ -2,9 +2,11 @@
   "set": "4ed",
   "setName": "Fourth Edition",
   "boosterType": "draft",
+  "source": "https://mtg.fandom.com/wiki/Fourth_Edition",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare"], "pool": { "nonfoil": ["1-999"] } },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-999"] } },
-    { "name": "common", "count": 11, "rarities": ["common"], "pool": { "nonfoil": ["1-999"] } }
+    { "name": "rare", "count": 1, "rarities": ["rare"], "pool": { "nonfoil": ["1-363"] } },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-363"] } },
+    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-363"] } },
+    { "name": "land", "count": 1, "pool": { "nonfoil": ["364-378"] } }
   ]
 }

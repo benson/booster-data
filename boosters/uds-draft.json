@@ -2,9 +2,11 @@
   "set": "uds",
   "setName": "Urza's Destiny",
   "boosterType": "draft",
+  "source": "https://mtg.fandom.com/wiki/Urza%27s_Destiny",
+  "notes": "Small set with no basic lands. Urza's Destiny boosters included Urza's Saga basic lands.",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare"], "pool": { "nonfoil": ["1-999"] } },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-999"] } },
-    { "name": "common", "count": 11, "rarities": ["common"], "pool": { "nonfoil": ["1-999"] } }
+    { "name": "rare", "count": 1, "rarities": ["rare"], "pool": { "nonfoil": ["1-143"] } },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-143"] } },
+    { "name": "common", "count": 11, "rarities": ["common"], "pool": { "nonfoil": ["1-143"] } }
   ]
 }

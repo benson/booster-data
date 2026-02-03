@@ -1,0 +1,593 @@
+{
+  "description": "Test cases for validating booster card distribution. Each test case includes cards that should and should not appear in specific booster types, with source citations.",
+  "testSets": [
+    {
+      "set": "dsk",
+      "setName": "Duskmourn: House of Horror",
+      "source": "https://magic.wizards.com/en/news/feature/collecting-duskmourn",
+      "testCases": [
+        {
+          "card": "Central Elevator // Promising Stairs",
+          "cn": "44",
+          "inBoosters": ["play", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set cards 1-271 appear in Play Boosters"
+        },
+        {
+          "card": "Dissection Tools (Extended Art)",
+          "cn": "385",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["play"],
+          "sourceQuote": "Extended-art cards are exclusive to Collector Boosters (368-385)"
+        },
+        {
+          "card": "Enduring Curiosity (Extended Art)",
+          "cn": "371",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["play"],
+          "sourceQuote": "Extended-art cards are exclusive to Collector Boosters"
+        }
+      ]
+    },
+    {
+      "set": "blb",
+      "setName": "Bloomburrow",
+      "source": "https://magic.wizards.com/en/news/feature/collecting-bloomburrow",
+      "testCases": [
+        {
+          "card": "Helga, Skittish Seer",
+          "cn": "213",
+          "inBoosters": ["play", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set contains 261 cards total in Play Boosters"
+        },
+        {
+          "card": "Byway Barterer (Extended Art)",
+          "cn": "360",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["play"],
+          "sourceQuote": "13 rare cards...exclusively found in Collector Boosters (extended-art 356-368)"
+        },
+        {
+          "card": "Dreamdew Entrancer (Extended Art)",
+          "cn": "365",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["play"],
+          "sourceQuote": "Extended-art cards are exclusive to Collector Boosters"
+        }
+      ]
+    },
+    {
+      "set": "mh3",
+      "setName": "Modern Horizons 3",
+      "source": "https://magic.wizards.com/en/news/feature/collecting-modern-horizons-3",
+      "testCases": [
+        {
+          "card": "Emrakul, the World Anew",
+          "cn": "6",
+          "inBoosters": ["play", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set cards appear in Play Boosters and Collector Boosters"
+        },
+        {
+          "card": "Aether Revolt (Extended Art)",
+          "cn": "456",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["play"],
+          "sourceQuote": "Extended-art cards exclusive to Collector Boosters"
+        },
+        {
+          "card": "Argent Dais (Extended Art)",
+          "cn": "447",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["play"],
+          "sourceQuote": "Extended-art cards exclusive to Collector Boosters"
+        }
+      ]
+    },
+    {
+      "set": "otj",
+      "setName": "Outlaws of Thunder Junction",
+      "source": "https://magic.wizards.com/en/news/feature/collecting-outlaws-of-thunder-junction",
+      "testCases": [
+        {
+          "card": "Oko, the Ringleader",
+          "cn": "223",
+          "inBoosters": ["play", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set cards appear in Play Boosters"
+        },
+        {
+          "card": "Akul the Unrepentant (Extended Art)",
+          "cn": "346",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["play"],
+          "sourceQuote": "Extended art is also a treatment unique to Collector Boosters. There are 61 extended-art cards in OTJ"
+        },
+        {
+          "card": "Another Round (Extended Art)",
+          "cn": "307",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["play"],
+          "sourceQuote": "Extended art is also a treatment unique to Collector Boosters"
+        }
+      ]
+    },
+    {
+      "set": "mkm",
+      "setName": "Murders at Karlov Manor",
+      "source": "https://magic.wizards.com/en/news/feature/collecting-murders-at-karlov-manor",
+      "testCases": [
+        {
+          "card": "Aurelia, the Law Above",
+          "cn": "203",
+          "inBoosters": ["play", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set cards appear in Play Boosters"
+        },
+        {
+          "card": "Archdruid's Charm (Extended Art)",
+          "cn": "408",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["play"],
+          "sourceQuote": "Extended-art treatments available in Collector Boosters"
+        },
+        {
+          "card": "Assassin's Trophy (Extended Art)",
+          "cn": "412",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["play"],
+          "sourceQuote": "Extended-art treatments available in Collector Boosters"
+        }
+      ]
+    },
+    {
+      "set": "lci",
+      "setName": "The Lost Caverns of Ixalan",
+      "source": "https://magic.wizards.com/en/news/feature/collecting-the-lost-caverns-of-ixalan",
+      "testCases": [
+        {
+          "card": "Quintorius Kand",
+          "cn": "237",
+          "inBoosters": ["play", "draft", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set cards appear in Draft, Set, and Collector Boosters"
+        },
+        {
+          "card": "Extended-art rare",
+          "cn": "390",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["play", "draft"],
+          "sourceQuote": "Extended-art cards exclusive to Collector Boosters"
+        }
+      ]
+    },
+    {
+      "set": "woe",
+      "setName": "Wilds of Eldraine",
+      "source": "https://magic.wizards.com/en/news/feature/collecting-wilds-of-eldraine",
+      "testCases": [
+        {
+          "card": "Talion, the Kindly Lord",
+          "cn": "215",
+          "inBoosters": ["draft", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set cards appear in Draft Boosters, Set Boosters, and Collector Boosters"
+        },
+        {
+          "card": "Extended-art card",
+          "cn": "350",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["draft"],
+          "sourceQuote": "Extended-art cards exclusive to Collector Boosters"
+        }
+      ]
+    },
+    {
+      "set": "ltr",
+      "setName": "The Lord of the Rings: Tales of Middle-earth",
+      "source": "https://magic.wizards.com/en/news/feature/collecting-the-lord-of-the-rings-tales-of-middle-earth",
+      "testCases": [
+        {
+          "card": "The One Ring",
+          "cn": "246",
+          "inBoosters": ["draft", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set cards appear in Set, Draft, and Collector Boosters"
+        },
+        {
+          "card": "Extended-art card",
+          "cn": "450",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["draft"],
+          "sourceQuote": "Extended-art cards from Commander/Jumpstart/Starter Kits exclusive to Collector Boosters"
+        }
+      ]
+    },
+    {
+      "set": "mom",
+      "setName": "March of the Machine",
+      "source": "https://magic.wizards.com/en/news/feature/collecting-march-of-the-machine",
+      "testCases": [
+        {
+          "card": "Elesh Norn // The Argent Etchings",
+          "cn": "6",
+          "inBoosters": ["draft", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set cards appear in Draft and Collector Boosters"
+        },
+        {
+          "card": "Ancient Imperiosaur (Extended Art)",
+          "cn": "368",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["draft"],
+          "sourceQuote": "Extended-art cards exclusive to Collector Boosters"
+        }
+      ]
+    },
+    {
+      "set": "one",
+      "setName": "Phyrexia: All Will Be One",
+      "source": "https://magic.wizards.com/en/news/feature/collecting-phyrexia-all-will-be-one",
+      "testCases": [
+        {
+          "card": "Elesh Norn, Mother of Machines",
+          "cn": "10",
+          "inBoosters": ["draft", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set cards appear in Set, Draft, and Collector Boosters"
+        },
+        {
+          "card": "Argentum Masticore (Extended Art)",
+          "cn": "393",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["draft"],
+          "sourceQuote": "Extended-art treatment is only found in Collector Boosters (29 rares total)"
+        },
+        {
+          "card": "Black Sun's Twilight (Extended Art)",
+          "cn": "383",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["draft"],
+          "sourceQuote": "Extended-art treatment is only found in Collector Boosters"
+        }
+      ]
+    },
+    {
+      "set": "bro",
+      "setName": "The Brothers' War",
+      "source": "https://magic.wizards.com/en/news/feature/whats-inside-the-brothers-war-boosters",
+      "testCases": [
+        {
+          "card": "Urza, Lord Protector",
+          "cn": "225",
+          "inBoosters": ["draft", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set contains 101 commons, 80 uncommons, 63 rares, and 23 mythic rares"
+        },
+        {
+          "card": "Arcane Proxy (Extended Art)",
+          "cn": "319",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["draft"],
+          "sourceQuote": "You can find 53 rares and 19 mythic rares with extended art in The Brothers' War Collector Boosters"
+        },
+        {
+          "card": "Ashnod, Flesh Mechanist (Extended Art)",
+          "cn": "323",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["draft"],
+          "sourceQuote": "Extended-art cards in Collector Boosters"
+        }
+      ]
+    },
+    {
+      "set": "dmu",
+      "setName": "Dominaria United",
+      "source": "https://magic.wizards.com/en/news/feature/collecting-dominaria-united-2022-08-18",
+      "testCases": [
+        {
+          "card": "Sheoldred, the Apocalypse",
+          "cn": "107",
+          "inBoosters": ["draft", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set cards appear in Draft, Set, and Collector Boosters"
+        },
+        {
+          "card": "Academy Loremaster (Extended Art)",
+          "cn": "391",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["draft"],
+          "sourceQuote": "Extended-art treatments exclusive to Collector Boosters"
+        },
+        {
+          "card": "Aether Channeler (Extended Art)",
+          "cn": "392",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["draft"],
+          "sourceQuote": "Extended-art treatments exclusive to Collector Boosters"
+        }
+      ]
+    },
+    {
+      "set": "snc",
+      "setName": "Streets of New Capenna",
+      "source": "https://magic.wizards.com/en/news/feature/collecting-streets-of-new-capenna-2022-04-07",
+      "testCases": [
+        {
+          "card": "Raffine, Scheming Seer",
+          "cn": "213",
+          "inBoosters": ["draft", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set cards appear in Set, Draft, and Collector Boosters"
+        },
+        {
+          "card": "Angel of Suffering (Extended Art)",
+          "cn": "416",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["draft"],
+          "sourceQuote": "Extended-art cards can be found in both foil and in non-foil in Collector Boosters exclusively"
+        }
+      ]
+    },
+    {
+      "set": "neo",
+      "setName": "Kamigawa: Neon Dynasty",
+      "source": "https://magic.wizards.com/en/news/feature/collecting-kamigawa-neon-dynasty-2022-01-27",
+      "testCases": [
+        {
+          "card": "The Wandering Emperor",
+          "cn": "42",
+          "inBoosters": ["draft", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set cards appear in Set, Draft, and Collector Boosters"
+        },
+        {
+          "card": "Ao, the Dawn Sky (Extended Art)",
+          "cn": "433",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["draft"],
+          "sourceQuote": "Extended art is a Collector Booster exclusive"
+        },
+        {
+          "card": "Atsushi, the Blazing Sky (Extended Art)",
+          "cn": "463",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["draft"],
+          "sourceQuote": "Extended art is a Collector Booster exclusive"
+        }
+      ]
+    },
+    {
+      "set": "vow",
+      "setName": "Innistrad: Crimson Vow",
+      "source": "https://magic.wizards.com/en/news/feature/collecting-innistrad-crimson-vow",
+      "testCases": [
+        {
+          "card": "Sorin the Mirthless",
+          "cn": "131",
+          "inBoosters": ["draft", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set cards appear in Draft and Collector Boosters"
+        },
+        {
+          "card": "Alchemist's Gambit (Extended Art)",
+          "cn": "374",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["draft"],
+          "sourceQuote": "Extended-art cards exclusive to Collector Boosters"
+        }
+      ]
+    },
+    {
+      "set": "mid",
+      "setName": "Innistrad: Midnight Hunt",
+      "source": "https://magic.wizards.com/en/news/feature/collecting-innistrad-midnight-hunt",
+      "testCases": [
+        {
+          "card": "Wrenn and Seven",
+          "cn": "208",
+          "inBoosters": ["draft", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set cards appear in Draft and Collector Boosters"
+        },
+        {
+          "card": "Angelfire Ignition (Extended Art)",
+          "cn": "367",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["draft"],
+          "sourceQuote": "Extended-art cards exclusive to Collector Boosters"
+        }
+      ]
+    },
+    {
+      "set": "afr",
+      "setName": "Adventures in the Forgotten Realms",
+      "source": "https://magic.wizards.com/en/news/feature/collecting-adventures-in-the-forgotten-realms",
+      "testCases": [
+        {
+          "card": "Tiamat",
+          "cn": "235",
+          "inBoosters": ["draft", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set cards appear in Draft and Collector Boosters"
+        },
+        {
+          "card": "Acererak the Archlich (Extended Art)",
+          "cn": "372",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["draft"],
+          "sourceQuote": "Extended-art cards exclusive to Collector Boosters"
+        }
+      ]
+    },
+    {
+      "set": "stx",
+      "setName": "Strixhaven: School of Mages",
+      "source": "https://magic.wizards.com/en/news/feature/collecting-strixhaven",
+      "testCases": [
+        {
+          "card": "Beledros Witherbloom",
+          "cn": "163",
+          "inBoosters": ["draft", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set cards appear in Draft, Set, and Collector Boosters"
+        },
+        {
+          "card": "Academic Probation (Extended Art)",
+          "cn": "287",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["draft"],
+          "sourceQuote": "Extended-art cards exclusive to Collector Boosters"
+        }
+      ]
+    },
+    {
+      "set": "khm",
+      "setName": "Kaldheim",
+      "source": "https://magic.wizards.com/en/news/feature/collecting-kaldheim",
+      "testCases": [
+        {
+          "card": "Vorinclex, Monstrous Raider",
+          "cn": "199",
+          "inBoosters": ["draft", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set cards appear in Draft and Collector Boosters"
+        },
+        {
+          "card": "Ascendant Spirit (Extended Art)",
+          "cn": "341",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["draft"],
+          "sourceQuote": "Extended-art cards exclusive to Collector Boosters"
+        }
+      ]
+    },
+    {
+      "set": "znr",
+      "setName": "Zendikar Rising",
+      "source": "https://magic.wizards.com/en/news/feature/collecting-zendikar-rising",
+      "testCases": [
+        {
+          "card": "Jace, Mirror Mage",
+          "cn": "63",
+          "inBoosters": ["draft", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set cards appear in Draft and Collector Boosters"
+        },
+        {
+          "card": "Agadeem's Awakening (Extended Art)",
+          "cn": "336",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["draft"],
+          "sourceQuote": "Extended-art cards exclusive to Collector Boosters"
+        }
+      ]
+    },
+    {
+      "set": "m21",
+      "setName": "Core Set 2021",
+      "source": "https://magic.wizards.com/en/news/feature/core-set-2021-product-overview",
+      "testCases": [
+        {
+          "card": "Ugin, the Spirit Dragon",
+          "cn": "1",
+          "inBoosters": ["draft", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set cards appear in Draft and Collector Boosters"
+        },
+        {
+          "card": "Baneslayer Angel (Extended Art)",
+          "cn": "340",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["draft"],
+          "sourceQuote": "Extended-art cards exclusive to Collector Boosters"
+        }
+      ]
+    },
+    {
+      "set": "iko",
+      "setName": "Ikoria: Lair of Behemoths",
+      "source": "https://magic.wizards.com/en/news/feature/collecting-ikoria",
+      "testCases": [
+        {
+          "card": "Lukka, Coppercoat Outcast",
+          "cn": "125",
+          "inBoosters": ["draft", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set cards appear in Draft and Collector Boosters"
+        },
+        {
+          "card": "Extended-art card",
+          "cn": "320",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["draft"],
+          "sourceQuote": "Extended-art cards exclusive to Collector Boosters"
+        }
+      ]
+    },
+    {
+      "set": "thb",
+      "setName": "Theros Beyond Death",
+      "source": "https://magic.wizards.com/en/news/feature/collecting-theros-beyond-death",
+      "testCases": [
+        {
+          "card": "Kroxa, Titan of Death's Hunger",
+          "cn": "221",
+          "inBoosters": ["draft", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set cards appear in Draft and Collector Boosters"
+        },
+        {
+          "card": "Extended-art card",
+          "cn": "290",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["draft"],
+          "sourceQuote": "Extended-art cards exclusive to Collector Boosters"
+        }
+      ]
+    },
+    {
+      "set": "eld",
+      "setName": "Throne of Eldraine",
+      "source": "https://magic.wizards.com/en/news/feature/collecting-throne-of-eldraine",
+      "testCases": [
+        {
+          "card": "Oko, Thief of Crowns",
+          "cn": "197",
+          "inBoosters": ["draft", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set cards appear in Draft and Collector Boosters"
+        },
+        {
+          "card": "Extended-art card",
+          "cn": "330",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["draft"],
+          "sourceQuote": "Extended-art cards exclusive to Collector Boosters"
+        }
+      ]
+    },
+    {
+      "set": "fdn",
+      "setName": "Foundations",
+      "source": "https://magic.wizards.com/en/news/feature/collecting-foundations",
+      "testCases": [
+        {
+          "card": "Main set rare",
+          "cn": "100",
+          "inBoosters": ["play", "collector"],
+          "notInBoosters": [],
+          "sourceQuote": "Main set cards appear in Play Boosters and Collector Boosters"
+        },
+        {
+          "card": "Extended-art card",
+          "cn": "400",
+          "inBoosters": ["collector"],
+          "notInBoosters": ["play"],
+          "sourceQuote": "Extended-art cards exclusive to Collector Boosters"
+        }
+      ]
+    }
+  ]
+}

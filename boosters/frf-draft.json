@@ -2,10 +2,11 @@
   "set": "frf",
   "setName": "Fate Reforged",
   "boosterType": "draft",
+  "source": "https://mtg.fandom.com/wiki/Fate_Reforged",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-999"] }, "mythicRate": 0.125 },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-999"] } },
-    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-999"] } },
-    { "name": "land", "count": 1, "pool": { "nonfoil": ["1-999"] } }
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-175"] }, "mythicRate": 0.125 },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-175"] } },
+    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-175"] } },
+    { "name": "land", "count": 1, "pool": { "nonfoil": ["176-185"] } }
   ]
 }

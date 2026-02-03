@@ -2,10 +2,11 @@
   "set": "emn",
   "setName": "Eldritch Moon",
   "boosterType": "draft",
+  "source": "https://mtg.fandom.com/wiki/Eldritch_Moon",
+  "notes": "Small set with no basic lands. Eldritch Moon boosters included Shadows over Innistrad basic lands.",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-999"] }, "mythicRate": 0.125 },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-999"] } },
-    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-999"] } },
-    { "name": "land", "count": 1, "pool": { "nonfoil": ["1-999"] } }
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-205"] }, "mythicRate": 0.125 },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-205"] } },
+    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-205"] } }
   ]
 }

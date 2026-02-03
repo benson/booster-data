@@ -2,8 +2,9 @@
   "set": "mb2",
   "setName": "Mystery Booster 2",
   "boosterType": "draft",
+  "source": "https://mtg.fandom.com/wiki/Mystery_Booster_2",
   "slots": [
-    { "name": "slot", "count": 14, "pool": { "nonfoil": ["1-999"] }, "notes": "curated selection from magic history" },
-    { "name": "playtest", "count": 1, "pool": { "nonfoil": ["1-999"] }, "notes": "r&d playtest card or special insert" }
+    { "name": "slot", "count": 14, "pool": { "nonfoil": ["1-385"] }, "notes": "curated selection from magic history" },
+    { "name": "playtest", "count": 1, "pool": { "nonfoil": ["1-385"] }, "notes": "r&d playtest card or special insert" }
   ]
 }
