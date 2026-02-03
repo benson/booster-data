@@ -2,9 +2,11 @@
   "set": "leg",
   "setName": "Legends",
   "boosterType": "draft",
+  "source": "https://mtg.fandom.com/wiki/Legends",
+  "notes": "Large early expansion with no basic lands.",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare"], "pool": { "nonfoil": ["1-999"] } },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-999"] } },
-    { "name": "common", "count": 11, "rarities": ["common"], "pool": { "nonfoil": ["1-999"] } }
+    { "name": "rare", "count": 1, "rarities": ["rare"], "pool": { "nonfoil": ["1-310"] } },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-310"] } },
+    { "name": "common", "count": 11, "rarities": ["common"], "pool": { "nonfoil": ["1-310"] } }
   ]
 }

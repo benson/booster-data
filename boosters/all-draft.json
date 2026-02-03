@@ -2,9 +2,11 @@
   "set": "all",
   "setName": "Alliances",
   "boosterType": "draft",
+  "source": "https://mtg.fandom.com/wiki/Alliances",
+  "notes": "Small set with no basic lands. Alliances boosters included Ice Age basic lands.",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare"], "pool": { "nonfoil": ["1-999"] } },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-999"] } },
-    { "name": "common", "count": 11, "rarities": ["common"], "pool": { "nonfoil": ["1-999"] } }
+    { "name": "rare", "count": 1, "rarities": ["rare"], "pool": { "nonfoil": ["1-199"] } },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-199"] } },
+    { "name": "common", "count": 11, "rarities": ["common"], "pool": { "nonfoil": ["1-199"] } }
   ]
 }

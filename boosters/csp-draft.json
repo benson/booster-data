@@ -2,9 +2,12 @@
   "set": "csp",
   "setName": "Coldsnap",
   "boosterType": "draft",
+  "source": "https://mtg.fandom.com/wiki/Coldsnap",
+  "notes": "Standalone set designed to complete Ice Age block. Contains snow-covered basic lands.",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare"], "pool": { "nonfoil": ["1-999"] } },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-999"] } },
-    { "name": "common", "count": 11, "rarities": ["common"], "pool": { "nonfoil": ["1-999"] } }
+    { "name": "rare", "count": 1, "rarities": ["rare"], "pool": { "nonfoil": ["1-150"] } },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-150"] } },
+    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-150"] } },
+    { "name": "land", "count": 1, "pool": { "nonfoil": ["151-155"] } }
   ]
 }

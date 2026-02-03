@@ -2,9 +2,11 @@
   "set": "fem",
   "setName": "Fallen Empires",
   "boosterType": "draft",
+  "source": "https://mtg.fandom.com/wiki/Fallen_Empires",
+  "notes": "Early expansion with no basic lands. Historical boosters had 8 cards. Set has multiple art variants for some cards.",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare"], "pool": { "nonfoil": ["1-999"] } },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-999"] } },
-    { "name": "common", "count": 11, "rarities": ["common"], "pool": { "nonfoil": ["1-999"] } }
+    { "name": "rare", "count": 1, "rarities": ["rare"], "pool": { "nonfoil": ["1-187"] } },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-187"] } },
+    { "name": "common", "count": 11, "rarities": ["common"], "pool": { "nonfoil": ["1-187"] } }
   ]
 }

@@ -2,10 +2,11 @@
   "set": "m11",
   "setName": "Magic 2011",
   "boosterType": "draft",
+  "source": "https://mtg.fandom.com/wiki/Magic_2011",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-999"] }, "mythicRate": 0.125 },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-999"] } },
-    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-999"] } },
-    { "name": "land", "count": 1, "pool": { "nonfoil": ["1-999"] } }
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-229"] }, "mythicRate": 0.125 },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-229"] } },
+    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-229"] } },
+    { "name": "land", "count": 1, "pool": { "nonfoil": ["230-249"] } }
   ]
 }

@@ -2,9 +2,11 @@
   "set": "tsp",
   "setName": "Time Spiral",
   "boosterType": "draft",
+  "source": "https://mtg.fandom.com/wiki/Time_Spiral_(set)",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare"], "pool": { "nonfoil": ["1-999"] } },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-999"] } },
-    { "name": "common", "count": 11, "rarities": ["common"], "pool": { "nonfoil": ["1-999"] } }
+    { "name": "rare", "count": 1, "rarities": ["rare"], "pool": { "nonfoil": ["1-281"] } },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-281"] } },
+    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-281"] } },
+    { "name": "land", "count": 1, "pool": { "nonfoil": ["282-301"] } }
   ]
 }

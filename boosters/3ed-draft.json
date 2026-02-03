@@ -2,9 +2,11 @@
   "set": "3ed",
   "setName": "Revised Edition",
   "boosterType": "draft",
+  "source": "https://mtg.fandom.com/wiki/Revised_Edition",
+  "notes": "Basic lands are sorted alphabetically with other cards (not at the end). No dedicated land slot - basic lands appear in common slot.",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare"], "pool": { "nonfoil": ["1-999"] } },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-999"] } },
-    { "name": "common", "count": 11, "rarities": ["common"], "pool": { "nonfoil": ["1-999"] } }
+    { "name": "rare", "count": 1, "rarities": ["rare"], "pool": { "nonfoil": ["1-306"] } },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-306"] } },
+    { "name": "common", "count": 11, "rarities": ["common"], "pool": { "nonfoil": ["1-306"] } }
   ]
 }

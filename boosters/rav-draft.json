@@ -2,9 +2,11 @@
   "set": "rav",
   "setName": "Ravnica: City of Guilds",
   "boosterType": "draft",
+  "source": "https://mtg.fandom.com/wiki/Ravnica:_City_of_Guilds",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare"], "pool": { "nonfoil": ["1-999"] } },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-999"] } },
-    { "name": "common", "count": 11, "rarities": ["common"], "pool": { "nonfoil": ["1-999"] } }
+    { "name": "rare", "count": 1, "rarities": ["rare"], "pool": { "nonfoil": ["1-286"] } },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-286"] } },
+    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-286"] } },
+    { "name": "land", "count": 1, "pool": { "nonfoil": ["287-306"] } }
   ]
 }
