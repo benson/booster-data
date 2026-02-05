@@ -7,6 +7,7 @@
     { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-307"] }, "mythicRate": 0.125, "notes": "main set + showcase adventures (277-296) + borderless (297-307)" },
     { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-307"] } },
     { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-307"] } },
-    { "name": "land", "count": 1, "pool": { "nonfoil": ["262-276"] }, "notes": "full-art basics (262-266), regular basics (267-276)" }
+    { "name": "land", "count": 1, "pool": { "nonfoil": ["262-276"] }, "notes": "full-art basics (262-266), regular basics (267-276)" },
+    { "name": "enchantingTales", "count": 1, "bonusSet": "wot", "pool": { "nonfoil": ["1-63"] }, "notes": "Enchanting Tales bonus sheet (18 U, 30 R, 15 M)" }
   ]
 }

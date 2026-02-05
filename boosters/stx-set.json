@@ -9,6 +9,7 @@
     { "name": "common", "count": 7, "rarities": ["common"], "pool": { "nonfoil": ["1-275"] } },
     { "name": "land", "count": 1, "pool": { "nonfoil": ["366-375"] }, "notes": "basic lands" },
     { "name": "wildcard", "count": 1, "pool": { "nonfoil": ["1-284", "366-375"] }, "notes": "any rarity from booster-eligible cards" },
-    { "name": "foil", "count": 1, "pool": { "foil": ["1-284", "366-375"] }, "notes": "any rarity from booster-eligible cards" }
+    { "name": "foil", "count": 1, "pool": { "foil": ["1-284", "366-375"] }, "notes": "any rarity from booster-eligible cards" },
+    { "name": "mysticalArchive", "count": 1, "bonusSet": "sta", "pool": { "nonfoil": ["1-63"] }, "notes": "Mystical Archive bonus sheet (18 U, 30 R, 15 M)" }
   ]
 }

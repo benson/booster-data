@@ -9,6 +9,7 @@
     { "name": "common", "count": 7, "rarities": ["common"], "pool": { "nonfoil": ["1-291"] } },
     { "name": "land", "count": 1, "pool": { "nonfoil": ["272-291"] } },
     { "name": "wildcard", "count": 1, "pool": { "nonfoil": ["1-322"] }, "notes": "any rarity from booster-eligible cards" },
-    { "name": "foil", "count": 1, "pool": { "foil": ["1-322"] }, "notes": "any rarity from booster-eligible cards" }
+    { "name": "foil", "count": 1, "pool": { "foil": ["1-322"] }, "notes": "any rarity from booster-eligible cards" },
+    { "name": "multiverseLegends", "count": 1, "bonusSet": "mul", "pool": { "nonfoil": ["1-65"] }, "notes": "Multiverse Legends bonus sheet (20 U, 30 R, 15 M)" }
   ]
 }

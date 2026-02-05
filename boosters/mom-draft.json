@@ -7,6 +7,7 @@
     { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-322"] }, "mythicRate": 0.125, "notes": "main set (1-271) + full-art lands (272-291) + showcase planar (292-319) + borderless planeswalkers (320-322)" },
     { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-291"] } },
     { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-291"] } },
-    { "name": "land", "count": 1, "pool": { "nonfoil": ["272-291"] } }
+    { "name": "land", "count": 1, "pool": { "nonfoil": ["272-291"] } },
+    { "name": "multiverseLegends", "count": 1, "bonusSet": "mul", "pool": { "nonfoil": ["1-65"] }, "notes": "Multiverse Legends bonus sheet (20 U, 30 R, 15 M)" }
   ]
 }

@@ -9,6 +9,7 @@ Goal: Make booster-data the 100% accurate source for which cards can be opened i
 - Tier 1 complete: all 2020+ sets verified with proper CN ranges
 - Tier 2 complete: all older Standard, Masters, and Commander draft sets verified
 - Tier 3 complete: pre-ELD Standard sets and specialty products verified
+- Tier 4 complete: bonus sheet slots added to all relevant files
 - Set booster files updated to match draft ranges
 
 ## Priority Tiers
@@ -95,24 +96,19 @@ Sets before collector boosters existed. Simple draft structure.
 ### Tier 4: Bonus Sheets & Special Slots
 
 **4.1 Model bonus sheet slots properly**
-Many sets have "bonus sheet" cards from separate mini-sets:
-- WOE has WOT (Enchanting Tales)
-- OTJ has OTP (Breaking News) + BIG (The Big Score)
-- MOM has MUL (Multiverse Legends)
-- BRO has BRR (Retro Artifacts)
-- STA (Mystical Archive) in STX
-- etc.
+- [x] STX - added Mystical Archive (STA 1-63) slot to draft and set boosters
+- [x] WOE - added Enchanting Tales (WOT 1-63) slot to draft and set boosters
+- [x] MOM - added Multiverse Legends (MUL 1-65) slot to draft and set boosters
+- [x] BRO - added Retro Artifacts (BRR 1-63) slot to draft and set boosters
+- [x] OTJ - already has Breaking News (OTP 1-65) slot
 
 **4.2 "The List" slot**
-Set boosters (2020-2023) had a slot for reprints from "The List"
-- Changes each set
-- Low pull rate (~25% of set boosters)
-- Need to decide if/how to model
+- Not modeled (low priority) - changes each set, ~25% pull rate in set boosters
+- Cards come from PLST set code which is maintained separately by WotC
 
 **4.3 Serialized cards**
-Some sets have serialized cards (001/500 etc.)
-- Currently excluded from ranges (correct)
-- Could add metadata about existence/odds
+- Not modeled (low priority) - correctly excluded from CN ranges
+- Examples: BRO schematic serialized, ONE oil slick serialized
 
 ## Verification Process
 
