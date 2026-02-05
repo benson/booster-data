@@ -4,9 +4,9 @@
   "boosterType": "draft",
   "source": "https://magic.wizards.com/en/articles/archive/card-preview/core-set-2021-product-overview-2020-06-05",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-274", "279-319"] }, "mythicRate": 0.125, "notes": "main set (1-274) + borderless/showcase (279-319, interleaved with extendedart)" },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-274", "279-319"] } },
-    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-274", "279-319"] } },
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-277", "279-319"] }, "mythicRate": 0.125, "notes": "main set (1-274) + Teferi alts (275-277) + borderless/showcase (279-319)" },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-277", "279-319"] } },
+    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-277", "279-319"] } },
     { "name": "land", "count": 1, "pool": { "nonfoil": ["265-274"] } }
   ]
 }
