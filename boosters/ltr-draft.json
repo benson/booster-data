@@ -4,8 +4,8 @@
   "boosterType": "draft",
   "source": "https://magic.wizards.com/en/news/feature/collecting-the-lord-of-the-rings-tales-of-middle-earth",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-281"] }, "mythicRate": 0.125 },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-281"] } },
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-281", "302-340", "731-750"] }, "mythicRate": 0.125, "notes": "main set (1-261) + basic lands (262-281) + showcase Ring treatment (302-331) + Nazgûl 9 arts (332-340) + borderless poster lands/artifacts (731-750)" },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-281", "302-340"] } },
     { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-281"] } },
     { "name": "land", "count": 1, "pool": { "nonfoil": ["262-281"] } }
   ]

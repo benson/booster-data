@@ -2,13 +2,13 @@
   "set": "dmu",
   "setName": "Dominaria United",
   "boosterType": "set",
-  "source": "https://magic.wizards.com/en/news/feature/collecting-dominaria-united",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-dominaria-united-2022-08-18",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-261"] }, "mythicRate": 0.125 },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-261"] } },
-    { "name": "common", "count": 7, "rarities": ["common"], "pool": { "nonfoil": ["1-261"] } },
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-281", "287-327"] }, "mythicRate": 0.125, "notes": "main set (1-261) + stained-glass lands (262-281) + showcase stained-glass legends (287-327)" },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-281", "287-327"] } },
+    { "name": "common", "count": 7, "rarities": ["common"], "pool": { "nonfoil": ["1-281"] } },
     { "name": "land", "count": 1, "pool": { "nonfoil": ["262-281"] }, "notes": "full-art basic lands" },
-    { "name": "wildcard", "count": 1, "pool": { "nonfoil": ["1-281"] }, "notes": "any rarity from booster-eligible cards" },
-    { "name": "foil", "count": 1, "pool": { "foil": ["1-281"] }, "notes": "any rarity from booster-eligible cards" }
+    { "name": "wildcard", "count": 1, "pool": { "nonfoil": ["1-281", "287-327"] }, "notes": "any rarity from booster-eligible cards" },
+    { "name": "foil", "count": 1, "pool": { "foil": ["1-281", "287-327"] }, "notes": "any rarity from booster-eligible cards" }
   ]
 }

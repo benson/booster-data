@@ -2,6 +2,7 @@
   "set": "2x2",
   "setName": "Double Masters 2022",
   "boosterType": "draft",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-double-masters-2022-and-product-overview",
   "slots": [
     { "name": "rare", "count": 2, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-331"] }, "mythicRate": 0.125, "notes": "2 rares/mythics per pack" },
     { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-331"] } },

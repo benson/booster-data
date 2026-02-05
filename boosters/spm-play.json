@@ -8,14 +8,15 @@
       "name": "rare",
       "count": 1,
       "rarities": ["rare", "mythic"],
-      "pool": { "nonfoil": ["1-188", "189-198"] },
-      "mythicRate": 0.125
+      "pool": { "nonfoil": ["1-234"] },
+      "mythicRate": 0.125,
+      "notes": "main set (1-188) + full-art lands (189-198) + borderless scene (199-207) + panel showcase (208-217) + poster showcase (218-234)"
     },
     {
       "name": "uncommon",
       "count": 3,
       "rarities": ["uncommon"],
-      "pool": { "nonfoil": ["1-188", "189-198"] }
+      "pool": { "nonfoil": ["1-234"] }
     },
     {
       "name": "common",
@@ -26,13 +27,13 @@
     {
       "name": "wildcard",
       "count": 1,
-      "pool": { "nonfoil": ["1-188", "189-198"] },
-      "notes": "any rarity; full-art lands and borderless treatments"
+      "pool": { "nonfoil": ["1-234"] },
+      "notes": "any rarity; includes borderless scene, panel, and poster variants"
     },
     {
       "name": "foil",
       "count": 1,
-      "pool": { "foil": ["1-198"] },
+      "pool": { "foil": ["1-234"] },
       "notes": "any rarity"
     }
   ]

@@ -8,31 +8,32 @@
       "name": "rare",
       "count": 1,
       "rarities": ["rare", "mythic"],
-      "pool": { "nonfoil": ["1-110"] },
-      "mythicRate": 0.125
+      "pool": { "nonfoil": ["1-154"] },
+      "mythicRate": 0.125,
+      "notes": "main set (1-100) + full-art lands (101-110) + borderless scene (111-126) + memory corridor showcase (127-154)"
     },
     {
       "name": "uncommon",
       "count": 3,
       "rarities": ["uncommon"],
-      "pool": { "nonfoil": ["1-110"] }
+      "pool": { "nonfoil": ["1-154"] }
     },
     {
       "name": "common",
       "count": 5,
       "rarities": ["common"],
-      "pool": { "nonfoil": ["1-110"] }
+      "pool": { "nonfoil": ["1-154"] }
     },
     {
       "name": "wildcard",
       "count": 1,
-      "pool": { "nonfoil": ["1-110"] },
+      "pool": { "nonfoil": ["1-154"] },
       "notes": "any rarity from booster-eligible cards"
     },
     {
       "name": "foil",
       "count": 1,
-      "pool": { "foil": ["1-110"] },
+      "pool": { "foil": ["1-154"] },
       "notes": "any rarity from booster-eligible cards"
     }
   ]

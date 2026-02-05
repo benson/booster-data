@@ -2,6 +2,7 @@
   "set": "2xm",
   "setName": "Double Masters",
   "boosterType": "draft",
+  "source": "https://magic.wizards.com/en/news/feature/introducing-double-masters-vip-edition-2020-07-17",
   "slots": [
     { "name": "rare", "count": 2, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-332"] }, "mythicRate": 0.125, "notes": "2 rares/mythics per pack" },
     { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-332"] } },

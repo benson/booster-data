@@ -2,6 +2,7 @@
   "set": "jmp",
   "setName": "Jumpstart",
   "boosterType": "jumpstart",
+  "source": "https://magic.wizards.com/en/news/feature/jumpstart-decklists-2020-06-18",
   "slots": [
     { "name": "themed", "count": 20, "pool": { "nonfoil": ["1-495"] }, "notes": "themed half-deck with predetermined card list" }
   ]

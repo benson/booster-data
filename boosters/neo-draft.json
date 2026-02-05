@@ -2,11 +2,11 @@
   "set": "neo",
   "setName": "Kamigawa: Neon Dynasty",
   "boosterType": "draft",
-  "source": "https://magic.wizards.com/en/news/feature/collecting-kamigawa-neon-dynasty",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-kamigawa-neon-dynasty-2022-01-27",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-302"] }, "mythicRate": 0.125 },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-302"] } },
-    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-302"] } },
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-306", "309-426"] }, "mythicRate": 0.125, "notes": "main set (1-282) + lands (283-302) + borderless PW (303-306) + showcase ninja/samurai/soft glow (309-405) + borderless dragons/lands (406-416) + showcase rare/mythic (417-426)" },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-302", "309-426"] } },
+    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-302", "309-426"] } },
     { "name": "land", "count": 1, "pool": { "nonfoil": ["283-302"] } }
   ]
 }

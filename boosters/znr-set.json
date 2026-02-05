@@ -2,26 +2,27 @@
   "set": "znr",
   "setName": "Zendikar Rising",
   "boosterType": "set",
-  "source": "https://magic.wizards.com/en/news/feature/collecting-zendikar-rising",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-zendikar-rising-2020-09-01",
   "slots": [
     {
       "name": "rare",
       "count": 1,
       "rarities": ["rare", "mythic"],
-      "pool": { "nonfoil": ["1-265"] },
-      "mythicRate": 0.125
+      "pool": { "nonfoil": ["1-313"] },
+      "mythicRate": 0.125,
+      "notes": "main set (1-265) + full-art lands (266-280) + borderless PW/pathways (281-289) + showcase landfall (290-313)"
     },
     {
       "name": "uncommon",
       "count": 3,
       "rarities": ["uncommon"],
-      "pool": { "nonfoil": ["1-265"] }
+      "pool": { "nonfoil": ["1-313"] }
     },
     {
       "name": "common",
       "count": 7,
       "rarities": ["common"],
-      "pool": { "nonfoil": ["1-265"] }
+      "pool": { "nonfoil": ["1-313"] }
     },
     {
       "name": "land",
@@ -32,13 +33,13 @@
     {
       "name": "wildcard",
       "count": 1,
-      "pool": { "nonfoil": ["1-280", "380-384"] },
+      "pool": { "nonfoil": ["1-313", "380-384"] },
       "notes": "any rarity from booster-eligible cards"
     },
     {
       "name": "foil",
       "count": 1,
-      "pool": { "foil": ["1-280", "380-384"] },
+      "pool": { "foil": ["1-313", "380-384"] },
       "notes": "any rarity from booster-eligible cards"
     }
   ]

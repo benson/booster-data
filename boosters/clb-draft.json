@@ -2,6 +2,7 @@
   "set": "clb",
   "setName": "Commander Legends: Battle for Baldur's Gate",
   "boosterType": "draft",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-commander-legends-battle-for-baldurs-gate",
   "slots": [
     { "name": "legendary", "count": 2, "pool": { "nonfoil": ["1-361"] }, "notes": "2 legendary creatures" },
     { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-361"] }, "mythicRate": 0.125 },

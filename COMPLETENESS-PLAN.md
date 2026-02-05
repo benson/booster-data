@@ -5,9 +5,9 @@ Goal: Make booster-data the 100% accurate source for which cards can be opened i
 ## Current State
 
 - **213 booster files** across 165 sets
-- **27 files missing source URLs** (unverified)
-- Good coverage for 2020+ standard sets
-- Older sets have basic draft files but likely incomplete ranges
+- **14 files missing source URLs** (pre-2019 sets without collecting articles)
+- Tier 1 complete: all 2020+ sets verified with proper CN ranges
+- Set booster files updated to match draft ranges
 
 ## Priority Tiers
 
@@ -17,12 +17,12 @@ Modern-legal sets that players actively open and need accurate data for.
 **1.1 Verify 2024+ Play Booster sets (16 sets)**
 All have play + collector files. Need to verify CN ranges against collecting articles.
 - [x] MKM, OTJ, BLB, FDN, DSK, TDM, TLA, EOE, INR, FIN (fixed in previous session)
-- [ ] MH3 - needs verification
-- [ ] LCI - needs verification
-- [ ] ACR - needs verification (Universes Beyond)
-- [ ] DFT - needs verification
-- [ ] SPM - needs verification (Universes Beyond)
-- [ ] ECL - [x] verified
+- [x] MH3 - fixed (added borderless frame break/profile + concept Eldrazi + retro frame 320-441)
+- [x] LCI - fixed (renamed to set booster - predates play boosters Nov 2023)
+- [x] ACR - fixed (added memory corridor 127-154 + borderless scene 111-126)
+- [ ] DFT - borderless vehicles use rarity-based filtering (C/U in play, R/M collector-only), current model can't express this cleanly
+- [x] SPM - fixed (added borderless scene 199-207 + panel 208-217 + poster 218-234)
+- [x] ECL - verified
 
 **1.2 Verify 2020-2023 Draft+Set Booster sets (14 sets)**
 All have draft + set + collector files. Need to:
@@ -32,9 +32,16 @@ All have draft + set + collector files. Need to:
 
 Sets: ZNR, KHM, STX, AFR, MID, VOW, NEO, SNC, DMU, BRO, ONE, MOM, WOE, LTR
 
-Status from previous session:
-- [x] AFR, KHM, ELD, MID, VOW, SNC, MH2, M21, WOE (draft ranges fixed)
-- [ ] ZNR, STX, NEO, DMU, BRO, ONE, MOM, LTR (need verification)
+Status:
+- [x] AFR, KHM, ELD, MID, VOW, SNC, MH2, M21, WOE (draft ranges fixed in earlier session)
+- [x] ZNR - fixed (added borderless PW/pathways 281-289 + showcase landfall 290-313)
+- [x] STX - fixed (added borderless PW 276-279 + elder dragons 280-284)
+- [x] NEO - fixed (added borderless PW 303-306 + showcase 309-426 + borderless dragons/lands 406-416)
+- [x] DMU - fixed (added showcase stained-glass 287-327)
+- [x] BRO - fixed (added borderless 293-300)
+- [x] ONE - fixed (added showcase ichor/manga/concept/phyrexian 285-344 + borderless dual lands 370-374)
+- [x] MOM - fixed (added showcase planar 292-319 + borderless PW 320-322)
+- [x] LTR - fixed (added showcase Ring 302-331 + Nazgûl 332-340 + borderless poster 731-750)
 - [ ] All set booster files need verification
 
 **1.3 Add source URLs to files missing them (27 files)**

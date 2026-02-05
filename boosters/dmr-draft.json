@@ -2,6 +2,7 @@
   "set": "dmr",
   "setName": "Dominaria Remastered",
   "boosterType": "draft",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-dominaria-remastered-and-product-overview",
   "slots": [
     { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-261"] }, "mythicRate": 0.125 },
     { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-261"] } },

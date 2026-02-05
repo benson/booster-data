@@ -2,6 +2,7 @@
   "set": "mh1",
   "setName": "Modern Horizons",
   "boosterType": "draft",
+  "source": "https://magic.wizards.com/en/news/feature/modern-horizons-release-notes-2019-05-31",
   "slots": [
     { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-254"] }, "mythicRate": 0.125 },
     { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-254"] } },

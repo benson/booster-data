@@ -9,31 +9,34 @@
       "count": 1,
       "rarities": ["rare", "mythic"],
       "pool": { "nonfoil": ["1-291"] },
-      "mythicRate": 0.125
+      "mythicRate": 0.125,
+      "notes": "main set only; borderless rude rider rares/mythics (333+) are collector-only"
     },
     {
       "name": "uncommon",
       "count": 3,
       "rarities": ["uncommon"],
-      "pool": { "nonfoil": ["1-291"] }
+      "pool": { "nonfoil": ["1-332"] },
+      "notes": "main set (1-291) + borderless revved up vehicles (292-332, uncommons only)"
     },
     {
       "name": "common",
       "count": 5,
       "rarities": ["common"],
-      "pool": { "nonfoil": ["1-291"] }
+      "pool": { "nonfoil": ["1-332"] },
+      "notes": "main set (1-291) + borderless revved up vehicles (292-332, commons only)"
     },
     {
       "name": "wildcard",
       "count": 1,
       "pool": { "nonfoil": ["1-291"] },
-      "notes": "any rarity from booster-eligible cards"
+      "notes": "any rarity from booster-eligible cards; borderless revved up C/U handled via rarity slots"
     },
     {
       "name": "foil",
       "count": 1,
       "pool": { "foil": ["1-291"] },
-      "notes": "any rarity from booster-eligible cards"
+      "notes": "any rarity; borderless revved up C/U may also appear as foil but requires rarity filtering not fully modeled"
     }
   ]
 }

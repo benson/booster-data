@@ -2,9 +2,9 @@
   "set": "stx",
   "setName": "Strixhaven: School of Mages",
   "boosterType": "draft",
-  "source": "https://magic.wizards.com/en/news/feature/collecting-strixhaven",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-strixhaven-school-mages-2021-03-25",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-275"] }, "mythicRate": 0.125 },
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-284"] }, "mythicRate": 0.125, "notes": "main set (1-275) + borderless planeswalkers (276-279) + borderless elder dragons (280-284)" },
     { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-275"] } },
     { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-275"] } },
     { "name": "land", "count": 1, "pool": { "nonfoil": ["366-375"] }, "notes": "basic lands" }

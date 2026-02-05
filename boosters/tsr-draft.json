@@ -2,6 +2,7 @@
   "set": "tsr",
   "setName": "Time Spiral Remastered",
   "boosterType": "draft",
+  "source": "https://magic.wizards.com/en/articles/archive/card-preview/its-time-time-spiral-remastered-2021-02-25",
   "slots": [
     { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-289"] }, "mythicRate": 0.125 },
     { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-289"] } },

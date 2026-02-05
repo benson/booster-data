@@ -2,6 +2,7 @@
   "set": "j22",
   "setName": "Jumpstart 2022",
   "boosterType": "jumpstart",
+  "source": "https://magic.wizards.com/en/news/feature/jumpstart-2022-booster-themes-and-card-lists",
   "slots": [
     { "name": "themed", "count": 20, "pool": { "nonfoil": ["1-806"] }, "notes": "themed half-deck with predetermined card list" }
   ]

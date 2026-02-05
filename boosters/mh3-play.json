@@ -8,20 +8,22 @@
       "name": "rare",
       "count": 1,
       "rarities": ["rare", "mythic"],
-      "pool": { "nonfoil": ["1-303"] },
-      "mythicRate": 0.125
+      "pool": { "nonfoil": ["1-303", "320-441"] },
+      "mythicRate": 0.125,
+      "notes": "main set (1-303) + borderless frame break (320-361) + borderless profile (362-380) + concept Eldrazi (381-383) + retro frame (384-441)"
     },
     {
       "name": "uncommon",
       "count": 3,
       "rarities": ["uncommon"],
-      "pool": { "nonfoil": ["1-303"] }
+      "pool": { "nonfoil": ["1-303", "320-441"] }
     },
     {
       "name": "common",
       "count": 5,
       "rarities": ["common"],
-      "pool": { "nonfoil": ["1-303"] }
+      "pool": { "nonfoil": ["1-303", "384-441"] },
+      "notes": "retro frame commons start at 384"
     },
     {
       "name": "land",
@@ -32,13 +34,13 @@
     {
       "name": "wildcard",
       "count": 1,
-      "pool": { "nonfoil": ["1-309"] },
+      "pool": { "nonfoil": ["1-309", "320-441"] },
       "notes": "any rarity from booster-eligible cards"
     },
     {
       "name": "foil",
       "count": 1,
-      "pool": { "foil": ["1-309"] },
+      "pool": { "foil": ["1-309", "320-441"] },
       "notes": "any rarity from booster-eligible cards"
     }
   ]

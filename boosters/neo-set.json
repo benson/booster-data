@@ -2,13 +2,13 @@
   "set": "neo",
   "setName": "Kamigawa: Neon Dynasty",
   "boosterType": "set",
-  "source": "https://magic.wizards.com/en/news/feature/collecting-kamigawa-neon-dynasty",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-kamigawa-neon-dynasty-2022-01-27",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-282"] }, "mythicRate": 0.125 },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-282"] } },
-    { "name": "common", "count": 7, "rarities": ["common"], "pool": { "nonfoil": ["1-282"] } },
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-306", "309-426"] }, "mythicRate": 0.125, "notes": "main set (1-282) + lands (283-302) + borderless PW (303-306) + showcase (309-426)" },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-302", "309-426"] } },
+    { "name": "common", "count": 7, "rarities": ["common"], "pool": { "nonfoil": ["1-302", "309-426"] } },
     { "name": "land", "count": 1, "pool": { "nonfoil": ["283-302"] }, "notes": "basic lands" },
-    { "name": "wildcard", "count": 1, "pool": { "nonfoil": ["1-302"] }, "notes": "any rarity from booster-eligible cards" },
-    { "name": "foil", "count": 1, "pool": { "foil": ["1-302"] }, "notes": "any rarity from booster-eligible cards" }
+    { "name": "wildcard", "count": 1, "pool": { "nonfoil": ["1-306", "309-426"] }, "notes": "any rarity from booster-eligible cards" },
+    { "name": "foil", "count": 1, "pool": { "foil": ["1-306", "309-426"] }, "notes": "any rarity from booster-eligible cards" }
   ]
 }
