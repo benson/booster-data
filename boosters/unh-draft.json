@@ -3,8 +3,8 @@
   "setName": "Unhinged",
   "boosterType": "draft",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare"], "pool": { "nonfoil": ["1-140"] } },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-140"] } },
-    { "name": "common", "count": 11, "rarities": ["common"], "pool": { "nonfoil": ["1-140"] } }
+    { "name": "rare", "count": 1, "rarities": ["rare"], "pool": { "nonfoil": ["1-141"] } },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-141"] } },
+    { "name": "common", "count": 11, "rarities": ["common"], "pool": { "nonfoil": ["1-141"] } }
   ]
 }

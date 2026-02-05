@@ -3,9 +3,9 @@
   "setName": "Conspiracy: Take the Crown",
   "boosterType": "draft",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-221"] }, "mythicRate": 0.125 },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-221"] } },
-    { "name": "common", "count": 11, "rarities": ["common"], "pool": { "nonfoil": ["1-221"] } }
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-222"] }, "mythicRate": 0.125 },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-222"] } },
+    { "name": "common", "count": 11, "rarities": ["common"], "pool": { "nonfoil": ["1-222"] } }
   ],
   "notes": "conspiracy draft format"
 }

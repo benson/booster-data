@@ -8,6 +8,7 @@ Goal: Make booster-data the 100% accurate source for which cards can be opened i
 - **14 files missing source URLs** (pre-2019 sets without collecting articles)
 - Tier 1 complete: all 2020+ sets verified with proper CN ranges
 - Tier 2 complete: all older Standard, Masters, and Commander draft sets verified
+- Tier 3 complete: pre-ELD Standard sets and specialty products verified
 - Set booster files updated to match draft ranges
 
 ## Priority Tiers
@@ -75,13 +76,20 @@ Priority order:
 
 **3.1 Pre-ELD Standard sets**
 Sets before collector boosters existed. Simple draft structure.
-- WAR, RNA, GRN, M19, DOM, RIX, XLN, etc.
-- 90+ sets going back to Alpha
+- [x] 96 sets verified (WAR through LEA)
+- All have correct CN ranges excluding Planeswalker deck cards
 
 **3.2 Specialty products**
-- Jumpstart (JMP, J22, J25) - themed half-deck packs
-- Conspiracy (CNS, CN2) - multiplayer draft
-- Battlebond (BBD) - two-headed giant draft
+- [x] JMP - verified (1-495, excludes CN 496 which is not in boosters)
+- [x] J22 - fixed (expanded to 1-834, excludes CN 835 promo)
+- [x] J25 - verified (1-779)
+- [x] CNS - verified (1-210)
+- [x] CN2 - fixed (expanded to 1-222 to include Kaya)
+- [x] BBD - fixed (expanded to 1-256 to include Will and Rowan Kenrith)
+- [x] UGL - verified (1-88)
+- [x] UNH - fixed (expanded to 1-141 to include Super Secret Tech)
+- [x] UST - verified (1-216)
+- [x] UNF - fixed (expanded to 1-274 to include showcase cards)
 - Un-sets (UGL, UNH, UST, UNF)
 
 ### Tier 4: Bonus Sheets & Special Slots

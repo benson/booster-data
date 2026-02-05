@@ -4,9 +4,9 @@
   "boosterType": "draft",
   "source": "https://magic.wizards.com/en/news/feature/almost-everything-know-about-unfinity-boosters-2022-09-20",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-244"] }, "mythicRate": 0.125 },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-244"] } },
-    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-244"] } },
-    { "name": "land", "count": 1, "pool": { "nonfoil": ["235-244"] }, "notes": "space-themed land" }
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-274"] }, "mythicRate": 0.125, "notes": "includes showcase 245-274 (~1 in 4 chance)" },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-274"] } },
+    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-274"] } },
+    { "name": "land", "count": 1, "pool": { "nonfoil": ["235-244"] }, "notes": "borderless space-themed land" }
   ]
 }
