@@ -2,11 +2,11 @@
   "set": "iko",
   "setName": "Ikoria: Lair of Behemoths",
   "boosterType": "draft",
-  "source": "https://magic.wizards.com/en/news/feature/ikoria-lair-behemoths-collector-booster",
+  "source": "https://magic.wizards.com/en/news/card-preview/collecting-ikoria-2020-04-02",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-274"] }, "mythicRate": 0.125 },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-274"] } },
-    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-274"] } },
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-274", "276-313"] }, "mythicRate": 0.125, "notes": "main set (1-274) + borderless PW (276-278) + showcase mutate/triomes (279-313)" },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-274", "276-313"] } },
+    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-274", "276-313"] } },
     { "name": "land", "count": 1, "pool": { "nonfoil": ["265-274"] } }
   ]
 }

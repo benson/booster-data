@@ -4,10 +4,10 @@
   "boosterType": "draft",
   "source": "https://magic.wizards.com/en/news/feature/collecting-commander-masters",
   "slots": [
-    { "name": "legendary", "count": 2, "pool": { "nonfoil": ["1-430"] }, "notes": "2 legendary creatures" },
-    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-430"] }, "mythicRate": 0.125 },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-430"] } },
-    { "name": "common", "count": 13, "rarities": ["common"], "pool": { "nonfoil": ["1-430"] } },
-    { "name": "foil", "count": 1, "pool": { "foil": ["1-430"] } }
+    { "name": "legendary", "count": 2, "pool": { "nonfoil": ["1-451"] }, "notes": "2 legendary creatures (main set 1-436 + basic lands 437-451)" },
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-451"] }, "mythicRate": 0.125 },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-451"] } },
+    { "name": "common", "count": 13, "rarities": ["common"], "pool": { "nonfoil": ["1-451"] } },
+    { "name": "foil", "count": 1, "pool": { "foil": ["1-451"] } }
   ]
 }

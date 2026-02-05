@@ -4,10 +4,10 @@
   "boosterType": "draft",
   "source": "https://magic.wizards.com/en/news/feature/collecting-commander-legends-2020-10-26",
   "slots": [
-    { "name": "legendary", "count": 2, "pool": { "nonfoil": ["1-361"] }, "notes": "2 legendary creatures" },
-    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-361"] }, "mythicRate": 0.125 },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-361"] } },
-    { "name": "common", "count": 13, "rarities": ["common"], "pool": { "nonfoil": ["1-361"] } },
-    { "name": "foil", "count": 1, "pool": { "foil": ["1-361"] } }
+    { "name": "legendary", "count": 2, "pool": { "nonfoil": ["1-361", "512-513"] }, "notes": "2 legendary creatures (includes borderless PWs 512-513)" },
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-361", "512-513"] }, "mythicRate": 0.125 },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-361", "512-513"] } },
+    { "name": "common", "count": 13, "rarities": ["common"], "pool": { "nonfoil": ["1-361", "512-513"] } },
+    { "name": "foil", "count": 1, "pool": { "foil": ["1-361", "512-513"] } }
   ]
 }

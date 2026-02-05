@@ -7,6 +7,7 @@ Goal: Make booster-data the 100% accurate source for which cards can be opened i
 - **213 booster files** across 165 sets
 - **14 files missing source URLs** (pre-2019 sets without collecting articles)
 - Tier 1 complete: all 2020+ sets verified with proper CN ranges
+- Tier 2 complete: all older Standard, Masters, and Commander draft sets verified
 - Set booster files updated to match draft ranges
 
 ## Priority Tiers
@@ -20,7 +21,7 @@ All have play + collector files. Need to verify CN ranges against collecting art
 - [x] MH3 - fixed (added borderless frame break/profile + concept Eldrazi + retro frame 320-441)
 - [x] LCI - fixed (renamed to set booster - predates play boosters Nov 2023)
 - [x] ACR - fixed (added memory corridor 127-154 + borderless scene 111-126)
-- [ ] DFT - borderless vehicles use rarity-based filtering (C/U in play, R/M collector-only), current model can't express this cleanly
+- [x] DFT - fixed (borderless vehicles 292-332 added to C/U slots with rarity filtering)
 - [x] SPM - fixed (added borderless scene 199-207 + panel 208-217 + poster 218-234)
 - [x] ECL - verified
 
@@ -42,7 +43,7 @@ Status:
 - [x] ONE - fixed (added showcase ichor/manga/concept/phyrexian 285-344 + borderless dual lands 370-374)
 - [x] MOM - fixed (added showcase planar 292-319 + borderless PW 320-322)
 - [x] LTR - fixed (added showcase Ring 302-331 + Nazgûl 332-340 + borderless poster 731-750)
-- [ ] All set booster files need verification
+- [x] All set booster files verified and updated
 
 **1.3 Add source URLs to files missing them (27 files)**
 Priority order:
@@ -54,18 +55,21 @@ Priority order:
 ### Tier 2: Medium Priority (Older Standard, Masters)
 
 **2.1 Pre-2020 Standard sets with collector boosters**
-- ELD, THB, IKO, M21 (partial coverage exists)
-- Need to verify draft ranges include showcase treatments
+- [x] ELD - already correct (1-302 with storybook showcase)
+- [x] THB - verified correct (1-254, constellation showcase is collector-only)
+- [x] IKO - fixed (added borderless PW 276-278 + showcase mutate/triomes 279-313)
+- [x] M21 - already correct (1-277 + 279-319 with showcase)
 
 **2.2 Masters/Remaster sets**
-These have unique structures (VIP packs, box toppers, etc.)
-- 2XM, 2X2 - need VIP/box topper modeling
-- DMR, RVR, TSR - remaster sets
-- UMA, A25, IMA, MM3, EMA, MM2, MMA - older masters
+- [x] 2XM - verified correct (1-332, borderless is VIP-only)
+- [x] 2X2 - fixed (added borderless 333-412 + 573-577, etched is collector-only)
+- [x] DMR, RVR, TSR - already have proper retro/timeshifted slots
+- [x] UMA, A25, IMA, MM3, EMA, MM2, MMA - verified correct (simple draft structure)
 
 **2.3 Commander draft sets**
-Unique structure with commander-specific slots
-- CMR, CLB, CMM - need proper slot modeling
+- [x] CMR - fixed (added borderless PWs 512-513)
+- [x] CLB - fixed (added borderless 362-364 + rulebook showcase 375-450)
+- [x] CMM - fixed (expanded to 1-451 to include basic lands)
 
 ### Tier 3: Lower Priority (Older/Niche)
 

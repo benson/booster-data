@@ -4,9 +4,9 @@
   "boosterType": "draft",
   "source": "https://magic.wizards.com/en/news/feature/collecting-double-masters-2022-and-product-overview",
   "slots": [
-    { "name": "rare", "count": 2, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-331"] }, "mythicRate": 0.125, "notes": "2 rares/mythics per pack" },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-331"] } },
-    { "name": "common", "count": 8, "rarities": ["common"], "pool": { "nonfoil": ["1-331"] } },
-    { "name": "foil", "count": 2, "pool": { "foil": ["1-331"] }, "notes": "2 foils per pack" }
+    { "name": "rare", "count": 2, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-331", "333-412", "573-577"] }, "mythicRate": 0.125, "notes": "2 rares/mythics per pack (includes borderless 333-412 + 573-577)" },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-331", "333-412", "573-577"] } },
+    { "name": "common", "count": 8, "rarities": ["common"], "pool": { "nonfoil": ["1-331", "333-412", "573-577"] } },
+    { "name": "foil", "count": 2, "pool": { "foil": ["1-331", "333-412", "573-577"] }, "notes": "2 foils per pack" }
   ]
 }
