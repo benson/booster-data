@@ -2,10 +2,11 @@
   "set": "mh2",
   "setName": "Modern Horizons 2",
   "boosterType": "draft",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-modern-horizons-2",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-303"] }, "mythicRate": 0.125 },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-303"] } },
-    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-303"] } },
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-441"] }, "mythicRate": 0.125, "notes": "main set + borderless (304-326) + sketch showcase (327-380) + retro frame (381-441, excludes extendedart 442+)" },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-441"] } },
+    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-441"] } },
     { "name": "newToModern", "count": 1, "pool": { "nonfoil": ["261-303"] }, "notes": "new-to-modern reprint slot" }
   ]
 }

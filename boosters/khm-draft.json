@@ -4,9 +4,9 @@
   "boosterType": "draft",
   "source": "https://magic.wizards.com/en/news/feature/collecting-kaldheim",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-285"] }, "mythicRate": 0.125 },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-285"] } },
-    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-285"] } },
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-332"] }, "mythicRate": 0.125, "notes": "main set + borderless (286-298) + Viking showcase (299-332, excludes extendedart 334+)" },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-332"] } },
+    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-332"] } },
     { "name": "land", "count": 1, "pool": { "nonfoil": ["271-285"] } }
   ]
 }

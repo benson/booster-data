@@ -4,9 +4,9 @@
   "boosterType": "draft",
   "source": "https://magic.wizards.com/en/news/feature/collecting-innistrad-crimson-vow",
   "slots": [
-    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-267"] }, "mythicRate": 0.125 },
-    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-267"] } },
-    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-267"] } },
+    { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-345"] }, "mythicRate": 0.125, "notes": "main set + fang frame showcase (268-328) + borderless (278-345, excludes extendedart 346+)" },
+    { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-345"] } },
+    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-345"] } },
     { "name": "land", "count": 1, "pool": { "nonfoil": ["398-402"] }, "notes": "basic lands" }
   ]
 }

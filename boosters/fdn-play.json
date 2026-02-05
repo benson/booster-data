@@ -8,38 +8,39 @@
       "name": "rare",
       "count": 1,
       "rarities": ["rare", "mythic"],
-      "pool": { "nonfoil": ["1-291"] },
-      "mythicRate": 0.125
+      "pool": { "nonfoil": ["1-361"] },
+      "mythicRate": 0.125,
+      "notes": "main set + borderless planeswalkers/cards (292-361, excludes manafoil 362+)"
     },
     {
       "name": "uncommon",
       "count": 3,
       "rarities": ["uncommon"],
-      "pool": { "nonfoil": ["1-291"] }
+      "pool": { "nonfoil": ["1-361"] }
     },
     {
       "name": "common",
       "count": 5,
       "rarities": ["common"],
-      "pool": { "nonfoil": ["1-291"] }
+      "pool": { "nonfoil": ["1-361"] }
     },
     {
       "name": "land",
       "count": 1,
-      "pool": { "nonfoil": ["1-291"] },
+      "pool": { "nonfoil": ["272-291"] },
       "rarities": ["land"],
-      "notes": "full-art basic lands (included within main set numbering)"
+      "notes": "full-art basic lands"
     },
     {
       "name": "wildcard",
       "count": 1,
-      "pool": { "nonfoil": ["1-291"] },
+      "pool": { "nonfoil": ["1-361"] },
       "notes": "any rarity from booster-eligible cards"
     },
     {
       "name": "foil",
       "count": 1,
-      "pool": { "foil": ["1-291"] },
+      "pool": { "foil": ["1-361"] },
       "notes": "any rarity from booster-eligible cards"
     }
   ]
