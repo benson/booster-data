@@ -8,19 +8,21 @@ const path = require('path');
 const SCRYFALL_API = 'https://api.scryfall.com';
 const delay = (ms) => new Promise(r => setTimeout(r, ms));
 
-// Known collector-exclusive promo types (cards with these are NOT in play boosters)
+// Known non-play-booster promo types
 const COLLECTOR_ONLY_PROMOS = new Set([
   'fracturefoil', 'texturedfoil', 'ripplefoil', 'halofoil',
   'confettifoil', 'galaxyfoil', 'surgefoil', 'raisedfoil',
   'headliner', 'serialized', 'buyabox', 'bundle',
   'planeswalkerdeck', 'starterdeck', 'prerelease',
   'datestamped', 'playerrewards', 'gameday', 'release',
-  'promostamped',
+  'promostamped', 'startercollection', 'beginnerbox',
+  'promopack', 'themepack', 'brawldeck', 'playtest',
+  'manafoil', 'invisibleink',
 ]);
 
 // Known collector-exclusive frame effects
 const COLLECTOR_ONLY_FRAMES = new Set([
-  'extendedart',
+  'extendedart', 'inverted', 'etched',
 ]);
 
 async function fetchJSON(url) {
