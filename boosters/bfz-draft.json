@@ -7,6 +7,7 @@
     { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-249"] }, "mythicRate": 0.125 },
     { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-249"] } },
     { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-249"] } },
-    { "name": "land", "count": 1, "pool": { "nonfoil": ["250-274"] } }
+    { "name": "land", "count": 1, "pool": { "nonfoil": ["250-274"] } },
+    { "name": "expedition", "count": 1, "bonusSet": "exp", "pool": { "foil": ["1-25"] }, "pullRate": 0.007, "notes": "Zendikar Expeditions ~1 in 144 packs" }
   ]
 }

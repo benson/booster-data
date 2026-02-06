@@ -2,6 +2,7 @@
   "set": "chr",
   "setName": "Chronicles",
   "boosterType": "draft",
+  "source": "https://mtg.fandom.com/wiki/Chronicles",
   "slots": [
     { "name": "rare", "count": 1, "rarities": ["rare"], "pool": { "nonfoil": ["1-125"] } },
     { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-125"] } },

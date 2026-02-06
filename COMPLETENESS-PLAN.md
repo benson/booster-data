@@ -5,7 +5,7 @@ Goal: Make booster-data the 100% accurate source for which cards can be opened i
 ## Current State
 
 - **213 booster files** across 165 sets
-- **14 files missing source URLs** (pre-2019 sets without collecting articles)
+- **All files have source URLs** (fandom.com for pre-2019 sets without collecting articles)
 - Tier 1 complete: all 2020+ sets verified with proper CN ranges
 - Tier 2 complete: all older Standard, Masters, and Commander draft sets verified
 - Tier 3 complete: pre-ELD Standard sets and specialty products verified
@@ -102,11 +102,23 @@ Sets before collector boosters existed. Simple draft structure.
 - [x] BRO - added Retro Artifacts (BRR 1-63) slot to draft and set boosters
 - [x] OTJ - already has Breaking News (OTP 1-65) slot
 
-**4.2 "The List" slot**
+**4.2 Masterpieces/Expeditions (with pullRate field)**
+- [x] BFZ - added EXP Expeditions (1-25) slot with pullRate: 0.007 (~1 in 144)
+- [x] OGW - added EXP Expeditions (26-45) slot with pullRate: 0.007
+- [x] KLD - added MPS Inventions (1-30) slot with pullRate: 0.007
+- [x] AER - added MPS Inventions (31-54) slot with pullRate: 0.007
+- [x] AKH - added MP2 Invocations (1-30) slot with pullRate: 0.007
+- [x] HOU - added MP2 Invocations (31-54) slot with pullRate: 0.007
+- [x] ZNR-collector - added ZNE Expeditions (1-30) slot with pullRate: 0.167 (~1 in 6)
+
+**4.3 Special slots**
+- [x] UNF - added Attraction slot (2 per pack, CN 200-234)
+
+**4.4 "The List" slot**
 - Not modeled (low priority) - changes each set, ~25% pull rate in set boosters
 - Cards come from PLST set code which is maintained separately by WotC
 
-**4.3 Serialized cards**
+**4.5 Serialized cards**
 - Not modeled (low priority) - correctly excluded from CN ranges
 - Examples: BRO schematic serialized, ONE oil slick serialized
 
@@ -126,6 +138,9 @@ For each file:
 
 ## Data Model Improvements
 
+Implemented:
+- `pullRate` field for optional slots (masterpieces, expeditions) - e.g., 0.007 for ~1/144
+
 Consider adding:
 - `verified: true/false` field to indicate confidence level
 - `lastVerified: "2024-01-15"` date field
@@ -139,18 +154,30 @@ Missing files that should exist:
 - Any new Universes Beyond sets
 - Set booster files for sets that only have draft (if meaningfully different)
 
-## Automated Validation Ideas
+## Automated Validation
 
-Since Scryfall `booster:true` is unreliable, consider:
-- Schema validation (all required fields present)
-- CN range overlap detection (no gaps or overlaps within a file)
-- Cross-file consistency (collector ranges should be superset of play ranges)
-- Source URL validation (URLs still work)
+Implemented in `validate.js`:
+- [x] Schema validation (all required fields present)
+- [x] CN range format validation
+- [x] Filename/content consistency
+- [x] Cross-file consistency (collector ranges superset of play ranges, excluding basic lands)
+- [x] Modern set coverage (checks for missing collector boosters)
+- [x] Index.json sync validation
+- [x] Source URL reachability (--check-urls flag)
+- [x] Scryfall card count verification (--check-scryfall flag)
 
-## Next Steps
+Run with: `node validate.js` (add flags for extended checks)
 
-1. Start with Tier 1.1 - verify remaining 2024+ play booster sets
-2. Add source URLs to the 27 missing files
-3. Verify Tier 1.2 draft ranges for 2020-2023 sets
-4. Model bonus sheets consistently
-5. Work through Tier 2 as time permits
+## Status
+
+All major work complete:
+- [x] Tier 1-4 verification complete
+- [x] All source URLs added (WotC or fandom.com)
+- [x] Bonus sheets modeled for STX, WOE, MOM, BRO, OTJ
+- [x] Masterpieces/Expeditions modeled with pullRate for BFZ/OGW/KLD/AER/AKH/HOU/ZNR
+- [x] Special slots: UNF Attractions
+- [x] Validation script created
+
+Remaining (low priority):
+- "The List" slot modeling
+- Serialized cards

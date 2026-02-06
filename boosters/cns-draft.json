@@ -2,6 +2,7 @@
   "set": "cns",
   "setName": "Conspiracy",
   "boosterType": "draft",
+  "source": "https://mtg.fandom.com/wiki/Conspiracy_(set)",
   "slots": [
     { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-210"] }, "mythicRate": 0.125 },
     { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-210"] } },

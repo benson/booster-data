@@ -28,7 +28,6 @@
       "name": "land",
       "count": 1,
       "pool": { "nonfoil": ["272-291"] },
-      "rarities": ["land"],
       "notes": "full-art basic lands"
     },
     {

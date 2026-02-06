@@ -31,6 +31,14 @@
       "count": 3,
       "pool": { "nonfoil": ["281-391"], "foil": ["281-391"] },
       "notes": "showcase, extended-art treatments"
+    },
+    {
+      "name": "expedition",
+      "count": 1,
+      "bonusSet": "zne",
+      "pool": { "foil": ["1-30"] },
+      "pullRate": 0.167,
+      "notes": "~1 in 6 Collector Boosters contain a foil ZNE Expedition"
     }
   ]
 }

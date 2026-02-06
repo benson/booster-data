@@ -2,6 +2,7 @@
   "set": "cn2",
   "setName": "Conspiracy: Take the Crown",
   "boosterType": "draft",
+  "source": "https://mtg.fandom.com/wiki/Conspiracy:_Take_the_Crown",
   "slots": [
     { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-222"] }, "mythicRate": 0.125 },
     { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-222"] } },

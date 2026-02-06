@@ -1,0 +1,40 @@
+{
+  "set": "mh2",
+  "setName": "Modern Horizons 2",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-modern-horizons-2",
+  "slots": [
+    {
+      "name": "rareOrMythic",
+      "count": 4,
+      "rarities": ["rare", "mythic"],
+      "pool": {
+        "foil": ["1-303", "304-441"],
+        "nonfoil": ["304-494"]
+      },
+      "notes": "borderless (304-326), sketch showcase (327-380), retro frame (381-441), extended-art (442-494)"
+    },
+    {
+      "name": "uncommon",
+      "count": 4,
+      "rarities": ["uncommon"],
+      "pool": { "foil": ["1-303"] }
+    },
+    {
+      "name": "common",
+      "count": 4,
+      "rarities": ["common"],
+      "pool": { "foil": ["1-260"] }
+    },
+    {
+      "name": "collectorExclusive",
+      "count": 3,
+      "pool": {
+        "nonfoil": ["304-494"],
+        "foil": ["304-494"],
+        "etched": ["381-441"]
+      },
+      "notes": "borderless, sketch, retro, extended-art, etched retro frame"
+    }
+  ]
+}

@@ -2,6 +2,7 @@
   "set": "ust",
   "setName": "Unstable",
   "boosterType": "draft",
+  "source": "https://mtg.fandom.com/wiki/Unstable",
   "slots": [
     { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-216"] }, "mythicRate": 0.125 },
     { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-216"] } },

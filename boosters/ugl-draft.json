@@ -2,6 +2,7 @@
   "set": "ugl",
   "setName": "Unglued",
   "boosterType": "draft",
+  "source": "https://mtg.fandom.com/wiki/Unglued",
   "slots": [
     { "name": "rare", "count": 1, "rarities": ["rare"], "pool": { "nonfoil": ["1-88"] } },
     { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-88"] } },

@@ -2,6 +2,7 @@
   "set": "uma",
   "setName": "Ultimate Masters",
   "boosterType": "draft",
+  "source": "https://mtg.fandom.com/wiki/Ultimate_Masters",
   "slots": [
     { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-254"] }, "mythicRate": 0.125 },
     { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-254"] } },

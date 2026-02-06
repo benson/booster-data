@@ -2,6 +2,7 @@
   "set": "ema",
   "setName": "Eternal Masters",
   "boosterType": "draft",
+  "source": "https://mtg.fandom.com/wiki/Eternal_Masters",
   "slots": [
     { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-249"] }, "mythicRate": 0.125 },
     { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-249"] } },

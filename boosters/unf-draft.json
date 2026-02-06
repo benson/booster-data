@@ -6,7 +6,8 @@
   "slots": [
     { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-274"] }, "mythicRate": 0.125, "notes": "includes showcase 245-274 (~1 in 4 chance)" },
     { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-274"] } },
-    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-274"] } },
+    { "name": "common", "count": 6, "rarities": ["common"], "pool": { "nonfoil": ["1-274"] } },
+    { "name": "attraction", "count": 2, "pool": { "nonfoil": ["200-234"] }, "notes": "Attraction cards (CN 200a-234d, multiple variants per number)" },
     { "name": "land", "count": 1, "pool": { "nonfoil": ["235-244"] }, "notes": "borderless space-themed land" }
   ]
 }

@@ -7,6 +7,7 @@
   "slots": [
     { "name": "rare", "count": 1, "rarities": ["rare", "mythic"], "pool": { "nonfoil": ["1-184"] }, "mythicRate": 0.125 },
     { "name": "uncommon", "count": 3, "rarities": ["uncommon"], "pool": { "nonfoil": ["1-184"] } },
-    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-184"] } }
+    { "name": "common", "count": 10, "rarities": ["common"], "pool": { "nonfoil": ["1-184"] } },
+    { "name": "invention", "count": 1, "bonusSet": "mps", "pool": { "foil": ["31-54"] }, "pullRate": 0.007, "notes": "Kaladesh Inventions ~1 in 144 packs" }
   ]
 }
