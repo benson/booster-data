@@ -9,10 +9,10 @@
       "count": 5,
       "rarities": ["rare", "mythic"],
       "pool": {
-        "foil": ["1-291", "292-441"],
-        "nonfoil": ["292-441"]
+        "foil": ["1-291", "292-487"],
+        "nonfoil": ["292-487"]
       },
-      "notes": "borderless/inverted (292-421), showcase (422-431)"
+      "notes": "borderless/inverted (292-421), showcase (422-431), extended-art (442-487)"
     },
     {
       "name": "uncommon",
@@ -30,12 +30,12 @@
       "name": "collectorExclusive",
       "count": 2,
       "pool": {
-        "nonfoil": ["292-441"],
-        "foil": ["292-441"],
+        "nonfoil": ["292-487"],
+        "foil": ["292-487"],
         "fracturefoil": ["432-441"],
         "manafoil": ["292-421"]
       },
-      "notes": "borderless/inverted (292-421), showcase (422-431), fracturefoil showcase (432-441)"
+      "notes": "borderless/inverted (292-421), showcase (422-431), fracturefoil showcase (432-441), extended-art (442-487)"
     }
   ]
 }
