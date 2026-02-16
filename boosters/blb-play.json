@@ -20,7 +20,7 @@
     },
     {
       "name": "common",
-      "count": 5,
+      "count": 6,
       "rarities": ["common"],
       "pool": { "nonfoil": ["1-342"] }
     },

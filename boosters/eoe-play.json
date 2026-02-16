@@ -20,9 +20,15 @@
     },
     {
       "name": "common",
-      "count": 5,
+      "count": 6,
       "rarities": ["common"],
       "pool": { "nonfoil": ["1-316"] }
+    },
+    {
+      "name": "land",
+      "count": 1,
+      "pool": { "nonfoil": ["262-276"] },
+      "notes": "basic lands"
     },
     {
       "name": "wildcard",

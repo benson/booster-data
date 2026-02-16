@@ -21,10 +21,16 @@
     },
     {
       "name": "common",
-      "count": 5,
+      "count": 6,
       "rarities": ["common"],
       "pool": { "nonfoil": ["1-332"] },
       "notes": "main set (1-291) + borderless revved up vehicles (292-332, commons only)"
+    },
+    {
+      "name": "land",
+      "count": 1,
+      "pool": { "nonfoil": ["272-291"] },
+      "notes": "basic lands"
     },
     {
       "name": "wildcard",
