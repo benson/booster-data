@@ -1,0 +1,54 @@
+{
+  "set": "tmt",
+  "setName": "Teenage Mutant Ninja Turtles",
+  "boosterType": "play",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-teenage-mutant-ninja-turtles",
+  "slots": [
+    {
+      "name": "rare",
+      "count": 1,
+      "rarities": ["rare", "mythic"],
+      "pool": { "nonfoil": ["1-195"] },
+      "mythicRate": 0.125,
+      "notes": "main set rare/mythic"
+    },
+    {
+      "name": "uncommon",
+      "count": 2,
+      "rarities": ["uncommon"],
+      "pool": { "nonfoil": ["1-195"] }
+    },
+    {
+      "name": "common",
+      "count": 7,
+      "rarities": ["common"],
+      "pool": { "nonfoil": ["1-195"] }
+    },
+    {
+      "name": "land",
+      "count": 1,
+      "pool": { "nonfoil": ["183", "185-187", "189", "253-257"] },
+      "notes": "dual lands (60%) or rooftop basic lands (40%)"
+    },
+    {
+      "name": "legendaryTurtle",
+      "count": 1,
+      "rarities": ["common", "uncommon", "rare", "mythic"],
+      "rarityWeights": { "common": 0.685, "uncommon": 0.195, "rare": 0.08, "mythic": 0.04 },
+      "pool": { "nonfoil": ["10", "14-17", "35-38", "101-104", "118-121"] },
+      "notes": "dedicated turtle slot: Jennika + 4 core turtles at each rarity (5C/4U/4R/4M = 17 cards)"
+    },
+    {
+      "name": "wildcard",
+      "count": 1,
+      "pool": { "nonfoil": ["1-195"] },
+      "notes": "any rarity from main set"
+    },
+    {
+      "name": "foil",
+      "count": 1,
+      "pool": { "foil": ["1-195"] },
+      "notes": "any rarity from main set"
+    }
+  ]
+}
