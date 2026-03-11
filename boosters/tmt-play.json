@@ -8,9 +8,9 @@
       "name": "rare",
       "count": 1,
       "rarities": ["rare", "mythic"],
-      "pool": { "nonfoil": ["1-195", "196-222", "223-252", "281-304"] },
+      "pool": { "nonfoil": ["1-195", "196-222", "223-252"] },
       "mythicRate": 0.125,
-      "notes": "main set + sewer frame + scene + silhouette rare/mythic"
+      "notes": "main set + sewer frame + scene rare/mythic"
     },
     {
       "name": "uncommon",
@@ -37,20 +37,20 @@
       "count": 1,
       "rarities": ["common", "uncommon", "rare", "mythic"],
       "rarityWeights": { "common": 0.685, "uncommon": 0.195, "rare": 0.08, "mythic": 0.04 },
-      "pool": { "nonfoil": ["10", "14-17", "35-38", "101-104", "118-121", "196-199", "203", "211-216", "218-219", "281", "283", "287-288", "291", "293", "297-298", "301-304"] },
-      "notes": "turtle slot: main set turtles + sewer turtles + silhouette turtles"
+      "pool": { "nonfoil": ["10", "14-17", "35-38", "101-104", "118-121", "196-199", "203", "211-216", "218-219"] },
+      "notes": "turtle slot: main set turtles + sewer frame turtles"
     },
     {
       "name": "wildcard",
       "count": 1,
-      "pool": { "nonfoil": ["1-195", "196-222", "223-252", "281-304"] },
-      "notes": "any rarity from main set + sewer + scene + silhouette"
+      "pool": { "nonfoil": ["1-195", "196-222", "223-252"] },
+      "notes": "any rarity from main set + sewer + scene"
     },
     {
       "name": "foil",
       "count": 1,
-      "pool": { "foil": ["1-195", "196-222", "223-252", "281-304"] },
-      "notes": "any rarity from main set + sewer + scene + silhouette (traditional foil)"
+      "pool": { "foil": ["1-195", "196-222", "223-252"] },
+      "notes": "any rarity from main set + sewer + scene (traditional foil)"
     }
   ]
 }
