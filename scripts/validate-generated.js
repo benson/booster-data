@@ -216,6 +216,57 @@ async function validate(setCode) {
     warnings.push(`${uncoveredCards.length} booster-eligible cards not in any slot pool: ${details}`);
   }
 
+  // Collector-exclusive check: cards in config that should NOT be in play boosters
+  const COLLECTOR_PROMOS = new Set([
+    'fracturefoil', 'texturedfoil', 'textured', 'ripplefoil',
+    'halofoil', 'confettifoil', 'galaxyfoil', 'surgefoil',
+    'raisedfoil', 'serialized', 'manafoil', 'invisibleink',
+    'headliner',
+  ]);
+  const COLLECTOR_FRAMES = new Set(['extendedart']);
+
+  // Only check booster:false if the set has a meaningful split (not all-false like UB sets)
+  const boosterTrueCount = cards.filter(c => c.booster === true).length;
+  const boosterFalseCount = cards.filter(c => c.booster === false).length;
+  const hasBoosterData = boosterTrueCount > 0 && boosterTrueCount > boosterFalseCount * 0.2;
+
+  const nonBoosterInConfig = cards.filter(c => {
+    const cn = parseInt(c.collector_number, 10);
+    return !isNaN(cn) && allConfigCNs.has(cn) && c.booster === false;
+  });
+  if (nonBoosterInConfig.length > 0) {
+    // Filter out UB-only false positives (universesbeyond promo_type without collector-exclusive markers)
+    const suspicious = nonBoosterInConfig.filter(c => {
+      const promos = c.promo_types || [];
+      const frames = c.frame_effects || [];
+      const hasCollectorMarker = promos.some(p => COLLECTOR_PROMOS.has(p)) || frames.some(f => COLLECTOR_FRAMES.has(f));
+      const isUBSet = promos.includes('universesbeyond');
+      const isBoosterFun = promos.includes('boosterfun');
+      return !((isUBSet || isBoosterFun) && !hasCollectorMarker);
+    });
+    if (suspicious.length > 0) {
+      const samples = suspicious.slice(0, 10).map(c =>
+        `CN ${c.collector_number} ${c.name} (${(c.promo_types || []).join(',')})`
+      );
+      warnings.push(`${suspicious.length} non-UB cards with booster:false in config — verify manually: ${samples.join('; ')}`);
+    }
+  }
+
+  const collectorExclusiveInConfig = cards.filter(c => {
+    const cn = parseInt(c.collector_number, 10);
+    if (isNaN(cn) || !allConfigCNs.has(cn)) return false;
+    const promos = c.promo_types || [];
+    const frames = c.frame_effects || [];
+    return promos.some(p => COLLECTOR_PROMOS.has(p)) || frames.some(f => COLLECTOR_FRAMES.has(f));
+  });
+  if (collectorExclusiveInConfig.length > 0) {
+    const samples = collectorExclusiveInConfig.slice(0, 10).map(c => {
+      const markers = [...(c.promo_types || []), ...(c.frame_effects || [])].join(',');
+      return `CN ${c.collector_number} ${c.name} (${markers})`;
+    });
+    errors.push(`${collectorExclusiveInConfig.length} collector-exclusive cards in config: ${samples.join('; ')}`);
+  }
+
   // Index check
   const indexPath = path.join(__dirname, '..', 'index.json');
   const index = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
