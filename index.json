@@ -138,6 +138,7 @@
     "soi": ["draft"],
     "sok": ["draft"],
     "som": ["draft"],
+    "sos": ["collector", "play"],
     "spm": ["collector", "play"],
     "sth": ["draft"],
     "stx": ["collector", "draft", "set"],

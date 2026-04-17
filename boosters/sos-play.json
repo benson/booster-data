@@ -1,0 +1,53 @@
+{
+  "set": "sos",
+  "setName": "Secrets of Strixhaven",
+  "boosterType": "play",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-secrets-of-strixhaven",
+  "slots": [
+    {
+      "name": "rare",
+      "count": 1,
+      "rarities": ["rare", "mythic"],
+      "pool": { "nonfoil": ["1-305"] },
+      "mythicRate": 0.141,
+      "notes": "main set (1-266) + borderless guest lecturer/founder dragons/showcase/borderless lands (282-305)"
+    },
+    {
+      "name": "uncommon",
+      "count": 3,
+      "rarities": ["uncommon"],
+      "pool": { "nonfoil": ["1-266"] }
+    },
+    {
+      "name": "common",
+      "count": 6,
+      "rarities": ["common"],
+      "pool": { "nonfoil": ["1-266"] }
+    },
+    {
+      "name": "land",
+      "count": 1,
+      "pool": { "nonfoil": ["267-281"] },
+      "notes": "basic lands (includes spellcraft variants) plus common dual lands from main set"
+    },
+    {
+      "name": "wildcard",
+      "count": 1,
+      "pool": { "nonfoil": ["1-305"] },
+      "notes": "any rarity from booster-eligible cards; rare chance borderless/field notes"
+    },
+    {
+      "name": "foil",
+      "count": 1,
+      "pool": { "foil": ["1-305"] },
+      "notes": "traditional foil, any rarity from booster-eligible cards"
+    },
+    {
+      "name": "mysticalArchive",
+      "count": 1,
+      "bonusSet": "soa",
+      "pool": { "nonfoil": ["1-65"] },
+      "notes": "Mystical Archive bonus sheet (25 U, 25 R, 15 M); Japanese variants appear 1 in 3 Japanese boosters only"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "set": "sos",
+  "setName": "Secrets of Strixhaven",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-secrets-of-strixhaven",
+  "slots": [
+    {
+      "name": "rareOrMythic",
+      "count": 5,
+      "rarities": ["rare", "mythic"],
+      "pool": {
+        "foil": ["1-305", "306-368"],
+        "nonfoil": ["282-305", "306-368"]
+      },
+      "notes": "borderless, showcase, extended art, serialized headliner"
+    },
+    {
+      "name": "uncommon",
+      "count": 4,
+      "rarities": ["uncommon"],
+      "pool": { "foil": ["1-266"] }
+    },
+    {
+      "name": "common",
+      "count": 4,
+      "rarities": ["common"],
+      "pool": { "foil": ["1-266"] }
+    },
+    {
+      "name": "collectorExclusive",
+      "count": 2,
+      "pool": { "nonfoil": ["306-368"], "foil": ["306-368"] },
+      "notes": "serialized Emeritus of Ideation (306), extended art (307-362), inverted charms (363-367), Wisdom of Ages (368)"
+    },
+    {
+      "name": "mysticalArchive",
+      "count": 3,
+      "bonusSet": "soa",
+      "pool": { "nonfoil": ["1-195"], "foil": ["1-195"] },
+      "notes": "Mystical Archive bonus sheet including Japanese variants"
+    }
+  ]
+}
