@@ -11,8 +11,6 @@ const COLLECTOR_PROMOS = new Set([
   'halofoil', 'confettifoil', 'galaxyfoil', 'surgefoil',
   'raisedfoil', 'serialized', 'manafoil', 'invisibleink',
 ]);
-// extendedart is always collector-only; inverted/etched may appear in play boosters
-// depending on the set, so we categorize them separately for the prompt to decide
 const ALWAYS_COLLECTOR_FRAMES = new Set(['extendedart']);
 
 function categorize(c) {
@@ -52,6 +50,57 @@ async function fetchSetInfo(setCode) {
   return res.json();
 }
 
+// --- Cross-cutting metadata detection ---
+
+// Find Special Guests (spg) CN range released same day as this set
+async function detectSpecialGuestsRange(setReleasedAt) {
+  try {
+    const res = await fetch(`https://api.scryfall.com/cards/search?q=set%3Aspg&unique=prints&order=set&page=1`);
+    if (!res.ok) return null;
+    let data = await res.json();
+    let cards = data.data || [];
+    while (data.has_more) {
+      await delay(100);
+      const r2 = await fetch(data.next_page);
+      data = await r2.json();
+      cards = cards.concat(data.data || []);
+    }
+    const matching = cards
+      .filter(c => c.released_at === setReleasedAt)
+      .map(c => parseInt(c.collector_number, 10))
+      .filter(n => !isNaN(n))
+      .sort((a, b) => a - b);
+    if (matching.length === 0) return null;
+    return [matching[0], matching[matching.length - 1]];
+  } catch (e) {
+    console.error(`  Special Guests detection failed: ${e.message}`);
+    return null;
+  }
+}
+
+// Find bonus sheet: a Scryfall set with parent_set_code === setCode that isn't promos/tokens
+async function detectBonusSheet(setCode) {
+  try {
+    const res = await fetch('https://api.scryfall.com/sets');
+    if (!res.ok) return null;
+    const data = await res.json();
+    const children = data.data.filter(s =>
+      s.parent_set_code === setCode &&
+      !s.digital &&
+      !['token', 'memorabilia', 'promo'].includes(s.set_type) &&
+      (s.card_count || 0) >= 20 &&
+      !/token|art series|substitute|promo/i.test(s.name)
+    );
+    // Prefer sets that look like bonus sheets (reprints/eternal/masters types)
+    const preferred = children.find(s => ['masters', 'draft_innovation', 'eternal'].includes(s.set_type));
+    const pick = preferred || children[0];
+    return pick ? pick.code : null;
+  } catch (e) {
+    console.error(`  Bonus sheet detection failed: ${e.message}`);
+    return null;
+  }
+}
+
 // --- CN analysis ---
 
 function analyzeCards(cards) {
@@ -85,7 +134,6 @@ function analyzeCards(cards) {
       return { category: cat, minCN, maxCN, count: items.length, inBooster, rarities };
     });
 
-  // Find basic land CN ranges
   const basicLands = cards.filter(c => c.type_line && c.type_line.includes('Basic Land'));
   const basicLandCNs = basicLands
     .map(c => parseInt(c.collector_number, 10))
@@ -111,49 +159,16 @@ function formatCNRanges(cns) {
   return ranges;
 }
 
-// --- WotC article search ---
-
-async function searchCollectingArticle(setName) {
-  const query = encodeURIComponent(`site:magic.wizards.com "collecting" "${setName}"`);
-  try {
-    const res = await fetch(`https://www.google.com/search?q=${query}`, {
-      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; bot)' }
-    });
-    if (!res.ok) return null;
-    const html = await res.text();
-    const match = html.match(/https:\/\/magic\.wizards\.com\/en\/news\/feature\/collecting-[^\s"&]+/);
-    return match ? match[0] : null;
-  } catch {
-    return null;
-  }
-}
-
-async function fetchArticleText(url) {
-  try {
-    const res = await fetch(url, {
-      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; bot)' }
-    });
-    if (!res.ok) return null;
-    const html = await res.text();
-    // Strip HTML tags, keep text content
-    const text = html
-      .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
-      .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
-      .replace(/<[^>]+>/g, ' ')
-      .replace(/\s+/g, ' ')
-      .trim();
-    // Truncate to ~8000 chars to fit in prompt
-    return text.substring(0, 8000);
-  } catch {
-    return null;
-  }
-}
-
-// --- Example configs for prompt ---
+// --- Example configs for prompt (cached) ---
 
 function loadExampleConfigs() {
   const boostersDir = path.join(__dirname, '..', 'boosters');
-  const examples = ['fin-play.json', 'blb-play.json', 'tmt-play.json'];
+  const examples = [
+    'sos-play.json', 'sos-collector.json', // mystical-archive-style
+    'fin-play.json', 'fin-collector.json', // bonus-sheet-style
+    'blb-play.json', 'blb-collector.json', // special-guests-style
+    'tmt-play.json',                        // unusual slot (legendary turtle)
+  ];
   const configs = [];
   for (const name of examples) {
     const fp = path.join(boostersDir, name);
@@ -164,67 +179,141 @@ function loadExampleConfigs() {
   return configs;
 }
 
-// --- Claude API call ---
+// --- Claude API call with web search ---
 
-async function generateWithClaude(setCode, setName, analysis, articleUrl, articleText, examples) {
+async function generateWithClaude({ setCode, setName, setReleasedAt, analysis, specialGuestsRange, bonusSheetCode, examples }) {
   const client = new Anthropic();
 
   const { summary, basicLandCNs } = analysis;
   const basicLandRanges = formatCNRanges(basicLandCNs);
 
-  let prompt = `Generate a play booster config JSON for the Magic: The Gathering set "${setName}" (set code: "${setCode}").
+  const systemPrompt = `You generate accurate booster-pack configuration JSON files for Magic: The Gathering sets, consumed by pack-value and sealed-pool tools.
 
-## CN Analysis from Scryfall
-${summary.map(s => `- ${s.category}: CN ${s.minCN}-${s.maxCN} (${s.count} cards, ${s.inBooster} booster-eligible) — rarities: ${JSON.stringify(s.rarities)}`).join('\n')}
+Rules:
+1. Use web_search to find the official Wizards of the Coast "collecting {set name}" article at magic.wizards.com/en/news — it describes every booster slot. If you cannot find it, STOP and return an error message explaining the article is unavailable.
+2. Never guess slot structure. CN ranges come from Scryfall analysis (given); slot rules come from the WotC article (found via search).
+3. Play Boosters are typically 13 cards: 6 commons + 3 uncommons + 1 rare/mythic + 1 wildcard + 1 foil + 1 land. Some sets add a dedicated bonus-sheet slot for 14 total.
+4. Collector Boosters are typically 15: 5 rare/mythic + 4 uncommon (foil) + 4 common (foil) + 2 collector-exclusive + occasional bonus slot.
+5. CN ranges in "pool" must include every treatment mentioned by the article as appearing in that booster.
+6. Extended-art cards are collector-only unless the article says otherwise.
+7. Output ONLY valid JSON in the final response — no markdown, no commentary.`;
+
+  const examplesBlock = examples.map(e => `### ${e.name}\n\`\`\`json\n${JSON.stringify(e.content, null, 2)}\n\`\`\``).join('\n\n');
+
+  const userPrompt = `Generate play AND collector booster configs for the set "${setName}" (code: "${setCode}", released ${setReleasedAt}).
+
+## Scryfall CN analysis
+${summary.map(s => `- ${s.category}: CN ${s.minCN}-${s.maxCN} (${s.count} cards, ${s.inBooster} booster-eligible) — rarities ${JSON.stringify(s.rarities)}`).join('\n')}
 
 ## Basic Land CNs
 ${basicLandRanges.length > 0 ? basicLandRanges.join(', ') : 'None found'}
 
-`;
+## Detected cross-cutting metadata
+- Special Guests range (set:spg cards released ${setReleasedAt}): ${specialGuestsRange ? `CN ${specialGuestsRange[0]}-${specialGuestsRange[1]}` : 'none'}
+- Bonus sheet child set on Scryfall: ${bonusSheetCode || 'none'}
 
-  if (articleText) {
-    prompt += `## WotC Collecting Article
-Source: ${articleUrl}
-${articleText}
+## Task
+Use web_search to find the "collecting ${setName}" article on magic.wizards.com. Read it carefully. Produce a JSON object with three fields:
 
-`;
-  } else {
-    prompt += `## No WotC Collecting Article Found
-Use standard play booster structure based on the CN analysis.
+\`\`\`
+{
+  "play": { ...play booster config... },
+  "collector": { ...collector booster config... },
+  "metadata": {
+    "specialGuests": [start, end] | null,
+    "bonusSheet": "xxx" | null,
+    "hasBigScore": boolean
+  }
+}
+\`\`\`
 
-`;
+The play and collector configs must match the example format exactly (set, setName, boosterType, source, slots[]). Use "${setCode}" as set, "${setName}" as setName, "play"/"collector" as boosterType, the article URL as source.
+
+Set metadata.specialGuests to the detected range if the article confirms Special Guests appear in this set's play boosters; else null.
+Set metadata.bonusSheet to the detected child set code if the article confirms it appears as a dedicated bonus-sheet slot in play boosters; else null.
+Set metadata.hasBigScore to true only if this set is OTJ or a direct Big Score reprint.`;
+
+  const examplesSystem = `## Example configs for reference\n\n${examplesBlock}`;
+
+  let response;
+  try {
+    response = await client.messages.create({
+      model: 'claude-sonnet-4-6',
+      max_tokens: 8000,
+      system: [
+        { type: 'text', text: systemPrompt },
+        { type: 'text', text: examplesSystem, cache_control: { type: 'ephemeral' } },
+      ],
+      tools: [{ type: 'web_search_20250305', name: 'web_search', max_uses: 5 }],
+      messages: [{ role: 'user', content: userPrompt }],
+    });
+  } catch (e) {
+    throw new Error(`Claude API error: ${e.message}`);
   }
 
-  prompt += `## Example Configs for Reference
-${examples.map(e => `### ${e.name}\n\`\`\`json\n${JSON.stringify(e.content, null, 2)}\n\`\`\``).join('\n\n')}
+  // Extract the final text block (after any tool_use/tool_result rounds)
+  const textBlocks = response.content.filter(b => b.type === 'text');
+  if (textBlocks.length === 0) throw new Error('Claude returned no text content');
+  const finalText = textBlocks[textBlocks.length - 1].text.trim();
 
-## Instructions
-1. Standard play booster = 6 commons + 3 uncommons + 1 rare/mythic + 1 wildcard + 1 foil + 1 land = 13 cards per pack
-2. If the collecting article mentions a special slot (like a dedicated character slot, bonus sheet, etc.), add it and adjust counts accordingly
-3. The "pool" CN ranges should include ALL booster-eligible cards. CRITICAL: check the collecting article carefully for which treatments appear in play boosters:
-   - "inverted" / sewer frame cards CAN appear in play boosters for some sets (e.g. TMT) — include them if the article says so
-   - "showcase" / scene cards typically appear in play boosters — include them
-   - "borderless" cards may appear in play boosters — check the article
-   - Extended-art cards are almost always collector-booster-only — exclude unless article says otherwise
-   - Silhouette / special mythics often appear in play boosters at low rates — include if article confirms
-4. Do NOT assume all bonus cards are collector-only. Read the article slot-by-slot and include every treatment it lists for play boosters
-5. The land slot should use the basic land CN range specifically
-6. If there's a bonus sheet from another set, use "bonusSet" field with that set's code
-7. mythicRate should be 0.125 (1 in 8) for the rare slot
-8. The "source" field should be the WotC collecting article URL if available
-
-Return ONLY the JSON object, no markdown fencing or explanation.`;
-
-  const response = await client.messages.create({
-    model: 'claude-sonnet-4-6',
-    max_tokens: 2000,
-    messages: [{ role: 'user', content: prompt }],
-  });
-
-  const text = response.content[0].text.trim();
   // Strip markdown fencing if present
-  const json = text.replace(/^```json?\n?/, '').replace(/\n?```$/, '');
-  return JSON.parse(json);
+  const json = finalText.replace(/^```json?\s*/i, '').replace(/\s*```$/, '');
+  let parsed;
+  try {
+    parsed = JSON.parse(json);
+  } catch (e) {
+    throw new Error(`Claude did not return valid JSON. Response excerpt: ${finalText.slice(0, 500)}`);
+  }
+
+  if (!parsed.play || !parsed.collector || !parsed.metadata) {
+    throw new Error(`Claude output missing required top-level fields (play/collector/metadata). Got keys: ${Object.keys(parsed).join(',')}`);
+  }
+  return parsed;
+}
+
+// --- Metadata merging ---
+
+function updateMetadata(setCode, m) {
+  const metaPath = path.join(__dirname, '..', 'metadata.json');
+  const existing = fs.existsSync(metaPath)
+    ? JSON.parse(fs.readFileSync(metaPath, 'utf8'))
+    : { version: 1, sets: {} };
+
+  const entry = {};
+  if (Array.isArray(m.specialGuests) && m.specialGuests.length === 2) entry.specialGuests = m.specialGuests;
+  if (m.bonusSheet) entry.bonusSheet = m.bonusSheet;
+  if (m.hasBigScore) entry.hasBigScore = true;
+
+  if (Object.keys(entry).length === 0) {
+    // Nothing to record; leave metadata.json alone
+    return false;
+  }
+
+  existing.sets = existing.sets || {};
+  existing.sets[setCode] = entry;
+
+  // Keep sets keyed alphabetically for stable diffs
+  const sortedSets = Object.fromEntries(Object.keys(existing.sets).sort().map(k => [k, existing.sets[k]]));
+  existing.sets = sortedSets;
+
+  fs.writeFileSync(metaPath, JSON.stringify(existing, null, 2) + '\n');
+  return true;
+}
+
+// --- Index.json update ---
+
+function updateIndex(setCode, hasCollector) {
+  const indexPath = path.join(__dirname, '..', 'index.json');
+  const index = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
+  const types = index.boosters[setCode] || [];
+  if (!types.includes('play')) types.push('play');
+  if (hasCollector && !types.includes('collector')) types.push('collector');
+  types.sort();
+  index.boosters[setCode] = types;
+
+  const sorted = { version: index.version, boosters: {} };
+  Object.keys(index.boosters).sort().forEach(k => { sorted.boosters[k] = index.boosters[k]; });
+  fs.writeFileSync(indexPath, JSON.stringify(sorted, null, 4) + '\n');
 }
 
 // --- Main ---
@@ -237,64 +326,59 @@ async function main() {
   }
 
   const code = setCode.toLowerCase();
-  console.error(`Fetching set info for ${code}...`);
+  console.error(`[${code}] fetching set info...`);
   const setInfo = await fetchSetInfo(code);
 
-  console.error(`Fetching cards for ${setInfo.name}...`);
+  console.error(`[${code}] fetching cards for ${setInfo.name}...`);
   const cards = await fetchAllCards(code);
-  console.error(`  ${cards.length} cards fetched`);
+  console.error(`[${code}]   ${cards.length} cards`);
 
-  console.error('Analyzing CN structure...');
+  console.error(`[${code}] analyzing CN structure...`);
   const analysis = analyzeCards(cards);
   analysis.summary.forEach(s => {
-    console.error(`  ${s.category}: CN ${s.minCN}-${s.maxCN} (${s.count} cards, ${s.inBooster} booster-eligible)`);
+    console.error(`[${code}]   ${s.category}: CN ${s.minCN}-${s.maxCN} (${s.count} cards, ${s.inBooster} booster-eligible)`);
   });
 
-  console.error('Searching for WotC collecting article...');
-  const articleUrl = await searchCollectingArticle(setInfo.name);
-  let articleText = null;
-  if (articleUrl) {
-    console.error(`  Found: ${articleUrl}`);
-    articleText = await fetchArticleText(articleUrl);
-  } else {
-    console.error('  Not found — will use standard structure');
-  }
+  console.error(`[${code}] detecting Special Guests range...`);
+  const specialGuestsRange = await detectSpecialGuestsRange(setInfo.released_at);
+  console.error(`[${code}]   ${specialGuestsRange ? `CN ${specialGuestsRange[0]}-${specialGuestsRange[1]}` : 'none'}`);
 
-  console.error('Loading example configs...');
+  console.error(`[${code}] detecting bonus sheet...`);
+  const bonusSheetCode = await detectBonusSheet(code);
+  console.error(`[${code}]   ${bonusSheetCode || 'none'}`);
+
+  console.error(`[${code}] loading example configs...`);
   const examples = loadExampleConfigs();
 
-  console.error('Calling Claude API...');
-  const config = await generateWithClaude(code, setInfo.name, analysis, articleUrl, articleText, examples);
+  console.error(`[${code}] calling Claude with web_search...`);
+  const result = await generateWithClaude({
+    setCode: code,
+    setName: setInfo.name,
+    setReleasedAt: setInfo.released_at,
+    analysis,
+    specialGuestsRange,
+    bonusSheetCode,
+    examples,
+  });
 
-  // Ensure required fields
-  config.set = code;
-  config.setName = setInfo.name;
-  config.boosterType = 'play';
-
-  // Write config file
-  const outPath = path.join(__dirname, '..', 'boosters', `${code}-play.json`);
-  fs.writeFileSync(outPath, JSON.stringify(config, null, 2) + '\n');
-  console.error(`Config written to boosters/${code}-play.json`);
-
-  // Update index.json
-  const indexPath = path.join(__dirname, '..', 'index.json');
-  const index = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
-  if (!index.boosters[code]) {
-    index.boosters[code] = ['play'];
-  } else if (!index.boosters[code].includes('play')) {
-    index.boosters[code].push('play');
-    index.boosters[code].sort();
+  // Overwrite authoritative fields on the configs
+  for (const bt of ['play', 'collector']) {
+    result[bt].set = code;
+    result[bt].setName = setInfo.name;
+    result[bt].boosterType = bt;
   }
 
-  // Sort boosters object alphabetically
-  const sorted = {};
-  sorted.version = index.version;
-  sorted.boosters = {};
-  Object.keys(index.boosters).sort().forEach(k => {
-    sorted.boosters[k] = index.boosters[k];
-  });
-  fs.writeFileSync(indexPath, JSON.stringify(sorted, null, 4) + '\n');
-  console.error(`index.json updated`);
+  const playPath = path.join(__dirname, '..', 'boosters', `${code}-play.json`);
+  const collectorPath = path.join(__dirname, '..', 'boosters', `${code}-collector.json`);
+  fs.writeFileSync(playPath, JSON.stringify(result.play, null, 2) + '\n');
+  fs.writeFileSync(collectorPath, JSON.stringify(result.collector, null, 2) + '\n');
+  console.error(`[${code}] wrote ${code}-play.json and ${code}-collector.json`);
+
+  updateIndex(code, true);
+  console.error(`[${code}] updated index.json`);
+
+  const metaChanged = updateMetadata(code, result.metadata);
+  console.error(`[${code}] metadata.json ${metaChanged ? 'updated' : 'unchanged'}`);
 }
 
 main().catch(e => {
