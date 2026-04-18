@@ -7,47 +7,84 @@
     {
       "name": "rare",
       "count": 1,
-      "rarities": ["rare", "mythic"],
-      "pool": { "nonfoil": ["1-305"] },
+      "rarities": [
+        "rare",
+        "mythic"
+      ],
+      "pool": {
+        "nonfoil": [
+          "1-305"
+        ]
+      },
       "mythicRate": 0.141,
-      "notes": "main set (1-266) + borderless guest lecturer/founder dragons/showcase/borderless lands (282-305)"
+      "notes": "main set (1-266) + borderless Elder Dragons/planeswalkers/dual lands + borderless field notes (282-305); rare/mythic borderless <1% each"
     },
     {
       "name": "uncommon",
       "count": 3,
-      "rarities": ["uncommon"],
-      "pool": { "nonfoil": ["1-266"] }
+      "rarities": [
+        "uncommon"
+      ],
+      "pool": {
+        "nonfoil": [
+          "1-266"
+        ]
+      },
+      "notes": "100 uncommons from main set"
     },
     {
       "name": "common",
       "count": 6,
-      "rarities": ["common"],
-      "pool": { "nonfoil": ["1-266"] }
+      "rarities": [
+        "common"
+      ],
+      "pool": {
+        "nonfoil": [
+          "1-266"
+        ]
+      },
+      "notes": "81 commons from main set; 1 in 55 packs a Special Guests card (SPG 149-158) replaces one common"
     },
     {
       "name": "land",
       "count": 1,
-      "pool": { "nonfoil": ["267-281"] },
-      "notes": "basic lands (includes spellcraft variants) plus common dual lands from main set"
+      "pool": {
+        "nonfoil": [
+          "267-281"
+        ]
+      },
+      "notes": "full-art basic lands including spellcraft variants; 20% of packs also include a traditional foil land"
     },
     {
       "name": "wildcard",
       "count": 1,
-      "pool": { "nonfoil": ["1-305"] },
-      "notes": "any rarity from booster-eligible cards; rare chance borderless/field notes"
+      "pool": {
+        "nonfoil": [
+          "1-305"
+        ]
+      },
+      "notes": "common (54.4%), uncommon (33.6%), rare (6.7%), mythic (1.1%) from main set; rare/mythic borderless or field notes at <1% each"
     },
     {
       "name": "foil",
       "count": 1,
-      "pool": { "foil": ["1-305"] },
-      "notes": "traditional foil, any rarity from booster-eligible cards"
+      "pool": {
+        "foil": [
+          "1-305"
+        ]
+      },
+      "notes": "traditional foil, any rarity from booster-eligible cards including borderless and field notes"
     },
     {
       "name": "mysticalArchive",
       "count": 1,
       "bonusSet": "soa",
-      "pool": { "nonfoil": ["1-65"] },
-      "notes": "Mystical Archive bonus sheet (25 U, 25 R, 15 M); Japanese variants appear 1 in 3 Japanese boosters only"
+      "pool": {
+        "nonfoil": [
+          "1-65"
+        ]
+      },
+      "notes": "Mystical Archive bonus sheet (SOA 1-65); Japanese alternate-art variants appear in Japanese-language Play Boosters only"
     }
   ]
 }

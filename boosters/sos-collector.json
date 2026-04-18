@@ -7,37 +7,87 @@
     {
       "name": "rareOrMythic",
       "count": 5,
-      "rarities": ["rare", "mythic"],
+      "rarities": [
+        "rare",
+        "mythic"
+      ],
       "pool": {
-        "foil": ["1-305", "306-368"],
-        "nonfoil": ["282-305", "306-368"]
+        "foil": [
+          "1-305",
+          "307-362"
+        ],
+        "nonfoil": [
+          "282-305",
+          "307-362"
+        ]
       },
-      "notes": "borderless, showcase, extended art, serialized headliner"
+      "notes": "foil extended-art (307-362, 59.9% R / 4.3% M), foil borderless Elder Dragons/planeswalkers/dual lands (282-305, 6.1% R / 4.3% M), foil field notes (282-305, 7.3% R / 3.7% M), silver scroll foil JPN Mystical Archive (7.7% R / 2.3% M); serialized double rainbow foil Emeritus of Ideation (CN 306) <1%"
     },
     {
       "name": "uncommon",
       "count": 4,
-      "rarities": ["uncommon"],
-      "pool": { "foil": ["1-266"] }
+      "rarities": [
+        "uncommon"
+      ],
+      "pool": {
+        "foil": [
+          "1-266"
+        ]
+      },
+      "notes": "traditional foil uncommons from main set (100 uncommons)"
     },
     {
       "name": "common",
       "count": 4,
-      "rarities": ["common"],
-      "pool": { "foil": ["1-266"] }
+      "rarities": [
+        "common"
+      ],
+      "pool": {
+        "foil": [
+          "1-266"
+        ]
+      },
+      "notes": "traditional foil commons from main set (81 commons + 5 common dual lands)"
     },
     {
-      "name": "collectorExclusive",
-      "count": 2,
-      "pool": { "nonfoil": ["306-368"], "foil": ["306-368"] },
-      "notes": "serialized Emeritus of Ideation (306), extended art (307-362), inverted charms (363-367), Wisdom of Ages (368)"
+      "name": "land",
+      "count": 1,
+      "pool": {
+        "nonfoil": [
+          "267-281"
+        ],
+        "foil": [
+          "267-281"
+        ]
+      },
+      "notes": "full-art basic land including spellcraft variants; nonfoil or traditional foil"
     },
     {
       "name": "mysticalArchive",
       "count": 3,
       "bonusSet": "soa",
-      "pool": { "nonfoil": ["1-195"], "foil": ["1-195"] },
-      "notes": "Mystical Archive bonus sheet including Japanese variants"
+      "pool": {
+        "nonfoil": [
+          "1-195"
+        ],
+        "foil": [
+          "1-195"
+        ]
+      },
+      "notes": "3-4 Mystical Archive cards per pack (SOA 1-65 English nonfoil/foil, 66-130 Japanese alternate-art, 131-195 silver scroll foil JPN); silver scroll foil JPN versions available in all-language Collector Boosters"
+    },
+    {
+      "name": "collectorExclusive",
+      "count": 2,
+      "pool": {
+        "nonfoil": [
+          "307-362"
+        ],
+        "foil": [
+          "306-362"
+        ]
+      },
+      "notes": "serialized double rainbow foil Emeritus of Ideation (CN 306, <1%), extended-art rare/mythic (307-362); Collector Booster-exclusive card styles and special foil treatments"
     }
   ]
 }
