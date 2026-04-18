@@ -179,6 +179,36 @@ function loadExampleConfigs() {
   return configs;
 }
 
+// Extract a JSON object from text that may contain prose and/or markdown fences.
+function extractJSON(text) {
+  // Prefer the last fenced ```json``` block if present
+  const blocks = [...text.matchAll(/```(?:json)?\s*\n?([\s\S]*?)```/gi)];
+  if (blocks.length > 0) return blocks[blocks.length - 1][1].trim();
+
+  // Fallback: find the outermost balanced { ... } in the text
+  const start = text.indexOf('{');
+  if (start === -1) throw new Error('No { found in response');
+  let depth = 0;
+  let inString = false;
+  let escape = false;
+  for (let i = start; i < text.length; i++) {
+    const ch = text[i];
+    if (inString) {
+      if (escape) escape = false;
+      else if (ch === '\\') escape = true;
+      else if (ch === '"') inString = false;
+      continue;
+    }
+    if (ch === '"') inString = true;
+    else if (ch === '{') depth++;
+    else if (ch === '}') {
+      depth--;
+      if (depth === 0) return text.slice(start, i + 1);
+    }
+  }
+  throw new Error('Unbalanced braces');
+}
+
 // --- Claude API call with web search ---
 
 async function generateWithClaude({ setCode, setName, setReleasedAt, analysis, specialGuestsRange, bonusSheetCode, examples }) {
@@ -256,13 +286,12 @@ Set metadata.hasBigScore to true only if this set is OTJ or a direct Big Score r
   if (textBlocks.length === 0) throw new Error('Claude returned no text content');
   const finalText = textBlocks[textBlocks.length - 1].text.trim();
 
-  // Strip markdown fencing if present
-  const json = finalText.replace(/^```json?\s*/i, '').replace(/\s*```$/, '');
+  const json = extractJSON(finalText);
   let parsed;
   try {
     parsed = JSON.parse(json);
   } catch (e) {
-    throw new Error(`Claude did not return valid JSON. Response excerpt: ${finalText.slice(0, 500)}`);
+    throw new Error(`Claude did not return valid JSON: ${e.message}. Response excerpt: ${finalText.slice(0, 500)}`);
   }
 
   if (!parsed.play || !parsed.collector || !parsed.metadata) {
