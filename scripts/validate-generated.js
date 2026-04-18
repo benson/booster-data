@@ -71,6 +71,11 @@ async function validate(setCode) {
   if (!config.boosterType) errors.push('Missing "boosterType" field');
   if (config.set !== setCode) errors.push(`"set" field "${config.set}" doesn't match expected "${setCode}"`);
   if (config.boosterType !== 'play') errors.push(`"boosterType" should be "play", got "${config.boosterType}"`);
+  if (!config.source) {
+    errors.push('Missing "source" field (must be a magic.wizards.com URL)');
+  } else if (!/^https:\/\/magic\.wizards\.com\//.test(config.source)) {
+    errors.push(`"source" must be a magic.wizards.com URL, got "${config.source}"`);
+  }
   if (!config.slots || !Array.isArray(config.slots)) {
     errors.push('Missing or invalid "slots" array');
     return { valid: false, errors, warnings };
@@ -230,25 +235,35 @@ async function validate(setCode) {
   const boosterFalseCount = cards.filter(c => c.booster === false).length;
   const hasBoosterData = boosterTrueCount > 0 && boosterTrueCount > boosterFalseCount * 0.2;
 
-  const nonBoosterInConfig = cards.filter(c => {
-    const cn = parseInt(c.collector_number, 10);
-    return !isNaN(cn) && allConfigCNs.has(cn) && c.booster === false;
-  });
-  if (nonBoosterInConfig.length > 0) {
-    // Filter out UB-only false positives (universesbeyond promo_type without collector-exclusive markers)
-    const suspicious = nonBoosterInConfig.filter(c => {
-      const promos = c.promo_types || [];
-      const frames = c.frame_effects || [];
-      const hasCollectorMarker = promos.some(p => COLLECTOR_PROMOS.has(p)) || frames.some(f => COLLECTOR_FRAMES.has(f));
-      const isUBSet = promos.includes('universesbeyond');
-      const isBoosterFun = promos.includes('boosterfun');
-      return !((isUBSet || isBoosterFun) && !hasCollectorMarker);
+  // Skip booster:false check entirely for freshly-released sets — Scryfall hasn't
+  // populated booster metadata yet, so false-positives would drown real signal.
+  const releasedAt = setInfo.released_at ? new Date(setInfo.released_at) : null;
+  const daysSinceRelease = releasedAt
+    ? (Date.now() - releasedAt.getTime()) / (1000 * 60 * 60 * 24)
+    : Infinity;
+  const isFreshlyReleased = daysSinceRelease <= 14;
+
+  if (!isFreshlyReleased) {
+    const nonBoosterInConfig = cards.filter(c => {
+      const cn = parseInt(c.collector_number, 10);
+      return !isNaN(cn) && allConfigCNs.has(cn) && c.booster === false;
     });
-    if (suspicious.length > 0) {
-      const samples = suspicious.slice(0, 10).map(c =>
-        `CN ${c.collector_number} ${c.name} (${(c.promo_types || []).join(',')})`
-      );
-      warnings.push(`${suspicious.length} non-UB cards with booster:false in config — verify manually: ${samples.join('; ')}`);
+    if (nonBoosterInConfig.length > 0) {
+      // Filter out UB-only false positives (universesbeyond promo_type without collector-exclusive markers)
+      const suspicious = nonBoosterInConfig.filter(c => {
+        const promos = c.promo_types || [];
+        const frames = c.frame_effects || [];
+        const hasCollectorMarker = promos.some(p => COLLECTOR_PROMOS.has(p)) || frames.some(f => COLLECTOR_FRAMES.has(f));
+        const isUBSet = promos.includes('universesbeyond');
+        const isBoosterFun = promos.includes('boosterfun');
+        return !((isUBSet || isBoosterFun) && !hasCollectorMarker);
+      });
+      if (suspicious.length > 0) {
+        const samples = suspicious.slice(0, 10).map(c =>
+          `CN ${c.collector_number} ${c.name} (${(c.promo_types || []).join(',')})`
+        );
+        warnings.push(`${suspicious.length} non-UB cards with booster:false in config — verify manually: ${samples.join('; ')}`);
+      }
     }
   }
 

@@ -71,7 +71,16 @@ async function detectSpecialGuestsRange(setReleasedAt) {
       .filter(n => !isNaN(n))
       .sort((a, b) => a - b);
     if (matching.length === 0) return null;
-    return [matching[0], matching[matching.length - 1]];
+    const min = matching[0];
+    const max = matching[matching.length - 1];
+    // Contiguity check: multiple sets can release the same day (e.g. msh + om2),
+    // which pools their spg CNs. If the CNs aren't a single contiguous block we
+    // can't disambiguate — return null and let the LLM infer from the article.
+    if (max - min + 1 > matching.length) {
+      console.error(`WARN: multiple Special Guests blocks on ${setReleasedAt}; cannot disambiguate, returning null`);
+      return null;
+    }
+    return [min, max];
   } catch (e) {
     console.error(`  Special Guests detection failed: ${e.message}`);
     return null;
@@ -348,13 +357,22 @@ function updateIndex(setCode, hasCollector) {
 // --- Main ---
 
 async function main() {
-  const setCode = process.argv[2];
+  const args = process.argv.slice(2);
+  const force = args.includes('--force');
+  const setCode = args.find(a => !a.startsWith('--'));
   if (!setCode) {
-    console.error('Usage: node generate-config.js <set-code>');
+    console.error('Usage: node generate-config.js <set-code> [--force]');
     process.exit(1);
   }
 
   const code = setCode.toLowerCase();
+
+  const playPath = path.join(__dirname, '..', 'boosters', `${code}-play.json`);
+  if (fs.existsSync(playPath) && !force) {
+    console.error(`[${code}] config already exists — pass --force to regenerate`);
+    process.exit(1);
+  }
+
   console.error(`[${code}] fetching set info...`);
   const setInfo = await fetchSetInfo(code);
 
@@ -397,7 +415,6 @@ async function main() {
     result[bt].boosterType = bt;
   }
 
-  const playPath = path.join(__dirname, '..', 'boosters', `${code}-play.json`);
   const collectorPath = path.join(__dirname, '..', 'boosters', `${code}-collector.json`);
   fs.writeFileSync(playPath, JSON.stringify(result.play, null, 2) + '\n');
   fs.writeFileSync(collectorPath, JSON.stringify(result.collector, null, 2) + '\n');
@@ -410,7 +427,11 @@ async function main() {
   console.error(`[${code}] metadata.json ${metaChanged ? 'updated' : 'unchanged'}`);
 }
 
-main().catch(e => {
-  console.error(`Error: ${e.message}`);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch(e => {
+    console.error(`Error: ${e.message}`);
+    process.exit(1);
+  });
+} else {
+  module.exports = { extractJSON };
+}
