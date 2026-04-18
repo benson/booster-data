@@ -53,7 +53,7 @@
           "267-281"
         ]
       },
-      "notes": "full-art basic lands including spellcraft variants; 20% of packs also include a traditional foil land"
+      "notes": "full-art spellcraft basic lands (one per college: Plains/Island/Swamp/Mountain/Forest); 20% of packs also include a traditional foil land"
     },
     {
       "name": "wildcard",
@@ -63,7 +63,7 @@
           "1-305"
         ]
       },
-      "notes": "common (54.4%), uncommon (33.6%), rare (6.7%), mythic (1.1%) from main set; rare/mythic borderless or field notes at <1% each"
+      "notes": "common (39.1%), uncommon (39.1%), rare (19.5%), mythic rare (1.9%) from main set including borderless and field notes"
     },
     {
       "name": "foil",
@@ -84,7 +84,7 @@
           "1-65"
         ]
       },
-      "notes": "Mystical Archive bonus sheet (SOA 1-65); Japanese alternate-art variants appear in Japanese-language Play Boosters only"
+      "notes": "Mystical Archive bonus sheet (SOA 1-65 English); guaranteed in every Play Booster; Japanese alternate-art silver scroll foil variants appear in Japanese-language Play Boosters only"
     }
   ]
 }
