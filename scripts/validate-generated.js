@@ -47,6 +47,87 @@ async function fetchSetInfo(setCode) {
   return res.json();
 }
 
+async function scryfallSetExists(setCode) {
+  try {
+    const res = await fetch(`https://api.scryfall.com/sets/${setCode}`);
+    if (!res.ok) return null;
+    return await res.json();
+  } catch {
+    return null;
+  }
+}
+
+// Detect Special Guests CN range for a set's release date — same logic as
+// generate-config.js. Used to cross-check Claude's metadata.specialGuests.
+async function detectSpecialGuestsRange(setReleasedAt) {
+  try {
+    let url = 'https://api.scryfall.com/cards/search?q=set%3Aspg&unique=prints&order=set';
+    let cards = [];
+    while (url) {
+      const res = await fetch(url);
+      if (!res.ok) return null;
+      const data = await res.json();
+      cards = cards.concat(data.data || []);
+      url = data.has_more ? data.next_page : null;
+      if (url) await delay(100);
+    }
+    const matching = cards
+      .filter(c => c.released_at === setReleasedAt)
+      .map(c => parseInt(c.collector_number, 10))
+      .filter(n => !isNaN(n))
+      .sort((a, b) => a - b);
+    if (matching.length === 0) return null;
+    const min = matching[0];
+    const max = matching[matching.length - 1];
+    if (max - min + 1 > matching.length) return null; // non-contiguous; can't disambiguate
+    return [min, max];
+  } catch {
+    return null;
+  }
+}
+
+// Compare a new play config's structural shape (slot count, slot names, total card count)
+// against the most recent sibling play config. Returns errors only for radical divergence —
+// the real signal is "Claude invented or dropped a slot," not minor naming variation.
+function compareToSibling(config, setCode) {
+  const errors = [];
+  const boostersDir = path.join(__dirname, '..', 'boosters');
+  const indexPath = path.join(__dirname, '..', 'index.json');
+  const index = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
+  const PLAY_BOOSTER_START = '2024-02-09';
+
+  // Collect candidate sibling configs (other play-era sets we've already verified).
+  const siblings = [];
+  for (const code of Object.keys(index.boosters)) {
+    if (code === setCode) continue;
+    if (!index.boosters[code].includes('play')) continue;
+    const fp = path.join(boostersDir, `${code}-play.json`);
+    if (!fs.existsSync(fp)) continue;
+    try {
+      const sibling = JSON.parse(fs.readFileSync(fp, 'utf8'));
+      siblings.push(sibling);
+    } catch { /* skip unreadable */ }
+  }
+
+  if (siblings.length === 0) return errors; // no peers to compare to
+
+  const siblingSlotCounts = siblings.map(s => s.slots.length);
+  const median = [...siblingSlotCounts].sort((a, b) => a - b)[Math.floor(siblingSlotCounts.length / 2)];
+  if (Math.abs(config.slots.length - median) >= 3) {
+    errors.push(`Slot count ${config.slots.length} diverges sharply from sibling median ${median} — likely hallucinated structure`);
+  }
+
+  // Common slot names that appear in nearly every play booster
+  const expectedSlots = ['rare', 'uncommon', 'common', 'land', 'wildcard', 'foil'];
+  const ourNames = new Set(config.slots.map(s => s.name));
+  const missingExpected = expectedSlots.filter(n => !ourNames.has(n));
+  if (missingExpected.length > 1) {
+    errors.push(`Missing expected slot names: ${missingExpected.join(', ')} — play boosters always include these`);
+  }
+
+  return errors;
+}
+
 async function validate(setCode) {
   const errors = [];
   const warnings = [];
@@ -118,8 +199,21 @@ async function validate(setCode) {
     if (slot.mythicRate !== undefined) {
       if (typeof slot.mythicRate !== 'number' || slot.mythicRate < 0 || slot.mythicRate > 1) {
         errors.push(`Slot "${slot.name}" mythicRate out of range`);
+      } else if (slot.mythicRate < 0.05 || slot.mythicRate > 0.25) {
+        // Real WotC rates cluster around 0.125 (1/8). Anything outside 1/20–1/4 is almost
+        // certainly a hallucination — the rate would be either trivially zero or as common
+        // as a rare, neither of which has ever shipped.
+        errors.push(`Slot "${slot.name}" mythicRate ${slot.mythicRate} outside plausible 0.05–0.25 range`);
       }
     }
+  }
+
+  // Sibling-set similarity: the structure of a new play config should look like the
+  // most-recent same-era play config. Catches "Claude invented a slot" / "Claude dropped a slot"
+  // even when individual CN ranges still parse and exist on Scryfall.
+  if (config.boosterType === 'play') {
+    const siblingErrors = compareToSibling(config, setCode);
+    errors.push(...siblingErrors);
   }
 
   // Scryfall cross-validation
@@ -287,6 +381,38 @@ async function validate(setCode) {
   const index = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
   if (!index.boosters[setCode] || !index.boosters[setCode].includes('play')) {
     warnings.push('Set not found in index.json with "play" type');
+  }
+
+  // Cross-check metadata.json against Scryfall — catches LLM-invented bonus sheets
+  // and Special Guests ranges that don't match what's actually on Scryfall.
+  const metaPath = path.join(__dirname, '..', 'metadata.json');
+  if (fs.existsSync(metaPath)) {
+    const metadata = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
+    const setMeta = metadata.sets?.[setCode];
+    if (setMeta) {
+      if (setMeta.bonusSheet) {
+        const bonusSet = await scryfallSetExists(setMeta.bonusSheet);
+        if (!bonusSet) {
+          errors.push(`metadata.bonusSheet "${setMeta.bonusSheet}" does not resolve to a real Scryfall set`);
+        } else if ((bonusSet.card_count || 0) < 20) {
+          errors.push(`metadata.bonusSheet "${setMeta.bonusSheet}" only has ${bonusSet.card_count} cards — too small to be a real bonus sheet`);
+        }
+      }
+
+      if (Array.isArray(setMeta.specialGuests) && setMeta.specialGuests.length === 2) {
+        const detected = await detectSpecialGuestsRange(setInfo.released_at);
+        if (detected) {
+          const [cMin, cMax] = setMeta.specialGuests;
+          const [dMin, dMax] = detected;
+          // Allow off-by-one drift but flag larger mismatches.
+          if (Math.abs(cMin - dMin) > 1 || Math.abs(cMax - dMax) > 1) {
+            errors.push(`metadata.specialGuests [${cMin},${cMax}] disagrees with Scryfall-detected SPG range [${dMin},${dMax}] for release date ${setInfo.released_at}`);
+          }
+        }
+        // If we couldn't detect (multiple sets sharing a release date, etc.),
+        // trust the LLM. The detector intentionally returns null in that case.
+      }
+    }
   }
 
   const valid = errors.length === 0;

@@ -13,10 +13,21 @@ async function fetchScryfallSets() {
   return data.data;
 }
 
+// Decide whether to skip a set in detection.
+//   - No entry in index -> not complete, regenerate.
+//   - Entry has play but missing collector -> partial failure, regenerate (force).
+//   - Entry has any other shape (draft-only, set-only, no-collector specials like MB2) ->
+//     treat as a deliberate manual entry and leave alone. The cron should never override
+//     curated decisions; use workflow_dispatch + force=true to re-run those.
+function isComplete(types) {
+  if (!types || types.length === 0) return false;
+  if (types.includes('play')) return types.includes('collector');
+  return true; // entry exists without play -> manually curated, leave alone
+}
+
 async function main() {
   const indexPath = path.join(__dirname, '..', 'index.json');
   const index = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
-  const existingSets = new Set(Object.keys(index.boosters));
 
   const sets = await fetchScryfallSets();
   const now = new Date();
@@ -30,7 +41,7 @@ async function main() {
     const released = new Date(s.released_at);
     if (released > cutoff) return false;
     if (s.released_at < PLAY_BOOSTER_START) return false;
-    if (existingSets.has(s.code)) return false;
+    if (isComplete(index.boosters[s.code])) return false;
     return true;
   });
 
@@ -38,7 +49,8 @@ async function main() {
     code: s.code,
     name: s.name,
     released: s.released_at,
-    scryfall_uri: s.scryfall_uri
+    scryfall_uri: s.scryfall_uri,
+    incomplete: !!index.boosters[s.code]
   }));
 
   console.log(JSON.stringify(output));
