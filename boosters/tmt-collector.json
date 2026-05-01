@@ -1,0 +1,104 @@
+{
+  "set": "tmt",
+  "setName": "Teenage Mutant Ninja Turtles",
+  "boosterType": "collector",
+  "source": "https://magic.wizards.com/en/news/feature/collecting-teenage-mutant-ninja-turtles",
+  "slots": [
+    {
+      "name": "rareOrMythic",
+      "count": 5,
+      "rarities": [
+        "rare",
+        "mythic"
+      ],
+      "pool": {
+        "foil": [
+          "1-190",
+          "196-257"
+        ],
+        "nonfoil": [
+          "196-257",
+          "258-280",
+          "291-314"
+        ]
+      },
+      "notes": "foil main set rare/mythic (1-190), foil inverted silhouette rare/mythic (196-257), nonfoil Japan Showcase rare/mythic (258-280), nonfoil Kevin Eastman headliner mythic (291-314); traditional foil source material cards (PZA) also appear"
+    },
+    {
+      "name": "uncommon",
+      "count": 4,
+      "rarities": [
+        "uncommon"
+      ],
+      "pool": {
+        "foil": [
+          "1-190",
+          "196-257"
+        ]
+      },
+      "notes": "traditional foil uncommons from main set and inverted silhouette treatment"
+    },
+    {
+      "name": "common",
+      "count": 4,
+      "rarities": [
+        "common"
+      ],
+      "pool": {
+        "foil": [
+          "1-190",
+          "196-257"
+        ]
+      },
+      "notes": "traditional foil commons from main set and inverted silhouette treatment"
+    },
+    {
+      "name": "land",
+      "count": 1,
+      "pool": {
+        "nonfoil": [
+          "191-195",
+          "253-257",
+          "305-319"
+        ],
+        "foil": [
+          "191-195",
+          "253-257",
+          "305-319"
+        ]
+      },
+      "notes": "sewer, rooftop, and additional cycle basic lands; nonfoil or traditional foil"
+    },
+    {
+      "name": "collectorExclusive",
+      "count": 2,
+      "pool": {
+        "nonfoil": [
+          "258-280"
+        ],
+        "foil": [
+          "258-280",
+          "291-314"
+        ],
+        "fracturefoil": [
+          "258-280"
+        ]
+      },
+      "notes": "Japan Showcase nonfoil/traditional foil/fracture foil (258-280); borderless Kevin Eastman headliner traditional foil (291-314); traditional foil source material cards (PZA) appear; Collector Booster-exclusive treatments"
+    },
+    {
+      "name": "sourceMaterial",
+      "count": 1,
+      "bonusSet": "pza",
+      "pool": {
+        "nonfoil": [
+          "1-20"
+        ],
+        "foil": [
+          "1-20"
+        ]
+      },
+      "notes": "source material (PZA) borderless cards; non-foil also appears in Play Boosters; traditional foil only in Collector Boosters"
+    }
+  ]
+}

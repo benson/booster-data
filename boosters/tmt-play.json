@@ -7,50 +7,123 @@
     {
       "name": "rare",
       "count": 1,
-      "rarities": ["rare", "mythic"],
-      "pool": { "nonfoil": ["1-195", "196-222", "223-252"] },
+      "rarities": [
+        "rare",
+        "mythic"
+      ],
+      "pool": {
+        "nonfoil": [
+          "1-195",
+          "196-222",
+          "223-252"
+        ]
+      },
       "mythicRate": 0.125,
       "notes": "main set + sewer frame + scene rare/mythic"
     },
     {
       "name": "uncommon",
       "count": 2,
-      "rarities": ["uncommon"],
-      "pool": { "nonfoil": ["1-195", "196-199", "206-207", "210", "223", "228", "232", "236", "240", "244"] },
+      "rarities": [
+        "uncommon"
+      ],
+      "pool": {
+        "nonfoil": [
+          "1-195",
+          "196-199",
+          "206-207",
+          "210",
+          "223",
+          "228",
+          "232",
+          "236",
+          "240",
+          "244"
+        ]
+      },
       "notes": "main set uncommons + sewer frame uncommons + scene uncommons"
     },
     {
       "name": "common",
       "count": 7,
-      "rarities": ["common"],
-      "pool": { "nonfoil": ["1-195", "203", "209"] },
+      "rarities": [
+        "common"
+      ],
+      "pool": {
+        "nonfoil": [
+          "1-195",
+          "203",
+          "209"
+        ]
+      },
       "notes": "main set commons + sewer frame commons (Jennika, Foot Ninjas)"
     },
     {
       "name": "land",
       "count": 1,
-      "pool": { "nonfoil": ["183", "185-187", "189", "253-257"] },
+      "pool": {
+        "nonfoil": [
+          "183",
+          "185-187",
+          "189",
+          "253-257"
+        ]
+      },
       "notes": "dual lands (60%) or rooftop basic lands (40%)"
     },
     {
       "name": "legendaryTurtle",
       "count": 1,
-      "rarities": ["common", "uncommon", "rare", "mythic"],
-      "rarityWeights": { "common": 0.685, "uncommon": 0.195, "rare": 0.08, "mythic": 0.04 },
-      "pool": { "nonfoil": ["10", "14-17", "35-38", "101-104", "118-121", "196-199", "203", "211-216", "218-219"] },
-      "notes": "turtle slot: main set turtles + sewer frame turtles"
+      "rarities": [
+        "common",
+        "uncommon",
+        "rare",
+        "mythic"
+      ],
+      "rarityWeights": {
+        "common": 0.685,
+        "uncommon": 0.195,
+        "rare": 0.08,
+        "mythic": 0.04
+      },
+      "pool": {
+        "nonfoil": [
+          "10",
+          "14-17",
+          "35-38",
+          "101-104",
+          "118-121",
+          "196-199",
+          "203",
+          "211-216",
+          "218-219"
+        ]
+      },
+      "notes": "guaranteed turtle slot; main set turtles at all rarities + sewer frame turtles; one Leonardo/Donatello/Raphael/Michelangelo legend per pack"
     },
     {
       "name": "wildcard",
       "count": 1,
-      "pool": { "nonfoil": ["1-195", "196-222", "223-252"] },
-      "notes": "any rarity from main set + sewer + scene"
+      "pool": {
+        "nonfoil": [
+          "1-195",
+          "196-222",
+          "223-252"
+        ]
+      },
+      "notes": "any rarity from main set + sewer frame + scene"
     },
     {
       "name": "foil",
       "count": 1,
-      "pool": { "foil": ["1-195", "196-222", "223-252"] },
-      "notes": "any rarity from main set + sewer + scene (traditional foil)"
+      "pool": {
+        "foil": [
+          "1-195",
+          "196-222",
+          "223-252"
+        ]
+      },
+      "notes": "traditional foil, any rarity from main set + sewer frame + scene"
     }
   ]
 }

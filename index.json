@@ -484,6 +484,7 @@
             "draft"
         ],
         "tmt": [
+            "collector",
             "play"
         ],
         "tor": [
