@@ -78,29 +78,48 @@ jobs:
           echo "Failed: [$failed]"
 
       - name: Validate
+        id: validate
         if: steps.generate.outputs.succeeded != ''
         run: |
           node validate.js --check-scryfall
+          validated=""
           failed=""
           for code in ${{ steps.generate.outputs.succeeded }}; do
+            ok=1
             if [ -f "boosters/${code}-play.json" ]; then
-              if ! node scripts/validate-generated.js "$code"; then
-                failed="$failed $code"
+              if ! node scripts/validate-generated.js "$code" play; then
+                failed="$failed ${code}-play"
+                ok=0
               fi
             fi
+            if [ -f "boosters/${code}-collector.json" ]; then
+              if ! node scripts/validate-generated.js "$code" collector; then
+                failed="$failed ${code}-collector"
+                ok=0
+              fi
+            fi
+            if [ "$ok" = "1" ]; then
+              validated="$validated $code"
+            fi
           done
-          if [ -n "$failed" ]; then
-            echo "::error::validate-generated.js failed for:$failed"
-            echo "Refusing to open a PR with configs the validator rejected. Inspect the diff locally and rerun with workflow_dispatch + force=true if needed."
-            exit 1
-          fi
+          validated="${validated# }"
+          failed="${failed# }"
+          echo "validated=$validated" >> "$GITHUB_OUTPUT"
+          echo "failed=$failed" >> "$GITHUB_OUTPUT"
+          echo "Validated: [$validated]"
+          echo "Validation failed: [$failed]"
+          # Don't exit non-zero — let the Report failures step run for any rejected configs.
 
       - name: Commit to master
         id: commit
-        if: steps.generate.outputs.succeeded != ''
+        # All-or-nothing: only commit if EVERY validated config passed (no validation failures).
+        # A partial-success commit is rare in practice (≤1 set per week) and the bookkeeping to
+        # surgically revert rejected files isn't worth the complexity. On any validation failure,
+        # the whole batch is rejected and an issue is filed.
+        if: steps.generate.outputs.succeeded != '' && steps.validate.outputs.failed == ''
         run: |
           git diff --quiet metadata.json index.json boosters/ && {
-            echo "No changes to commit (configs already up to date)."
+            echo "No changes to commit (validated configs already up to date)."
             echo "committed=false" >> "$GITHUB_OUTPUT"
             exit 0
           }
@@ -110,27 +129,41 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add boosters/ index.json metadata.json
           git commit -m "auto: add/update configs for $sets_comma"
-          # Pull/rebase in case homepage or another job touched the repo since checkout.
           git pull --rebase origin master
           git push origin master
           echo "committed=true" >> "$GITHUB_OUTPUT"
 
       - name: Report failures
-        if: steps.generate.outputs.failed != ''
+        # Fires for either generation OR validation failure — the alarm channel for the whole
+        # pipeline. Without this, validation rejects vanish silently into a failed cron run.
+        if: steps.generate.outputs.failed != '' || steps.validate.outputs.failed != ''
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          failed="${{ steps.generate.outputs.failed }}"
-          cat > /tmp/issue-body.md <<BODY
-          Generation failed for: \`$failed\`
-
-          **Workflow run:** https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-
-          Common causes: ANTHROPIC_API_KEY invalid, unparseable Claude response, Scryfall API error, WotC article unavailable.
-
-          Retry a single set: \`gh workflow run new-set.yml --repo ${{ github.repository }} -f set_code=<code>\`
-          BODY
-          gh issue create --title "auto: generation failed for sets: $failed" --label "automation,bug" --body-file /tmp/issue-body.md
+          gen_failed="${{ steps.generate.outputs.failed }}"
+          val_failed="${{ steps.validate.outputs.failed }}"
+          {
+            echo "**Workflow run:** https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo
+            if [ -n "$gen_failed" ]; then
+              echo "**Generation failed for:** \`$gen_failed\`"
+              echo
+              echo "Common causes: ANTHROPIC_API_KEY invalid, unparseable Claude response, Scryfall API error, WotC article unavailable."
+              echo
+            fi
+            if [ -n "$val_failed" ]; then
+              echo "**Validation rejected:** \`$val_failed\`"
+              echo
+              echo "Common causes: hallucinated CN ranges, missing collectorExclusive slot, omitted bonus-sheet/Special Guests metadata, structurally divergent slot layout."
+              echo "These configs were NOT committed. Inspect the run logs for specific validator errors."
+              echo
+            fi
+            echo "Retry a single set: \`gh workflow run new-set.yml --repo ${{ github.repository }} -f set_code=<code> -f force=true\`"
+          } > /tmp/issue-body.md
+          title="auto: pipeline failed"
+          [ -n "$gen_failed" ] && title="$title — gen: $gen_failed"
+          [ -n "$val_failed" ] && title="$title — val: $val_failed"
+          gh issue create --title "$title" --label "automation,bug" --body-file /tmp/issue-body.md
 
       - name: Trigger homepage update
         if: steps.commit.outputs.committed == 'true'
