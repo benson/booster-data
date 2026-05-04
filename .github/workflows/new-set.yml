@@ -1,7 +1,8 @@
 name: Detect & Generate New Set Configs
 on:
   schedule:
-    - cron: '0 6 * * 1'
+    # Weekly, staggered away from daily Scryfall-backed jobs.
+    - cron: '15 11 * * 1'
   workflow_dispatch:
     inputs:
       set_code:
@@ -16,6 +17,10 @@ on:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+concurrency:
+  group: booster-data-new-set
+  cancel-in-progress: false
 
 jobs:
   check-new-sets:
@@ -81,7 +86,7 @@ jobs:
         id: validate
         if: steps.generate.outputs.succeeded != ''
         run: |
-          node validate.js --check-scryfall
+          node validate.js --check-scryfall --sets "${{ steps.generate.outputs.succeeded }}"
           validated=""
           failed=""
           for code in ${{ steps.generate.outputs.succeeded }}; do

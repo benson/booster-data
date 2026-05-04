@@ -15,6 +15,34 @@ const checkUrls = args.includes('--check-urls');
 const checkScryfall = args.includes('--check-scryfall');
 const verbose = args.includes('--verbose') || args.includes('-v');
 
+function readOptionValues(names) {
+  const values = [];
+  for (let i = 0; i < args.length; i++) {
+    const arg = args[i];
+    for (const name of names) {
+      if (arg === name && args[i + 1]) {
+        values.push(args[++i]);
+        break;
+      }
+      if (arg.startsWith(name + '=')) {
+        values.push(arg.slice(name.length + 1));
+        break;
+      }
+    }
+  }
+  return values;
+}
+
+function splitSetCodes(values) {
+  return values
+    .join(' ')
+    .split(/[,\s]+/)
+    .map(code => code.trim().toLowerCase())
+    .filter(Boolean);
+}
+
+const scryfallSetFilter = new Set(splitSetCodes(readOptionValues(['--set', '--sets'])));
+
 function parseRange(range) {
   const match = range.match(/^(\d+)-(\d+)$/);
   if (match) return { start: parseInt(match[1]), end: parseInt(match[2]) };
@@ -341,6 +369,7 @@ async function validateScryfallCardCounts() {
   for (const fileName of files) {
     const data = JSON.parse(fs.readFileSync(path.join(boostersDir, fileName), 'utf8'));
     const setCode = data.set;
+    if (scryfallSetFilter.size > 0 && !scryfallSetFilter.has(setCode)) continue;
 
     if (!setCache.has(setCode)) {
       try {
@@ -370,6 +399,9 @@ async function main() {
   console.log('Validating booster-data...');
   if (checkUrls) console.log('  --check-urls enabled');
   if (checkScryfall) console.log('  --check-scryfall enabled');
+  if (checkScryfall && scryfallSetFilter.size > 0) {
+    console.log(`  Scryfall set filter: ${[...scryfallSetFilter].join(', ')}`);
+  }
   console.log('');
 
   const files = fs.readdirSync(boostersDir).filter(f => f.endsWith('.json'));
