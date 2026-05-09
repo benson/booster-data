@@ -15,6 +15,17 @@
       "notes": "showcase, borderless, extended-art treatments"
     },
     {
+      "name": "stellarSights",
+      "count": 1,
+      "bonusSet": "eos",
+      "pool": {
+        "nonfoil": ["1-90"],
+        "foil": ["1-90"],
+        "galaxyfoil": ["91-180"]
+      },
+      "notes": "regular and poster Stellar Sights lands in nonfoil, traditional foil, or galaxy foil"
+    },
+    {
       "name": "uncommon",
       "count": 4,
       "rarities": ["uncommon"],

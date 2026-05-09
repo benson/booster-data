@@ -37,6 +37,17 @@
       "notes": "any rarity from booster-eligible cards"
     },
     {
+      "name": "stellarSights",
+      "count": 1,
+      "bonusSet": "eos",
+      "pool": {
+        "nonfoil": ["1-45"],
+        "foil": ["1-45"]
+      },
+      "pullRate": 0.125,
+      "notes": "Stellar Sights lands appear in Play Boosters in nonfoil or traditional foil; poster Stellar Sights and galaxy foil variants are Collector Booster-only"
+    },
+    {
       "name": "foil",
       "count": 1,
       "pool": { "foil": ["1-316"] },
