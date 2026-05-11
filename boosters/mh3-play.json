@@ -26,6 +26,18 @@
       "notes": "retro frame commons start at 384"
     },
     {
+      "name": "newToModern",
+      "count": 1,
+      "rarities": ["uncommon", "rare", "mythic"],
+      "rarityWeights": {
+        "uncommon": 0.75,
+        "rare": 0.213,
+        "mythic": 0.023
+      },
+      "pool": { "nonfoil": ["262-303"] },
+      "notes": "20 uncommons, 18 rares, 4 mythic rares introduced to Modern from Commander/Legacy; regular frame versions only (booster fun variants omitted, <1.4% combined)"
+    },
+    {
       "name": "land",
       "count": 1,
       "pool": { "nonfoil": ["304-309"] },
