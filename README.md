@@ -1,6 +1,14 @@
 # booster-data
 
-Accurate collector number (CN) ranges for Magic: The Gathering booster pack contents.
+> Archived/reference-only.
+>
+> Packcracker, Poolbuilder, and the shared homepage MTG utilities now use
+> MTGJSON-derived booster artifacts from `homepage/shared/boosters` as the source
+> of truth for booster contents and odds. This repository stays published
+> temporarily so old deployed clients do not break, but new-set config generation
+> is disabled and no new data should be added here.
+
+Archived collector number (CN) ranges for Magic: The Gathering booster pack contents.
 
 ## why
 
@@ -12,7 +20,7 @@ Scryfall's `booster:true` field is unreliable. This project provides verified CN
 boosters/
   {set}-{type}.json    # e.g., mkm-play.json, znr-collector.json
 index.json             # lists all available files
-validate.js            # validation script
+validate.js            # archival validation script
 ```
 
 ## booster types
@@ -123,7 +131,7 @@ const { boosters } = await res.json();
 - 2019+ sets: WotC "Collecting [Set Name]" articles
 - Pre-2019 sets: MTG Wiki (mtg.fandom.com)
 
-## not modeled
+## not modeled in this archive
 
 - **The List**: Changes each set, ~25% in set boosters, uses PLST set code
 - **Serialized cards**: Correctly excluded from CN ranges

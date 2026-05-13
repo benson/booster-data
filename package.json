@@ -1,9 +1,6 @@
 {
   "private": true,
   "scripts": {
-    "test": "node --test scripts/__tests__/*.test.js"
-  },
-  "dependencies": {
-    "@anthropic-ai/sdk": "^0.90.0"
+    "test": "node --test tests/*.test.js && node validate.js"
   }
 }

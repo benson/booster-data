@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "description": "Per-set cross-cutting metadata consumed by homepage/shared/mtg.js. Updated incrementally by scripts/generate-config.js when new sets are ingested.",
+  "description": "Archived per-set metadata retained for old deployed clients. New Packcracker/Poolbuilder data comes from MTGJSON-derived homepage/shared artifacts.",
   "sets": {
     "blb": {
       "specialGuests": [
